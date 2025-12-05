@@ -1,0 +1,3505 @@
+{
+  "modules": [
+    {
+      "id": "mt6605",
+      "name": "MT6605",
+      "type": "nfc_controller",
+      "position": {
+        "x": 100,
+        "y": 90
+      },
+      "parameters": {
+        "interface": "I2C"
+      },
+      "description": "NFC Controller chip",
+      "confidence": 1.0
+    },
+    {
+      "id": "gpio0",
+      "name": "GPIO",
+      "type": "gpio_interface",
+      "position": {
+        "x": 193,
+        "y": 40
+      },
+      "parameters": {},
+      "description": "GPIO interface connection point",
+      "confidence": 2.0
+    },
+    {
+      "id": "lpddr3_933mhz_lpddr4",
+      "name": "LPDDR3 933MHz/LPDDR4",
+      "type": "memory",
+      "position": {
+        "x": 300,
+        "y": 35
+      },
+      "parameters": {
+        "type": "LPDDR3/LPDDR4",
+        "speed": "933MHz"
+      },
+      "description": "External DRAM memory",
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "emmc5_1",
+      "name": "eMMC5.1",
+      "type": "storage",
+      "position": {
+        "x": 365,
+        "y": 35
+      },
+      "parameters": {
+        "version": "5.1"
+      },
+      "description": "eMMC storage interface",
+      "confidence": 1.0
+    },
+    {
+      "id": "sd30",
+      "name": "SD 3.0",
+      "type": "sd_card",
+      "position": {
+        "x": 428,
+        "y": 35
+      },
+      "parameters": {
+        "version": "3.0"
+      },
+      "description": "SD 3.0 card interface",
+      "confidence": 1.0
+    },
+    {
+      "id": "usb_fshs_hostdevice",
+      "name": "USB FS/HS Host/Device",
+      "type": "usb",
+      "position": {
+        "x": 502,
+        "y": 31
+      },
+      "parameters": {
+        "speed": "FS/HS",
+        "mode": "Host/Device"
+      },
+      "description": "USB Full/High Speed Host/Device",
+      "confidence": 1.0
+    },
+    {
+      "id": "usb_fshs_device",
+      "name": "USB FS/HS device",
+      "type": "usb",
+      "position": {
+        "x": 572,
+        "y": 31
+      },
+      "parameters": {
+        "speed": "FS/HS",
+        "mode": "Device"
+      },
+      "description": "USB Full/High Speed Device",
+      "confidence": 1.0
+    },
+    {
+      "id": "mt6797",
+      "name": "MT6797",
+      "type": "soc",
+      "position": {
+        "x": 380,
+        "y": 200
+      },
+      "parameters": {},
+      "description": "Main SoC - MediaTek MT6797",
+      "confidence": 1.0
+    },
+    {
+      "id": "i2c_3",
+      "name": "I2C",
+      "type": "i2c",
+      "position": {
+        "x": 590,
+        "y": 347
+      },
+      "parameters": {},
+      "description": "I2C interface (lower middle right)",
+      "confidence": 3.3333333333333335
+    },
+    {
+      "id": "emi_block",
+      "name": "EMI",
+      "type": "memory_interface",
+      "position": {
+        "x": 301,
+        "y": 90
+      },
+      "parameters": {},
+      "description": "External Memory Interface",
+      "confidence": 0.6666666666666666
+    },
+    {
+      "id": "mmc",
+      "name": "MMC",
+      "type": "mmc_interface",
+      "position": {
+        "x": 365,
+        "y": 90
+      },
+      "parameters": {},
+      "description": "MMC interface controller",
+      "confidence": 1.0
+    },
+    {
+      "id": "sdio",
+      "name": "SDIO",
+      "type": "sdio_interface",
+      "position": {
+        "x": 428,
+        "y": 90
+      },
+      "parameters": {},
+      "description": "SDIO interface controller",
+      "confidence": 1.0
+    },
+    {
+      "id": "usb_2_0",
+      "name": "USB 2.0",
+      "type": "usb_interface",
+      "position": {
+        "x": 510,
+        "y": 90
+      },
+      "parameters": {
+        "version": "2.0"
+      },
+      "description": "USB 2.0 controller",
+      "confidence": 1.0
+    },
+    {
+      "id": "usb_3_0",
+      "name": "USB 3.0",
+      "type": "usb_interface",
+      "position": {
+        "x": 572,
+        "y": 90
+      },
+      "parameters": {
+        "version": "3.0"
+      },
+      "description": "USB 3.0 controller",
+      "confidence": 1.0
+    },
+    {
+      "id": "simcard1",
+      "name": "SIMCARD1",
+      "type": "sim_interface",
+      "position": {
+        "x": 90,
+        "y": 160
+      },
+      "parameters": {},
+      "description": "SIM card 1 interface",
+      "confidence": 1.0
+    },
+    {
+      "id": "simcard2",
+      "name": "SIMCARD2",
+      "type": "sim_interface",
+      "position": {
+        "x": 90,
+        "y": 192
+      },
+      "parameters": {},
+      "description": "SIM card 2 interface",
+      "confidence": 1.0
+    },
+    {
+      "id": "emulator_port",
+      "name": "Emulator Port",
+      "type": "debug_interface",
+      "position": {
+        "x": 90,
+        "y": 225
+      },
+      "parameters": {},
+      "description": "Emulator/Debug port",
+      "confidence": 0.6666666666666666
+    },
+    {
+      "id": "sim_interface",
+      "name": "SIM",
+      "type": "interface",
+      "position": {
+        "x": 193,
+        "y": 157
+      },
+      "parameters": {},
+      "description": "SIM card interface",
+      "confidence": 1.0
+    },
+    {
+      "id": "jtag_interface",
+      "name": "JTAG",
+      "type": "interface",
+      "position": {
+        "x": 193,
+        "y": 227
+      },
+      "parameters": {},
+      "description": "JTAG debug interface",
+      "confidence": 1.0
+    },
+    {
+      "id": "l2_cache_2",
+      "name": "L2 cache",
+      "type": "cache",
+      "position": {
+        "x": 321,
+        "y": 147
+      },
+      "parameters": {},
+      "description": "L2 cache for second ARM Cortex cluster",
+      "confidence": 2.3333333333333335
+    },
+    {
+      "id": "arm_cortex_a72_mpcore_1",
+      "name": "ARM9 Cortex-A72 MPCore",
+      "type": "processor",
+      "position": {
+        "x": 242,
+        "y": 185
+      },
+      "parameters": {
+        "cores": "2",
+        "architecture": "ARMv8"
+      },
+      "description": "Dual-core ARM Cortex-A72 MPCore processor",
+      "confidence": 0.6666666666666666
+    },
+    {
+      "id": "arm_cortex_a53_mpcore_1",
+      "name": "ARM9 Cortex-A53 MPCore",
+      "type": "processor",
+      "position": {
+        "x": 308,
+        "y": 185
+      },
+      "parameters": {
+        "cores": "2",
+        "architecture": "ARMv8"
+      },
+      "description": "Dual-core ARM Cortex-A53 MPCore processor",
+      "confidence": 1.0
+    },
+    {
+      "id": "arm9_cortex_a53_mpcore_3d",
+      "name": "ARM9 Cortex-A53 MPCore 3D Graphics",
+      "type": "cpu_core",
+      "position": {
+        "x": 345,
+        "y": 185
+      },
+      "parameters": {
+        "core_type": "Cortex-A53",
+        "count": "4",
+        "feature": "3D Graphics"
+      },
+      "description": "4x ARM Cortex-A53 MPCore with 3D Graphics",
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "arm9_cortexr4",
+      "name": "ARM9 CortexR4",
+      "type": "cpu_core",
+      "position": {
+        "x": 398,
+        "y": 185
+      },
+      "parameters": {
+        "core_type": "Cortex-R4"
+      },
+      "description": "ARM Cortex-R4 processor",
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "image_processor",
+      "name": "25MPxel Image Signal Processor",
+      "type": "isp",
+      "position": {
+        "x": 483,
+        "y": 175
+      },
+      "parameters": {
+        "resolution": "25MP"
+      },
+      "description": "25 Megapixel Image Signal Processor",
+      "confidence": 0.6666666666666666
+    },
+    {
+      "id": "video_codec",
+      "name": "2160P Video Codec",
+      "type": "video_codec",
+      "position": {
+        "x": 483,
+        "y": 220
+      },
+      "parameters": {
+        "resolution": "2160P"
+      },
+      "description": "2160P (4K) Video Codec",
+      "confidence": 1.0
+    },
+    {
+      "id": "mci5i_a",
+      "name": "MCI5i-A",
+      "type": "interconnect",
+      "position": {
+        "x": 293,
+        "y": 228
+      },
+      "parameters": {},
+      "description": "MCI5i-A interconnect",
+      "confidence": 0.6666666666666666
+    },
+    {
+      "id": "axi_interconnect",
+      "name": "AXI 64/128 bits interconnection",
+      "type": "interconnect",
+      "position": {
+        "x": 380,
+        "y": 244
+      },
+      "parameters": {
+        "width": "64/128 bits"
+      },
+      "description": "AXI 64/128 bits interconnection bus",
+      "confidence": 1.0
+    },
+    {
+      "id": "td_hspa_r9",
+      "name": "TD HSPA+ R9",
+      "type": "modem",
+      "position": {
+        "x": 242,
+        "y": 275
+      },
+      "parameters": {
+        "standard": "TD-HSPA+ Release 9"
+      },
+      "description": "TD-HSPA+ Release 9 modem",
+      "confidence": 0.6666666666666666
+    },
+    {
+      "id": "umts_hspa_r8",
+      "name": "UMTS HSPA+ R8/4",
+      "type": "modem",
+      "position": {
+        "x": 280,
+        "y": 278
+      },
+      "parameters": {
+        "standard": "UMTS HSPA+ R8/4"
+      },
+      "description": "UMTS HSPA+ Release 8/4 modem",
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "tdd_fdd_r9_cat6_lte",
+      "name": "TDD/FDD R9 CAT6 LTE",
+      "type": "modem",
+      "position": {
+        "x": 320,
+        "y": 278
+      },
+      "parameters": {
+        "standard": "LTE CAT6",
+        "mode": "TDD/FDD R9"
+      },
+      "description": "TDD/FDD Release 9 Category 6 LTE modem",
+      "confidence": 0.6666666666666666
+    },
+    {
+      "id": "8txcsi_e",
+      "name": "8TxCSI-E",
+      "type": "rf_interface",
+      "position": {
+        "x": 361,
+        "y": 258
+      },
+      "parameters": {},
+      "description": "8Tx CSI-E interface",
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "security_engine",
+      "name": "Security Engine",
+      "type": "security",
+      "position": {
+        "x": 485,
+        "y": 260
+      },
+      "parameters": {},
+      "description": "Hardware security engine",
+      "confidence": 1.0
+    },
+    {
+      "id": "quad_band_edge_gprs",
+      "name": "Quad Band EDGE/GPRS",
+      "type": "modem",
+      "position": {
+        "x": 238,
+        "y": 328
+      },
+      "parameters": {
+        "bands": "Quad",
+        "standard": "EDGE/GPRS"
+      },
+      "description": "Quad Band EDGE/GPRS modem",
+      "confidence": 1.0
+    },
+    {
+      "id": "cdma",
+      "name": "CDMA",
+      "type": "modem",
+      "position": {
+        "x": 313,
+        "y": 333
+      },
+      "parameters": {
+        "standard": "CDMA"
+      },
+      "description": "CDMA modem",
+      "confidence": 1.0
+    },
+    {
+      "id": "gps_glonass_beidou",
+      "name": "GPS/Glonass/Beidou",
+      "type": "gnss",
+      "position": {
+        "x": 361,
+        "y": 278
+      },
+      "parameters": {
+        "systems": "GPS/GLONASS/Beidou"
+      },
+      "description": "Multi-GNSS receiver",
+      "confidence": 0.6666666666666666
+    },
+    {
+      "id": "fm_trx",
+      "name": "FM TRX",
+      "type": "fm_transceiver",
+      "position": {
+        "x": 361,
+        "y": 308
+      },
+      "parameters": {},
+      "description": "FM Transceiver",
+      "confidence": 1.0
+    },
+    {
+      "id": "wifi_11ac_nac",
+      "name": "WiFi 11ac/nac",
+      "type": "wifi",
+      "position": {
+        "x": 361,
+        "y": 333
+      },
+      "parameters": {
+        "standard": "802.11ac/nac"
+      },
+      "description": "WiFi 802.11ac/nac controller",
+      "confidence": 0.6666666666666666
+    },
+    {
+      "id": "hifi_audio_processor",
+      "name": "HiFi Audio Processor",
+      "type": "audio_processor",
+      "position": {
+        "x": 419,
+        "y": 283
+      },
+      "parameters": {},
+      "description": "HiFi Audio Processor",
+      "confidence": 1.0
+    },
+    {
+      "id": "peripherals",
+      "name": "Peripherals",
+      "type": "peripheral_block",
+      "position": {
+        "x": 444,
+        "y": 328
+      },
+      "parameters": {},
+      "description": "General peripherals block",
+      "confidence": 1.0
+    },
+    {
+      "id": "display_engine",
+      "name": "WQHD2560x14 (4) Display Engine MiraVision\u2122 Technology",
+      "type": "display_engine",
+      "position": {
+        "x": 505,
+        "y": 308
+      },
+      "parameters": {
+        "resolution": "WQHD 2560x1440",
+        "technology": "MiraVision"
+      },
+      "description": "WQHD Display Engine with MiraVision Technology",
+      "confidence": 0.6666666666666666
+    },
+    {
+      "id": "mipi_csi2_2",
+      "name": "MIPI CSI-2",
+      "type": "mipi_interface",
+      "position": {
+        "x": 590,
+        "y": 142
+      },
+      "parameters": {
+        "type": "CSI-2"
+      },
+      "description": "MIPI CSI-2 camera interface (second)",
+      "confidence": 3.0
+    },
+    {
+      "id": "helio_x20",
+      "name": "HELIO X20",
+      "type": "product_label",
+      "position": {
+        "x": 680,
+        "y": 180
+      },
+      "parameters": {},
+      "description": "Product branding label",
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "rtc_block",
+      "name": "RTC",
+      "type": "rtc",
+      "position": {
+        "x": 695,
+        "y": 207
+      },
+      "parameters": {},
+      "description": "Real-Time Clock",
+      "confidence": 1.0
+    },
+    {
+      "id": "audio_block",
+      "name": "Audio",
+      "type": "audio",
+      "position": {
+        "x": 695,
+        "y": 222
+      },
+      "parameters": {},
+      "description": "Audio interface block",
+      "confidence": 1.0
+    },
+    {
+      "id": "speakers_block",
+      "name": "Speakers",
+      "type": "speaker",
+      "position": {
+        "x": 695,
+        "y": 237
+      },
+      "parameters": {},
+      "description": "Speaker output",
+      "confidence": 1.0
+    },
+    {
+      "id": "microphones_block",
+      "name": "Microphones",
+      "type": "microphone",
+      "position": {
+        "x": 695,
+        "y": 252
+      },
+      "parameters": {},
+      "description": "Microphone input",
+      "confidence": 1.0
+    },
+    {
+      "id": "vibrator_block",
+      "name": "Vibrator",
+      "type": "vibrator",
+      "position": {
+        "x": 695,
+        "y": 267
+      },
+      "parameters": {},
+      "description": "Vibrator motor control",
+      "confidence": 1.0
+    },
+    {
+      "id": "32mhz_crystal",
+      "name": "32Mhz Crystal",
+      "type": "oscillator",
+      "position": {
+        "x": 742,
+        "y": 180
+      },
+      "parameters": {
+        "frequency": "32MHz"
+      },
+      "description": "32MHz crystal oscillator",
+      "confidence": 0.6666666666666666
+    },
+    {
+      "id": "battery",
+      "name": "Battery",
+      "type": "power_source",
+      "position": {
+        "x": 763,
+        "y": 275
+      },
+      "parameters": {},
+      "description": "Battery power source",
+      "confidence": 1.0
+    },
+    {
+      "id": "mt6170",
+      "name": "MT6170",
+      "type": "rf_transceiver",
+      "position": {
+        "x": 100,
+        "y": 280
+      },
+      "parameters": {},
+      "description": "RF transceiver chip",
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "wcdma_rf",
+      "name": "WCDMA RF",
+      "type": "rf_interface",
+      "position": {
+        "x": 183,
+        "y": 312
+      },
+      "parameters": {
+        "standard": "WCDMA"
+      },
+      "description": "WCDMA RF interface",
+      "confidence": 0.6666666666666666
+    },
+    {
+      "id": "lte_rf",
+      "name": "LTE RF",
+      "type": "rf_interface",
+      "position": {
+        "x": 183,
+        "y": 332
+      },
+      "parameters": {
+        "standard": "LTE"
+      },
+      "description": "LTE RF interface",
+      "confidence": 0.6666666666666666
+    },
+    {
+      "id": "cdma_rf",
+      "name": "CDMA RF",
+      "type": "rf_interface",
+      "position": {
+        "x": 183,
+        "y": 352
+      },
+      "parameters": {
+        "standard": "CDMA"
+      },
+      "description": "CDMA RF interface",
+      "confidence": 0.6666666666666666
+    },
+    {
+      "id": "rf_rf_input",
+      "name": "RF RF",
+      "type": "rf_interface",
+      "position": {
+        "x": 155,
+        "y": 312
+      },
+      "parameters": {},
+      "description": "RF RF input to MT6797",
+      "confidence": 1.0
+    },
+    {
+      "id": "mt6631",
+      "name": "MT6631",
+      "type": "connectivity",
+      "position": {
+        "x": 352,
+        "y": 460
+      },
+      "parameters": {
+        "interfaces": [
+          "BT RF",
+          "GPS RF",
+          "FM RF",
+          "WiFi RF"
+        ]
+      },
+      "description": "Connectivity combo chip",
+      "confidence": 1.0
+    },
+    {
+      "id": "bt_rf",
+      "name": "BT RF",
+      "type": "rf_interface",
+      "position": {
+        "x": 343,
+        "y": 450
+      },
+      "parameters": {
+        "standard": "Bluetooth"
+      },
+      "description": "Bluetooth RF interface",
+      "confidence": 0.6666666666666666
+    },
+    {
+      "id": "gps_rf",
+      "name": "GPS RF",
+      "type": "rf_interface",
+      "position": {
+        "x": 343,
+        "y": 470
+      },
+      "parameters": {
+        "standard": "GPS"
+      },
+      "description": "GPS RF interface",
+      "confidence": 0.6666666666666666
+    },
+    {
+      "id": "fm_rf",
+      "name": "FM RF",
+      "type": "rf_interface",
+      "position": {
+        "x": 343,
+        "y": 487
+      },
+      "parameters": {
+        "standard": "FM"
+      },
+      "description": "FM RF interface",
+      "confidence": 0.6666666666666666
+    },
+    {
+      "id": "wifi_rf",
+      "name": "WiFi RF",
+      "type": "rf_interface",
+      "position": {
+        "x": 343,
+        "y": 503
+      },
+      "parameters": {
+        "standard": "WiFi"
+      },
+      "description": "WiFi RF interface",
+      "confidence": 0.6666666666666666
+    },
+    {
+      "id": "touch_screen_controller",
+      "name": "Touch Screen Controller",
+      "type": "touch_controller",
+      "position": {
+        "x": 483,
+        "y": 428
+      },
+      "parameters": {},
+      "description": "Touch screen controller",
+      "confidence": 1.0
+    },
+    {
+      "id": "da9214",
+      "name": "DA9214",
+      "type": "power_regulator",
+      "position": {
+        "x": 680,
+        "y": 320
+      },
+      "parameters": {},
+      "description": "Dialog DA9214 power regulator",
+      "confidence": 1.0
+    },
+    {
+      "id": "fan53555",
+      "name": "FAN53555",
+      "type": "power_regulator",
+      "position": {
+        "x": 680,
+        "y": 347
+      },
+      "parameters": {},
+      "description": "Fairchild FAN53555 power regulator",
+      "confidence": 1.0
+    },
+    {
+      "id": "mipi_dsi_1",
+      "name": "MIPI DSI",
+      "type": "mipi_interface",
+      "position": {
+        "x": 590,
+        "y": 385
+      },
+      "parameters": {
+        "type": "DSI"
+      },
+      "description": "MIPI DSI interface (bottom)",
+      "confidence": 1.6666666666666667
+    },
+    {
+      "id": "mhl_bridge",
+      "name": "MHL Bridge",
+      "type": "mhl_bridge",
+      "position": {
+        "x": 590,
+        "y": 428
+      },
+      "parameters": {},
+      "description": "MHL bridge chip",
+      "confidence": 0.6666666666666666
+    },
+    {
+      "id": "lcm",
+      "name": "LCM",
+      "type": "display",
+      "position": {
+        "x": 643,
+        "y": 378
+      },
+      "parameters": {},
+      "description": "LCD Module",
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "hd_hdtv",
+      "name": "HD HDTV",
+      "type": "display_output",
+      "position": {
+        "x": 623,
+        "y": 428
+      },
+      "parameters": {
+        "resolution": "HD"
+      },
+      "description": "HD HDTV output",
+      "confidence": 0.6666666666666666
+    },
+    {
+      "id": "lpddr3_333mhz",
+      "name": "LPDDR3 333MHz(eLPDDR)",
+      "type": "memory",
+      "position": {
+        "x": 301,
+        "y": 35
+      },
+      "parameters": {
+        "type": "LPDDR3",
+        "frequency": "333MHz"
+      },
+      "description": "LPDDR3 memory module",
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "emulation_port",
+      "name": "Emulation Port",
+      "type": "debug_interface",
+      "position": {
+        "x": 90,
+        "y": 225
+      },
+      "parameters": {},
+      "description": "Debug/Emulation port",
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "arm_cortex_a53_mpcore_1",
+      "name": "ARM5 Cortex-A53 MPCore",
+      "type": "cpu_cluster",
+      "position": {
+        "x": 242,
+        "y": 185
+      },
+      "parameters": {
+        "cores": "5",
+        "architecture": "Cortex-A53"
+      },
+      "description": "5-core ARM Cortex-A53 cluster",
+      "confidence": 0.6666666666666666
+    },
+    {
+      "id": "arm_cortex_a72_mpcore",
+      "name": "ARM2 Cortex-A72 MPCore",
+      "type": "cpu_cluster",
+      "position": {
+        "x": 332,
+        "y": 185
+      },
+      "parameters": {
+        "cores": "2",
+        "architecture": "Cortex-A72"
+      },
+      "description": "2-core ARM Cortex-A72 cluster",
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "arm_mali_t880mp4_3d",
+      "name": "ARM Mali-T880MP4 3D Graphics",
+      "type": "gpu",
+      "position": {
+        "x": 392,
+        "y": 185
+      },
+      "parameters": {
+        "cores": "4",
+        "model": "Mali-T880MP4"
+      },
+      "description": "ARM Mali-T880 MP4 3D Graphics processor",
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "image_signal_processor",
+      "name": "25MPxiel Image Signal Processor",
+      "type": "isp",
+      "position": {
+        "x": 490,
+        "y": 162
+      },
+      "parameters": {
+        "resolution": "25MP"
+      },
+      "description": "25 Megapixel Image Signal Processor",
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "td_hsdpa_r9",
+      "name": "TD HSDPA R9",
+      "type": "modem",
+      "position": {
+        "x": 242,
+        "y": 273
+      },
+      "parameters": {},
+      "description": "TD-HSDPA Release 9 modem",
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "umts_hsdpa_hspa_r8",
+      "name": "UMTS HSDPA HSPA+ R8",
+      "type": "modem",
+      "position": {
+        "x": 287,
+        "y": 273
+      },
+      "parameters": {},
+      "description": "UMTS HSDPA HSPA+ Release 8",
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "8txs_le",
+      "name": "8Tx5.5",
+      "type": "rf_frontend",
+      "position": {
+        "x": 332,
+        "y": 253
+      },
+      "parameters": {},
+      "description": "8Tx5.5 RF frontend",
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "gpsdglonass_beidou",
+      "name": "GPS/Glonass Beidou",
+      "type": "gnss",
+      "position": {
+        "x": 355,
+        "y": 273
+      },
+      "parameters": {},
+      "description": "GPS/Glonass/Beidou receiver",
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "wqhd2560x14_40",
+      "name": "WQHD2560x14 (4)",
+      "type": "display_engine",
+      "position": {
+        "x": 490,
+        "y": 285
+      },
+      "parameters": {
+        "resolution": "2560x1440"
+      },
+      "description": "WQHD 2560x1440 Display Engine",
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "wifi_11acnabgn",
+      "name": "WiFi 11ac/n/a/b/g/n",
+      "type": "wifi",
+      "position": {
+        "x": 355,
+        "y": 333
+      },
+      "parameters": {
+        "standard": "802.11ac/n/a/b/g/n"
+      },
+      "description": "WiFi 802.11ac/n/a/b/g/n",
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "mipi_vision_miralink_miracast",
+      "name": "Display Engine MiraVision\u2122 MiraLink\u2122 Miracast",
+      "type": "display_interface",
+      "position": {
+        "x": 490,
+        "y": 318
+      },
+      "parameters": {},
+      "description": "Display Engine with MiraVision, MiraLink, and Miracast",
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "hedr_block",
+      "name": "HEDR",
+      "type": "hdr_processor",
+      "position": {
+        "x": 563,
+        "y": 217
+      },
+      "parameters": {},
+      "description": "HDR processor block",
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "mt6351",
+      "name": "MT6351",
+      "type": "pmic",
+      "position": {
+        "x": 680,
+        "y": 185
+      },
+      "parameters": {},
+      "description": "Power Management IC",
+      "confidence": 0.6666666666666666
+    },
+    {
+      "id": "32mhz_crystal",
+      "name": "32MHz Crystal",
+      "type": "crystal",
+      "position": {
+        "x": 757,
+        "y": 185
+      },
+      "parameters": {
+        "frequency": "32MHz"
+      },
+      "description": "32MHz crystal oscillator",
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "lcdi",
+      "name": "LCDI",
+      "type": "lcd_interface",
+      "position": {
+        "x": 643,
+        "y": 378
+      },
+      "parameters": {},
+      "description": "LCD interface",
+      "confidence": 0.6666666666666666
+    },
+    {
+      "id": "hdtv",
+      "name": "3D HDTV",
+      "type": "hdmi_output",
+      "position": {
+        "x": 625,
+        "y": 428
+      },
+      "parameters": {},
+      "description": "3D HDTV output",
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "mt6176",
+      "name": "MT6176",
+      "type": "rf_transceiver",
+      "position": {
+        "x": 100,
+        "y": 280
+      },
+      "parameters": {
+        "interfaces": [
+          "EDGE/GPRS RF",
+          "WCDMA RF",
+          "LTE RF",
+          "CDMA RF"
+        ]
+      },
+      "description": "Multi-mode RF transceiver",
+      "confidence": 0.6666666666666666
+    },
+    {
+      "id": "edge_gprs_rf",
+      "name": "EDGE/GPRS RF",
+      "type": "rf",
+      "position": {
+        "x": 90,
+        "y": 285
+      },
+      "parameters": {},
+      "description": "EDGE/GPRS RF interface",
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "rf_if_output",
+      "name": "RF IF",
+      "type": "interface",
+      "position": {
+        "x": 352,
+        "y": 378
+      },
+      "parameters": {},
+      "description": "RF interface output",
+      "confidence": 0.6666666666666666
+    },
+    {
+      "id": "em_block",
+      "name": "EM",
+      "type": "module",
+      "position": {
+        "x": 301,
+        "y": 90
+      },
+      "parameters": {},
+      "description": "Embedded Memory block",
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "arm_mali_t880_mp4",
+      "name": "ARM9 Mali-T880 MP4 3D Graphics",
+      "type": "gpu",
+      "position": {
+        "x": 405,
+        "y": 185
+      },
+      "parameters": {
+        "cores": "4",
+        "type": "Mali-T880"
+      },
+      "description": "ARM Mali-T880 MP4 GPU",
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "mci_a",
+      "name": "MCI-A",
+      "type": "interconnect",
+      "position": {
+        "x": 308,
+        "y": 230
+      },
+      "parameters": {},
+      "description": "Memory Controller Interface A",
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "umts_hspa_r9",
+      "name": "UMTS HSPA+ R9",
+      "type": "modem",
+      "position": {
+        "x": 270,
+        "y": 275
+      },
+      "parameters": {
+        "standard": "UMTS HSPA+ Release 9"
+      },
+      "description": "UMTS HSPA+ Release 9 modem",
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "tdd_fdd_r8_cat5_lte",
+      "name": "TDD/FDD R8 CAT5 LTE",
+      "type": "modem",
+      "position": {
+        "x": 308,
+        "y": 275
+      },
+      "parameters": {
+        "standard": "LTE Release 8 Category 5"
+      },
+      "description": "LTE TDD/FDD Release 8 Category 5 modem",
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "8txcse",
+      "name": "8Tx3.5E",
+      "type": "module",
+      "position": {
+        "x": 360,
+        "y": 260
+      },
+      "parameters": {},
+      "description": "8Tx3.5E module",
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "hevc_block",
+      "name": "HEVC",
+      "type": "codec",
+      "position": {
+        "x": 560,
+        "y": 220
+      },
+      "parameters": {},
+      "description": "HEVC video codec",
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "mnl_bridge",
+      "name": "MNL Bridge",
+      "type": "bridge",
+      "position": {
+        "x": 560,
+        "y": 428
+      },
+      "parameters": {},
+      "description": "MNL Bridge",
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "lpddr3_133mhz_elpida",
+      "name": "LPDDR3 @133MHz(ELPIDA)",
+      "type": "memory",
+      "position": {
+        "x": 299,
+        "y": 31
+      },
+      "parameters": {
+        "type": "LPDDR3",
+        "frequency": "133MHz",
+        "vendor": "ELPIDA"
+      },
+      "description": "LPDDR3 memory from ELPIDA",
+      "confidence": 0.3333333333333333
+    }
+  ],
+  "connections": [
+    {
+      "id": "conn_1",
+      "from_module": "mt6605",
+      "from_port": "output",
+      "to_module": "i2c",
+      "to_port": "input",
+      "signal_name": "I2C",
+      "width": "",
+      "is_bus": false,
+      "direction": "right",
+      "annotations": [],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_2",
+      "from_module": "gpio0",
+      "from_port": "output",
+      "to_module": "gpio1",
+      "to_port": "input",
+      "signal_name": "GPIO",
+      "width": "",
+      "is_bus": false,
+      "direction": "down",
+      "annotations": [],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_3",
+      "from_module": "lpddr3_933mhz_lpddr4",
+      "from_port": "output",
+      "to_module": "emi",
+      "to_port": "input",
+      "signal_name": "EMI",
+      "width": "",
+      "is_bus": true,
+      "direction": "down",
+      "annotations": [],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_4",
+      "from_module": "emmc5_1",
+      "from_port": "output",
+      "to_module": "mmc",
+      "to_port": "input",
+      "signal_name": "MMC",
+      "width": "",
+      "is_bus": true,
+      "direction": "down",
+      "annotations": [],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_5",
+      "from_module": "sd_3_0",
+      "from_port": "output",
+      "to_module": "sdio",
+      "to_port": "input",
+      "signal_name": "SDIO",
+      "width": "",
+      "is_bus": true,
+      "direction": "down",
+      "annotations": [],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_6",
+      "from_module": "usb_fshs_hostdevice",
+      "from_port": "output",
+      "to_module": "usb_2_0",
+      "to_port": "input",
+      "signal_name": "USB 2.0",
+      "width": "",
+      "is_bus": true,
+      "direction": "down",
+      "annotations": [],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_7",
+      "from_module": "usb_fshs_device",
+      "from_port": "output",
+      "to_module": "usb_3_0",
+      "to_port": "input",
+      "signal_name": "USB 3.0",
+      "width": "",
+      "is_bus": true,
+      "direction": "down",
+      "annotations": [],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_8",
+      "from_module": "simcard1",
+      "from_port": "output",
+      "to_module": "sim",
+      "to_port": "input",
+      "signal_name": "SIM",
+      "width": "",
+      "is_bus": false,
+      "direction": "right",
+      "annotations": [],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_9",
+      "from_module": "simcard2",
+      "from_port": "output",
+      "to_module": "sim",
+      "to_port": "input",
+      "signal_name": "SIM",
+      "width": "",
+      "is_bus": false,
+      "direction": "right",
+      "annotations": [],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_10",
+      "from_module": "emulator_port",
+      "from_port": "output",
+      "to_module": "jtag",
+      "to_port": "input",
+      "signal_name": "JTAG",
+      "width": "",
+      "is_bus": false,
+      "direction": "right",
+      "annotations": [],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_11",
+      "from_module": "mt6170",
+      "from_port": "rf_out",
+      "to_module": "wcdma_rf",
+      "to_port": "input",
+      "signal_name": "RF RF",
+      "width": "",
+      "is_bus": false,
+      "direction": "right",
+      "annotations": [],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_12",
+      "from_module": "mt6170",
+      "from_port": "rf_out",
+      "to_module": "lte_rf",
+      "to_port": "input",
+      "signal_name": "RF RF",
+      "width": "",
+      "is_bus": false,
+      "direction": "right",
+      "annotations": [],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_13",
+      "from_module": "mt6170",
+      "from_port": "rf_out",
+      "to_module": "cdma_rf",
+      "to_port": "input",
+      "signal_name": "RF RF",
+      "width": "",
+      "is_bus": false,
+      "direction": "right",
+      "annotations": [],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_14",
+      "from_module": "wcdma_rf",
+      "from_port": "output",
+      "to_module": "rf_rf",
+      "to_port": "input",
+      "signal_name": "RF RF",
+      "width": "",
+      "is_bus": false,
+      "direction": "down-right",
+      "annotations": [],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_15",
+      "from_module": "lte_rf",
+      "from_port": "output",
+      "to_module": "rf_rf",
+      "to_port": "input",
+      "signal_name": "RF RF",
+      "width": "",
+      "is_bus": false,
+      "direction": "down-right",
+      "annotations": [],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_16",
+      "from_module": "cdma_rf",
+      "from_port": "output",
+      "to_module": "rf_rf",
+      "to_port": "input",
+      "signal_name": "RF RF",
+      "width": "",
+      "is_bus": false,
+      "direction": "down-right",
+      "annotations": [],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_17",
+      "from_module": "rf_rf",
+      "from_port": "output",
+      "to_module": "mt6797",
+      "to_port": "rf_input",
+      "signal_name": "RF RF",
+      "width": "",
+      "is_bus": false,
+      "direction": "up",
+      "annotations": [],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_18",
+      "from_module": "i2c_1",
+      "from_port": "output",
+      "to_module": "mt6797",
+      "to_port": "i2c_input",
+      "signal_name": "I2C",
+      "width": "",
+      "is_bus": false,
+      "direction": "up",
+      "annotations": [],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_19",
+      "from_module": "mt6631",
+      "from_port": "bt_rf",
+      "to_module": "bt_rf",
+      "to_port": "output",
+      "signal_name": "BT RF",
+      "width": "",
+      "is_bus": false,
+      "direction": "left",
+      "annotations": [],
+      "confidence": 0.6666666666666666
+    },
+    {
+      "id": "conn_20",
+      "from_module": "mt6631",
+      "from_port": "gps_rf",
+      "to_module": "gps_rf",
+      "to_port": "output",
+      "signal_name": "GPS RF",
+      "width": "",
+      "is_bus": false,
+      "direction": "left",
+      "annotations": [],
+      "confidence": 0.6666666666666666
+    },
+    {
+      "id": "conn_21",
+      "from_module": "mt6631",
+      "from_port": "fm_rf",
+      "to_module": "fm_rf",
+      "to_port": "output",
+      "signal_name": "FM RF",
+      "width": "",
+      "is_bus": false,
+      "direction": "left",
+      "annotations": [],
+      "confidence": 0.6666666666666666
+    },
+    {
+      "id": "conn_22",
+      "from_module": "mt6631",
+      "from_port": "wifi_rf",
+      "to_module": "wifi_rf",
+      "to_port": "output",
+      "signal_name": "WiFi RF",
+      "width": "",
+      "is_bus": false,
+      "direction": "left",
+      "annotations": [],
+      "confidence": 0.6666666666666666
+    },
+    {
+      "id": "conn_23",
+      "from_module": "i2c_1",
+      "from_port": "output",
+      "to_module": "touch_screen_controller",
+      "to_port": "input",
+      "signal_name": "I2C",
+      "width": "",
+      "is_bus": false,
+      "direction": "down",
+      "annotations": [],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_24",
+      "from_module": "mt6797",
+      "from_port": "mipi_csi2_out",
+      "to_module": "mipi_csi2",
+      "to_port": "input",
+      "signal_name": "MIPI CSI-2",
+      "width": "",
+      "is_bus": true,
+      "direction": "right",
+      "annotations": [],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_25",
+      "from_module": "mt6797",
+      "from_port": "mipi_csi2_out",
+      "to_module": "mipi_csi2_2",
+      "to_port": "input",
+      "signal_name": "MIPI CSI-2",
+      "width": "",
+      "is_bus": true,
+      "direction": "right",
+      "annotations": [],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_26",
+      "from_module": "mt6797",
+      "from_port": "mipi_csi2_out",
+      "to_module": "mipi_csi2_3",
+      "to_port": "input",
+      "signal_name": "MIPI CSI-2",
+      "width": "",
+      "is_bus": true,
+      "direction": "right",
+      "annotations": [],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_27",
+      "from_module": "mipi_csi2",
+      "from_port": "output",
+      "to_module": "helio_x20",
+      "to_port": "camera_input",
+      "signal_name": "",
+      "width": "",
+      "is_bus": false,
+      "direction": "right",
+      "annotations": [],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_28",
+      "from_module": "mipi_csi2_2",
+      "from_port": "output",
+      "to_module": "helio_x20",
+      "to_port": "camera_input",
+      "signal_name": "",
+      "width": "",
+      "is_bus": false,
+      "direction": "right",
+      "annotations": [],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_29",
+      "from_module": "mipi_csi2_3",
+      "from_port": "output",
+      "to_module": "helio_x20",
+      "to_port": "camera_input",
+      "signal_name": "",
+      "width": "",
+      "is_bus": false,
+      "direction": "right",
+      "annotations": [],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_30",
+      "from_module": "helio_x20",
+      "from_port": "rtc_out",
+      "to_module": "rtc",
+      "to_port": "input",
+      "signal_name": "",
+      "width": "",
+      "is_bus": false,
+      "direction": "right",
+      "annotations": [],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_31",
+      "from_module": "helio_x20",
+      "from_port": "audio_out",
+      "to_module": "audio",
+      "to_port": "input",
+      "signal_name": "",
+      "width": "",
+      "is_bus": false,
+      "direction": "right",
+      "annotations": [],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_32",
+      "from_module": "helio_x20",
+      "from_port": "speaker_out",
+      "to_module": "speakers",
+      "to_port": "input",
+      "signal_name": "",
+      "width": "",
+      "is_bus": false,
+      "direction": "right",
+      "annotations": [],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_33",
+      "from_module": "helio_x20",
+      "from_port": "mic_in",
+      "to_module": "microphones",
+      "to_port": "output",
+      "signal_name": "",
+      "width": "",
+      "is_bus": false,
+      "direction": "right",
+      "annotations": [],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_34",
+      "from_module": "helio_x20",
+      "from_port": "vibrator_out",
+      "to_module": "vibrator",
+      "to_port": "input",
+      "signal_name": "",
+      "width": "",
+      "is_bus": false,
+      "direction": "right",
+      "annotations": [],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_35",
+      "from_module": "rtc",
+      "from_port": "crystal_conn",
+      "to_module": "32mhz_crystal",
+      "to_port": "input",
+      "signal_name": "",
+      "width": "",
+      "is_bus": false,
+      "direction": "right",
+      "annotations": [],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_36",
+      "from_module": "vibrator",
+      "from_port": "power",
+      "to_module": "battery",
+      "to_port": "output",
+      "signal_name": "",
+      "width": "",
+      "is_bus": false,
+      "direction": "right",
+      "annotations": [],
+      "confidence": 0.6666666666666666
+    },
+    {
+      "id": "conn_37",
+      "from_module": "mt6797",
+      "from_port": "i2c_out",
+      "to_module": "i2c_2",
+      "to_port": "input",
+      "signal_name": "I2C",
+      "width": "",
+      "is_bus": false,
+      "direction": "right",
+      "annotations": [],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_38",
+      "from_module": "mt6797",
+      "from_port": "i2c_out",
+      "to_module": "i2c_3",
+      "to_port": "input",
+      "signal_name": "I2C",
+      "width": "",
+      "is_bus": false,
+      "direction": "right",
+      "annotations": [],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_39",
+      "from_module": "i2c_2",
+      "from_port": "output",
+      "to_module": "da9214",
+      "to_port": "input",
+      "signal_name": "I2C",
+      "width": "",
+      "is_bus": false,
+      "direction": "right",
+      "annotations": [],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_40",
+      "from_module": "i2c_3",
+      "from_port": "output",
+      "to_module": "fan53555",
+      "to_port": "input",
+      "signal_name": "I2C",
+      "width": "",
+      "is_bus": false,
+      "direction": "right",
+      "annotations": [],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_41",
+      "from_module": "mt6797",
+      "from_port": "mipi_dsi_out",
+      "to_module": "mipi_dsi",
+      "to_port": "input",
+      "signal_name": "MIPI DSI",
+      "width": "",
+      "is_bus": true,
+      "direction": "right",
+      "annotations": [],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_42",
+      "from_module": "mt6797",
+      "from_port": "mipi_dsi_out_2",
+      "to_module": "mhl_bridge",
+      "to_port": "input",
+      "signal_name": "MIPI DSI",
+      "width": "",
+      "is_bus": true,
+      "direction": "down-right",
+      "annotations": [],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_43",
+      "from_module": "mhl_bridge",
+      "from_port": "output",
+      "to_module": "lcm",
+      "to_port": "input",
+      "signal_name": "LCM",
+      "width": "",
+      "is_bus": false,
+      "direction": "right",
+      "annotations": [],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_44",
+      "from_module": "mhl_bridge",
+      "from_port": "hdtv_out",
+      "to_module": "hd_hdtv",
+      "to_port": "input",
+      "signal_name": "HD HDTV",
+      "width": "",
+      "is_bus": false,
+      "direction": "down",
+      "annotations": [],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_45",
+      "from_module": "mt6797",
+      "from_port": "mipi_dsi_out_3",
+      "to_module": "mipi_dsi_1",
+      "to_port": "input",
+      "signal_name": "MIPI DSI",
+      "width": "",
+      "is_bus": true,
+      "direction": "right",
+      "annotations": [],
+      "confidence": 0.6666666666666666
+    },
+    {
+      "id": "conn_1",
+      "from_module": "mt6605",
+      "from_port": "output",
+      "to_module": "i2c_block",
+      "to_port": "input",
+      "signal_name": "I2C",
+      "width": "",
+      "is_bus": false,
+      "direction": "right",
+      "annotations": [],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_2",
+      "from_module": "gpio0",
+      "from_port": "output",
+      "to_module": "gpio_block",
+      "to_port": "input",
+      "signal_name": "GPIO",
+      "width": "",
+      "is_bus": false,
+      "direction": "down",
+      "annotations": [],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_3",
+      "from_module": "lpddr3_333mhz",
+      "from_port": "output",
+      "to_module": "emi_block",
+      "to_port": "input",
+      "signal_name": "",
+      "width": "",
+      "is_bus": false,
+      "direction": "down",
+      "annotations": [],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_4",
+      "from_module": "emmc51",
+      "from_port": "output",
+      "to_module": "mmc_block",
+      "to_port": "input",
+      "signal_name": "",
+      "width": "",
+      "is_bus": false,
+      "direction": "down",
+      "annotations": [],
+      "confidence": 0.6666666666666666
+    },
+    {
+      "id": "conn_5",
+      "from_module": "sd30",
+      "from_port": "output",
+      "to_module": "sdio_block",
+      "to_port": "input",
+      "signal_name": "",
+      "width": "",
+      "is_bus": false,
+      "direction": "down",
+      "annotations": [],
+      "confidence": 0.6666666666666666
+    },
+    {
+      "id": "conn_6",
+      "from_module": "usb_fshs_hostdevice",
+      "from_port": "output",
+      "to_module": "usb20_block",
+      "to_port": "input",
+      "signal_name": "",
+      "width": "",
+      "is_bus": false,
+      "direction": "down",
+      "annotations": [],
+      "confidence": 0.6666666666666666
+    },
+    {
+      "id": "conn_7",
+      "from_module": "usb_fshs_device",
+      "from_port": "output",
+      "to_module": "usb30_block",
+      "to_port": "input",
+      "signal_name": "",
+      "width": "",
+      "is_bus": false,
+      "direction": "down",
+      "annotations": [],
+      "confidence": 0.6666666666666666
+    },
+    {
+      "id": "conn_8",
+      "from_module": "simcard1",
+      "from_port": "output",
+      "to_module": "sim_block",
+      "to_port": "input",
+      "signal_name": "",
+      "width": "",
+      "is_bus": false,
+      "direction": "right",
+      "annotations": [],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_9",
+      "from_module": "simcard2",
+      "from_port": "output",
+      "to_module": "sim_block",
+      "to_port": "input",
+      "signal_name": "",
+      "width": "",
+      "is_bus": false,
+      "direction": "right",
+      "annotations": [],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_10",
+      "from_module": "emulation_port",
+      "from_port": "output",
+      "to_module": "jtag_block",
+      "to_port": "input",
+      "signal_name": "",
+      "width": "",
+      "is_bus": false,
+      "direction": "right",
+      "annotations": [],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_11",
+      "from_module": "image_signal_processor",
+      "from_port": "mipi_csi2_1",
+      "to_module": "mipi_csi2",
+      "to_port": "input",
+      "signal_name": "MIPI CSI-2",
+      "width": "",
+      "is_bus": false,
+      "direction": "right",
+      "annotations": [],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_12",
+      "from_module": "image_signal_processor",
+      "from_port": "mipi_csi2_2",
+      "to_module": "mipi_csi2_2",
+      "to_port": "input",
+      "signal_name": "MIPI CSI-2",
+      "width": "",
+      "is_bus": false,
+      "direction": "right",
+      "annotations": [],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_13",
+      "from_module": "image_signal_processor",
+      "from_port": "mipi_csi2_3",
+      "to_module": "mipi_csi2_3",
+      "to_port": "input",
+      "signal_name": "MIPI CSI-2",
+      "width": "",
+      "is_bus": false,
+      "direction": "right",
+      "annotations": [],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_14",
+      "from_module": "video_codec",
+      "from_port": "output",
+      "to_module": "hedr_block",
+      "to_port": "input",
+      "signal_name": "HEDR",
+      "width": "",
+      "is_bus": false,
+      "direction": "right",
+      "annotations": [],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_15",
+      "from_module": "hedr_block",
+      "from_port": "output",
+      "to_module": "mt6351",
+      "to_port": "input",
+      "signal_name": "",
+      "width": "",
+      "is_bus": false,
+      "direction": "right",
+      "annotations": [],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_16",
+      "from_module": "mt6351",
+      "from_port": "output",
+      "to_module": "32mhz_crystal",
+      "to_port": "input",
+      "signal_name": "",
+      "width": "",
+      "is_bus": false,
+      "direction": "right",
+      "annotations": [],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_17",
+      "from_module": "mt6351",
+      "from_port": "rtc",
+      "to_module": "rtc_block",
+      "to_port": "input",
+      "signal_name": "RTC",
+      "width": "",
+      "is_bus": false,
+      "direction": "down",
+      "annotations": [],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_18",
+      "from_module": "mt6351",
+      "from_port": "audio",
+      "to_module": "audio_block",
+      "to_port": "input",
+      "signal_name": "Audio",
+      "width": "",
+      "is_bus": false,
+      "direction": "down",
+      "annotations": [],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_19",
+      "from_module": "mt6351",
+      "from_port": "speakers",
+      "to_module": "speakers_block",
+      "to_port": "input",
+      "signal_name": "Speakers",
+      "width": "",
+      "is_bus": false,
+      "direction": "down",
+      "annotations": [],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_20",
+      "from_module": "mt6351",
+      "from_port": "microphones",
+      "to_module": "microphones_block",
+      "to_port": "input",
+      "signal_name": "Microphones",
+      "width": "",
+      "is_bus": false,
+      "direction": "down",
+      "annotations": [],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_21",
+      "from_module": "mt6351",
+      "from_port": "vibrator",
+      "to_module": "vibrator_block",
+      "to_port": "input",
+      "signal_name": "Vibrator",
+      "width": "",
+      "is_bus": false,
+      "direction": "down",
+      "annotations": [],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_22",
+      "from_module": "vibrator_block",
+      "from_port": "output",
+      "to_module": "battery",
+      "to_port": "input",
+      "signal_name": "",
+      "width": "",
+      "is_bus": false,
+      "direction": "right",
+      "annotations": [],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_23",
+      "from_module": "i2c_block_out1",
+      "from_port": "output",
+      "to_module": "da9214",
+      "to_port": "input",
+      "signal_name": "I2C",
+      "width": "",
+      "is_bus": false,
+      "direction": "right",
+      "annotations": [],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_24",
+      "from_module": "i2c_block_out2",
+      "from_port": "output",
+      "to_module": "fan53555",
+      "to_port": "input",
+      "signal_name": "I2C",
+      "width": "",
+      "is_bus": false,
+      "direction": "right",
+      "annotations": [],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_25",
+      "from_module": "mipi_dsi_block",
+      "from_port": "output",
+      "to_module": "lcdi",
+      "to_port": "input",
+      "signal_name": "LCDI",
+      "width": "",
+      "is_bus": false,
+      "direction": "right",
+      "annotations": [],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_26",
+      "from_module": "rf_rf_block",
+      "from_port": "output",
+      "to_module": "mt6631",
+      "to_port": "input",
+      "signal_name": "RF RF",
+      "width": "",
+      "is_bus": false,
+      "direction": "down",
+      "annotations": [],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_31",
+      "from_module": "i2c_block_bottom",
+      "from_port": "output",
+      "to_module": "touch_screen_controller",
+      "to_port": "input",
+      "signal_name": "I2C",
+      "width": "",
+      "is_bus": false,
+      "direction": "down",
+      "annotations": [],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_32",
+      "from_module": "mhl_bridge",
+      "from_port": "output",
+      "to_module": "hdtv",
+      "to_port": "input",
+      "signal_name": "3D HDTV",
+      "width": "",
+      "is_bus": false,
+      "direction": "down",
+      "annotations": [],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_33",
+      "from_module": "mipi_dsi_block",
+      "from_port": "output",
+      "to_module": "mhl_bridge",
+      "to_port": "input",
+      "signal_name": "MIPI DSI",
+      "width": "",
+      "is_bus": false,
+      "direction": "down",
+      "annotations": [],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_34",
+      "from_module": "edge_gprs_rf",
+      "from_port": "output",
+      "to_module": "mt6176",
+      "to_port": "edge_gprs",
+      "signal_name": "EDGE/GPRS RF",
+      "width": "",
+      "is_bus": false,
+      "direction": "right",
+      "annotations": [],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_35",
+      "from_module": "wcdma_rf",
+      "from_port": "output",
+      "to_module": "mt6176",
+      "to_port": "wcdma",
+      "signal_name": "WCDMA RF",
+      "width": "",
+      "is_bus": false,
+      "direction": "right",
+      "annotations": [],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_36",
+      "from_module": "lte_rf",
+      "from_port": "output",
+      "to_module": "mt6176",
+      "to_port": "lte",
+      "signal_name": "LTE RF",
+      "width": "",
+      "is_bus": false,
+      "direction": "right",
+      "annotations": [],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_37",
+      "from_module": "cdma_rf",
+      "from_port": "output",
+      "to_module": "mt6176",
+      "to_port": "cdma",
+      "signal_name": "CDMA RF",
+      "width": "",
+      "is_bus": false,
+      "direction": "right",
+      "annotations": [],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_38",
+      "from_module": "mt6176",
+      "from_port": "rf_output",
+      "to_module": "rf_rf_input",
+      "to_port": "input",
+      "signal_name": "RF RF",
+      "width": "",
+      "is_bus": false,
+      "direction": "right",
+      "annotations": [],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_39",
+      "from_module": "mipi_vision_miralink_miracast",
+      "from_port": "i2c",
+      "to_module": "i2c_block_out1",
+      "to_port": "input",
+      "signal_name": "I2C",
+      "width": "",
+      "is_bus": false,
+      "direction": "down-right",
+      "annotations": [],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_40",
+      "from_module": "mipi_vision_miralink_miracast",
+      "from_port": "i2c_2",
+      "to_module": "i2c_block_out2",
+      "to_port": "input",
+      "signal_name": "I2C",
+      "width": "",
+      "is_bus": false,
+      "direction": "down-right",
+      "annotations": [],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_41",
+      "from_module": "mipi_vision_miralink_miracast",
+      "from_port": "mipi_dsi",
+      "to_module": "mipi_dsi_block",
+      "to_port": "input",
+      "signal_name": "MIPI DSI",
+      "width": "",
+      "is_bus": false,
+      "direction": "down",
+      "annotations": [],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_42",
+      "from_module": "i2c_block_bottom",
+      "from_port": "input",
+      "to_module": "peripherals",
+      "to_port": "i2c_out",
+      "signal_name": "I2C",
+      "width": "",
+      "is_bus": false,
+      "direction": "down",
+      "annotations": [],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_1",
+      "from_module": "mt6605",
+      "from_port": "output",
+      "to_module": "gpio_interface",
+      "to_port": "input",
+      "signal_name": "",
+      "width": "",
+      "is_bus": false,
+      "direction": "right",
+      "annotations": [],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_2",
+      "from_module": "mt6605",
+      "from_port": "output",
+      "to_module": "i2c_interface",
+      "to_port": "input",
+      "signal_name": "",
+      "width": "",
+      "is_bus": false,
+      "direction": "right",
+      "annotations": [],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_3",
+      "from_module": "gpio_interface",
+      "from_port": "output",
+      "to_module": "gpio_external",
+      "to_port": "input",
+      "signal_name": "GPIO",
+      "width": "",
+      "is_bus": false,
+      "direction": "up",
+      "annotations": [],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_4",
+      "from_module": "simcard1",
+      "from_port": "output",
+      "to_module": "sim_interface",
+      "to_port": "input",
+      "signal_name": "",
+      "width": "",
+      "is_bus": false,
+      "direction": "right",
+      "annotations": [],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_5",
+      "from_module": "simcard2",
+      "from_port": "output",
+      "to_module": "sim_interface",
+      "to_port": "input",
+      "signal_name": "",
+      "width": "",
+      "is_bus": false,
+      "direction": "right",
+      "annotations": [],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_6",
+      "from_module": "emulator_port",
+      "from_port": "output",
+      "to_module": "jtag_interface",
+      "to_port": "input",
+      "signal_name": "",
+      "width": "",
+      "is_bus": false,
+      "direction": "right",
+      "annotations": [],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_7",
+      "from_module": "mt6176",
+      "from_port": "output",
+      "to_module": "rf_if_interface",
+      "to_port": "input",
+      "signal_name": "",
+      "width": "",
+      "is_bus": false,
+      "direction": "right",
+      "annotations": [],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_8",
+      "from_module": "lpddr3_133mhz_elpida",
+      "from_port": "data",
+      "to_module": "em_block",
+      "to_port": "input",
+      "signal_name": "",
+      "width": "",
+      "is_bus": true,
+      "direction": "down",
+      "annotations": [],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_13",
+      "from_module": "arm_cortex_a72_mpcore_1",
+      "from_port": "cache",
+      "to_module": "l2_cache_1",
+      "to_port": "input",
+      "signal_name": "",
+      "width": "",
+      "is_bus": true,
+      "direction": "up",
+      "annotations": [],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_14",
+      "from_module": "arm_cortex_a53_mpcore_1",
+      "from_port": "cache",
+      "to_module": "l2_cache_2",
+      "to_port": "input",
+      "signal_name": "",
+      "width": "",
+      "is_bus": true,
+      "direction": "up",
+      "annotations": [],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_15",
+      "from_module": "arm_cortex_a53_mpcore_2",
+      "from_port": "cache",
+      "to_module": "l2_cache_3",
+      "to_port": "input",
+      "signal_name": "",
+      "width": "",
+      "is_bus": true,
+      "direction": "up",
+      "annotations": [],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_16",
+      "from_module": "hevc_block",
+      "from_port": "output",
+      "to_module": "mipi_csi2_1",
+      "to_port": "input",
+      "signal_name": "MIPI CSI-2",
+      "width": "",
+      "is_bus": false,
+      "direction": "right",
+      "annotations": [],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_17",
+      "from_module": "hevc_block",
+      "from_port": "output",
+      "to_module": "mipi_csi2_2",
+      "to_port": "input",
+      "signal_name": "MIPI CSI-2",
+      "width": "",
+      "is_bus": false,
+      "direction": "right",
+      "annotations": [],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_18",
+      "from_module": "hevc_block",
+      "from_port": "output",
+      "to_module": "mipi_csi2_3",
+      "to_port": "input",
+      "signal_name": "MIPI CSI-2",
+      "width": "",
+      "is_bus": false,
+      "direction": "right",
+      "annotations": [],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_19",
+      "from_module": "mipi_csi2_1",
+      "from_port": "output",
+      "to_module": "mt6351",
+      "to_port": "input",
+      "signal_name": "",
+      "width": "",
+      "is_bus": false,
+      "direction": "right",
+      "annotations": [],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_20",
+      "from_module": "mt6351",
+      "from_port": "rtc",
+      "to_module": "rtc",
+      "to_port": "input",
+      "signal_name": "",
+      "width": "",
+      "is_bus": false,
+      "direction": "down",
+      "annotations": [],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_21",
+      "from_module": "mt6351",
+      "from_port": "audio",
+      "to_module": "audio",
+      "to_port": "input",
+      "signal_name": "",
+      "width": "",
+      "is_bus": false,
+      "direction": "down",
+      "annotations": [],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_22",
+      "from_module": "audio",
+      "from_port": "output",
+      "to_module": "speakers",
+      "to_port": "input",
+      "signal_name": "",
+      "width": "",
+      "is_bus": false,
+      "direction": "down",
+      "annotations": [],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_23",
+      "from_module": "microphones",
+      "from_port": "output",
+      "to_module": "audio",
+      "to_port": "input",
+      "signal_name": "",
+      "width": "",
+      "is_bus": false,
+      "direction": "up",
+      "annotations": [],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_24",
+      "from_module": "mt6351",
+      "from_port": "vibrator",
+      "to_module": "vibrator",
+      "to_port": "input",
+      "signal_name": "",
+      "width": "",
+      "is_bus": false,
+      "direction": "down",
+      "annotations": [],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_26",
+      "from_module": "mt6797",
+      "from_port": "i2c",
+      "to_module": "da9214",
+      "to_port": "input",
+      "signal_name": "I2C",
+      "width": "",
+      "is_bus": false,
+      "direction": "right",
+      "annotations": [],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_27",
+      "from_module": "mt6797",
+      "from_port": "i2c",
+      "to_module": "fan53555",
+      "to_port": "input",
+      "signal_name": "I2C",
+      "width": "",
+      "is_bus": false,
+      "direction": "right",
+      "annotations": [],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_29",
+      "from_module": "mt6797",
+      "from_port": "mipi_dsi",
+      "to_module": "mipi_dsi_2",
+      "to_port": "input",
+      "signal_name": "MIPI DSI",
+      "width": "",
+      "is_bus": false,
+      "direction": "down",
+      "annotations": [],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_30",
+      "from_module": "mipi_dsi_1",
+      "from_port": "output",
+      "to_module": "lcdi",
+      "to_port": "input",
+      "signal_name": "LCDI",
+      "width": "",
+      "is_bus": false,
+      "direction": "right",
+      "annotations": [],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_31",
+      "from_module": "mnl_bridge",
+      "from_port": "output",
+      "to_module": "hd_hdtv",
+      "to_port": "input",
+      "signal_name": "3D HDTV",
+      "width": "",
+      "is_bus": false,
+      "direction": "right",
+      "annotations": [],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_32",
+      "from_module": "rf_if_interface",
+      "from_port": "output",
+      "to_module": "rf_if_output",
+      "to_port": "input",
+      "signal_name": "RF IF",
+      "width": "",
+      "is_bus": false,
+      "direction": "down",
+      "annotations": [],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_33",
+      "from_module": "rf_if_output",
+      "from_port": "output",
+      "to_module": "mt6631",
+      "to_port": "input",
+      "signal_name": "",
+      "width": "",
+      "is_bus": false,
+      "direction": "down",
+      "annotations": [],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_34",
+      "from_module": "i2c_output",
+      "from_port": "output",
+      "to_module": "touch_screen_controller",
+      "to_port": "input",
+      "signal_name": "I2C",
+      "width": "",
+      "is_bus": false,
+      "direction": "down",
+      "annotations": [],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_35",
+      "from_module": "32mhz_crystal",
+      "from_port": "output",
+      "to_module": "mt6351",
+      "to_port": "clock",
+      "signal_name": "",
+      "width": "",
+      "is_bus": false,
+      "direction": "left",
+      "annotations": [],
+      "confidence": 0.3333333333333333
+    }
+  ],
+  "ports": [
+    {
+      "name": "GPIO",
+      "direction": "inout",
+      "width": "",
+      "connected_to": "gpio_interface",
+      "description": "General Purpose I/O",
+      "confidence": 1.0
+    },
+    {
+      "name": "LPDDR3/LPDDR4",
+      "direction": "inout",
+      "width": "",
+      "connected_to": "lpddr3_933mhz_lpddr4",
+      "description": "External DRAM interface",
+      "confidence": 0.3333333333333333
+    },
+    {
+      "name": "eMMC5.1",
+      "direction": "inout",
+      "width": "",
+      "connected_to": "mmc_block",
+      "description": "eMMC 5.1 storage interface",
+      "confidence": 1.0
+    },
+    {
+      "name": "SD 3.0",
+      "direction": "inout",
+      "width": "",
+      "connected_to": "sdio_block",
+      "description": "SD 3.0 card interface",
+      "confidence": 1.0
+    },
+    {
+      "name": "USB FS/HS Host/Device",
+      "direction": "inout",
+      "width": "",
+      "connected_to": "usb_fshs_hostdevice",
+      "description": "USB 2.0 interface",
+      "confidence": 1.0
+    },
+    {
+      "name": "USB FS/HS device",
+      "direction": "inout",
+      "width": "",
+      "connected_to": "usb_fshs_device",
+      "description": "USB 3.0 interface",
+      "confidence": 1.0
+    },
+    {
+      "name": "SIMCARD1",
+      "direction": "inout",
+      "width": "",
+      "connected_to": "simcard1",
+      "description": "SIM card 1 interface",
+      "confidence": 1.0
+    },
+    {
+      "name": "SIMCARD2",
+      "direction": "inout",
+      "width": "",
+      "connected_to": "simcard2",
+      "description": "SIM card 2 interface",
+      "confidence": 1.0
+    },
+    {
+      "name": "Emulator Port",
+      "direction": "inout",
+      "width": "",
+      "connected_to": "jtag_interface",
+      "description": "JTAG debug/emulator port",
+      "confidence": 0.6666666666666666
+    },
+    {
+      "name": "MIPI CSI-2",
+      "direction": "input",
+      "width": "",
+      "connected_to": "image_processor",
+      "description": "Camera interfaces (3x)",
+      "confidence": 0.6666666666666666
+    },
+    {
+      "name": "MIPI CSI-2 (2)",
+      "direction": "output",
+      "width": "",
+      "connected_to": "mipi_csi2_2",
+      "description": "Camera interface 2",
+      "confidence": 0.6666666666666666
+    },
+    {
+      "name": "MIPI CSI-2 (3)",
+      "direction": "output",
+      "width": "",
+      "connected_to": "mipi_csi2_3",
+      "description": "Camera interface 3",
+      "confidence": 0.6666666666666666
+    },
+    {
+      "name": "32Mhz Crystal",
+      "direction": "input",
+      "width": "",
+      "connected_to": "32mhz_crystal",
+      "description": "32MHz crystal oscillator",
+      "confidence": 0.3333333333333333
+    },
+    {
+      "name": "Battery",
+      "direction": "input",
+      "width": "",
+      "connected_to": "battery",
+      "description": "Battery power input",
+      "confidence": 1.0
+    },
+    {
+      "name": "HD HDTV",
+      "direction": "output",
+      "width": "",
+      "connected_to": "hd_hdtv",
+      "description": "HDTV output",
+      "confidence": 0.3333333333333333
+    },
+    {
+      "name": "LPDDR3",
+      "direction": "inout",
+      "width": "",
+      "connected_to": "lpddr3_333mhz",
+      "description": "LPDDR3 memory interface",
+      "confidence": 0.6666666666666666
+    },
+    {
+      "name": "Emulation Port",
+      "direction": "inout",
+      "width": "",
+      "connected_to": "emulation_port",
+      "description": "Debug/emulation interface",
+      "confidence": 0.3333333333333333
+    },
+    {
+      "name": "MIPI CSI-2 (1)",
+      "direction": "input",
+      "width": "",
+      "connected_to": "mipi_csi2",
+      "description": "Camera interface 1",
+      "confidence": 0.3333333333333333
+    },
+    {
+      "name": "32MHz Crystal",
+      "direction": "input",
+      "width": "",
+      "connected_to": "32mhz_crystal",
+      "description": "32MHz clock crystal",
+      "confidence": 0.3333333333333333
+    },
+    {
+      "name": "LCDI",
+      "direction": "output",
+      "width": "",
+      "connected_to": "display_engine",
+      "description": "LCD interface",
+      "confidence": 0.6666666666666666
+    },
+    {
+      "name": "3D HDTV",
+      "direction": "output",
+      "width": "",
+      "connected_to": "mnl_bridge",
+      "description": "HDTV output",
+      "confidence": 0.6666666666666666
+    },
+    {
+      "name": "BT RF",
+      "direction": "output",
+      "width": "",
+      "connected_to": "bt_rf",
+      "description": "Bluetooth RF output",
+      "confidence": 0.3333333333333333
+    },
+    {
+      "name": "GPS RF",
+      "direction": "output",
+      "width": "",
+      "connected_to": "gps_rf",
+      "description": "GPS RF output",
+      "confidence": 0.3333333333333333
+    },
+    {
+      "name": "FM RF",
+      "direction": "output",
+      "width": "",
+      "connected_to": "fm_rf",
+      "description": "FM RF output",
+      "confidence": 0.3333333333333333
+    },
+    {
+      "name": "WiFi RF",
+      "direction": "output",
+      "width": "",
+      "connected_to": "wifi_rf",
+      "description": "WiFi RF output",
+      "confidence": 0.3333333333333333
+    },
+    {
+      "name": "EDGE/GPRS RF",
+      "direction": "input",
+      "width": "",
+      "connected_to": "edge_gprs_rf",
+      "description": "EDGE/GPRS RF input",
+      "confidence": 0.3333333333333333
+    },
+    {
+      "name": "WCDMA RF",
+      "direction": "input",
+      "width": "",
+      "connected_to": "wcdma_rf",
+      "description": "WCDMA RF input",
+      "confidence": 0.3333333333333333
+    },
+    {
+      "name": "LTE RF",
+      "direction": "input",
+      "width": "",
+      "connected_to": "lte_rf",
+      "description": "LTE RF input",
+      "confidence": 0.3333333333333333
+    },
+    {
+      "name": "CDMA RF",
+      "direction": "input",
+      "width": "",
+      "connected_to": "cdma_rf",
+      "description": "CDMA RF input",
+      "confidence": 0.3333333333333333
+    },
+    {
+      "name": "MIPI DSI",
+      "direction": "output",
+      "width": "",
+      "connected_to": "display_engine",
+      "description": "Display interfaces (2x)",
+      "confidence": 0.3333333333333333
+    },
+    {
+      "name": "I2C",
+      "direction": "inout",
+      "width": "",
+      "connected_to": "mt6797",
+      "description": "I2C bus",
+      "confidence": 0.3333333333333333
+    },
+    {
+      "name": "RF IF",
+      "direction": "inout",
+      "width": "",
+      "connected_to": "mt6176",
+      "description": "RF interface",
+      "confidence": 0.3333333333333333
+    },
+    {
+      "name": "Speakers",
+      "direction": "output",
+      "width": "",
+      "connected_to": "audio",
+      "description": "Speaker outputs",
+      "confidence": 0.3333333333333333
+    },
+    {
+      "name": "Microphones",
+      "direction": "input",
+      "width": "",
+      "connected_to": "audio",
+      "description": "Microphone inputs",
+      "confidence": 0.3333333333333333
+    },
+    {
+      "name": "Vibrator",
+      "direction": "output",
+      "width": "",
+      "connected_to": "mt6351",
+      "description": "Vibrator motor control",
+      "confidence": 0.3333333333333333
+    }
+  ],
+  "annotations": [
+    {
+      "type": "label",
+      "content": "MT6797",
+      "location": "Center of main SoC block",
+      "related_to": "mt6797"
+    },
+    {
+      "type": "label",
+      "content": "HELIO X20",
+      "location": "Right side product branding",
+      "related_to": "helio_x20"
+    },
+    {
+      "type": "label",
+      "content": "AXI 64/128 bits interconnection",
+      "location": "Center of SoC, main interconnect bus",
+      "related_to": "axi_interconnect"
+    },
+    {
+      "type": "label",
+      "content": "25MPxel Image Signal Processor",
+      "location": "Right side of SoC core",
+      "related_to": "image_processor"
+    },
+    {
+      "type": "label",
+      "content": "2160P Video Codec",
+      "location": "Right side of SoC core, below ISP",
+      "related_to": "video_codec"
+    },
+    {
+      "type": "label",
+      "content": "WQHD2560x14 (4) Display Engine MiraVision\u2122 Technology",
+      "location": "Lower right of SoC core",
+      "related_to": "display_engine"
+    },
+    {
+      "type": "label",
+      "content": "Security Engine",
+      "location": "Center-right of SoC core",
+      "related_to": "security_engine"
+    },
+    {
+      "type": "label",
+      "content": "HiFi Audio Processor",
+      "location": "Center of SoC core",
+      "related_to": "hifi_audio_processor"
+    },
+    {
+      "type": "label",
+      "content": "Peripherals",
+      "location": "Lower center of SoC core",
+      "related_to": "peripherals"
+    },
+    {
+      "type": "label",
+      "content": "8TxCSI-E",
+      "location": "Center of SoC, above AXI interconnect",
+      "related_to": "8txcsi_e"
+    },
+    {
+      "type": "label",
+      "content": "GPS/Glonass/Beidou",
+      "location": "Center-left of SoC core",
+      "related_to": "gps_glonass_beidou"
+    },
+    {
+      "type": "label",
+      "content": "FM TRX",
+      "location": "Center-left of SoC core",
+      "related_to": "fm_trx"
+    },
+    {
+      "type": "label",
+      "content": "WiFi 11ac/nac",
+      "location": "Center-left of SoC core",
+      "related_to": "wifi_11ac_nac"
+    },
+    {
+      "type": "label",
+      "content": "TD HSPA+ R9",
+      "location": "Left side of SoC core",
+      "related_to": "td_hspa_r9"
+    },
+    {
+      "type": "label",
+      "content": "UMTS HSPA+ R8/4",
+      "location": "Left-center of SoC core",
+      "related_to": "umts_hspa_r8"
+    },
+    {
+      "type": "label",
+      "content": "TDD/FDD R9 CAT6 LTE",
+      "location": "Center-left of SoC core",
+      "related_to": "tdd_fdd_r9_cat6_lte"
+    },
+    {
+      "type": "label",
+      "content": "Quad Band EDGE/GPRS",
+      "location": "Lower left of SoC core",
+      "related_to": "quad_band_edge_gprs"
+    },
+    {
+      "type": "label",
+      "content": "CDMA",
+      "location": "Lower center-left of SoC core",
+      "related_to": "cdma"
+    },
+    {
+      "type": "label",
+      "content": "ARM9 Cortex-A72 MPCore",
+      "location": "Upper left of SoC core",
+      "related_to": "arm9_cortex_a72_mpcore"
+    },
+    {
+      "type": "label",
+      "content": "ARM9 Cortex-A53 MPCore",
+      "location": "Upper center-left of SoC core",
+      "related_to": "arm9_cortex_a53_mpcore"
+    },
+    {
+      "type": "label",
+      "content": "ARM9 Cortex-A53 MPCore 3D Graphics",
+      "location": "Upper center of SoC core",
+      "related_to": "arm9_cortex_a53_mpcore_3d"
+    },
+    {
+      "type": "label",
+      "content": "ARM9 CortexR4",
+      "location": "Upper center-right of SoC core",
+      "related_to": "arm9_cortexr4"
+    },
+    {
+      "type": "label",
+      "content": "L2 cache",
+      "location": "Above ARM Cortex-A72 cluster",
+      "related_to": "l2_cache_1"
+    },
+    {
+      "type": "label",
+      "content": "MCI5i-A",
+      "location": "Left side of SoC core, interconnect",
+      "related_to": "mci5i_a"
+    },
+    {
+      "type": "text",
+      "content": "25MPxiel Image Signal Processor",
+      "location": "Right side of MT6797, upper section",
+      "related_to": "image_signal_processor"
+    },
+    {
+      "type": "text",
+      "content": "WQHD2560x14 (4)",
+      "location": "Right side of MT6797, lower section",
+      "related_to": "wqhd2560x14_40"
+    },
+    {
+      "type": "text",
+      "content": "Display Engine MiraVision\u2122 MiraLink\u2122 Miracast",
+      "location": "Right side of MT6797, bottom section",
+      "related_to": "mipi_vision_miralink_miracast"
+    },
+    {
+      "type": "label",
+      "content": "GPS/Glonass Beidou",
+      "location": "Center of MT6797, modem section",
+      "related_to": "gpsdglonass_beidou"
+    },
+    {
+      "type": "label",
+      "content": "WiFi 11ac/n/a/b/g/n",
+      "location": "Center of MT6797, connectivity section",
+      "related_to": "wifi_11acnabgn"
+    },
+    {
+      "type": "label",
+      "content": "8Tx5.5",
+      "location": "Center of MT6797, modem section",
+      "related_to": "8txs_le"
+    },
+    {
+      "type": "label",
+      "content": "MCI-A",
+      "location": "Above AXI interconnect",
+      "related_to": "mci_a"
+    },
+    {
+      "type": "label",
+      "content": "ARM9 Mali-T880 MP4 3D Graphics",
+      "location": "GPU block in MT6797",
+      "related_to": "arm_mali_t880_mp4"
+    },
+    {
+      "type": "label",
+      "content": "UMTS HSPA+ R9",
+      "location": "Lower left-center modem block",
+      "related_to": "umts_hspa_r9"
+    },
+    {
+      "type": "label",
+      "content": "TDD/FDD R8 CAT5 LTE",
+      "location": "Lower center modem block",
+      "related_to": "tdd_fdd_r8_cat5_lte"
+    },
+    {
+      "type": "label",
+      "content": "8Tx3.5E",
+      "location": "Center connectivity block",
+      "related_to": "8txcse"
+    },
+    {
+      "type": "label",
+      "content": "HEVC",
+      "location": "Right side codec block",
+      "related_to": "hevc_block"
+    },
+    {
+      "type": "label",
+      "content": "MT6605 NFC Controller",
+      "location": "Top left external chip",
+      "related_to": "mt6605"
+    },
+    {
+      "type": "label",
+      "content": "MT6176 EDGE/GPRS RF",
+      "location": "Left side RF chip",
+      "related_to": "mt6176"
+    },
+    {
+      "type": "label",
+      "content": "MT6631",
+      "location": "Bottom center connectivity chip",
+      "related_to": "mt6631"
+    },
+    {
+      "type": "label",
+      "content": "MT6351",
+      "location": "Right side PMIC",
+      "related_to": "mt6351"
+    },
+    {
+      "type": "label",
+      "content": "DA9214",
+      "location": "Right side power regulator",
+      "related_to": "da9214"
+    },
+    {
+      "type": "label",
+      "content": "FAN53555",
+      "location": "Right side power regulator",
+      "related_to": "fan53555"
+    },
+    {
+      "type": "label",
+      "content": "32Mhz Crystal",
+      "location": "Far right oscillator",
+      "related_to": "32mhz_crystal"
+    },
+    {
+      "type": "label",
+      "content": "LPDDR3 @133MHz(ELPIDA)",
+      "location": "Top external memory",
+      "related_to": "lpddr3_133mhz_elpida"
+    },
+    {
+      "type": "label",
+      "content": "eMMC5.1",
+      "location": "Top external storage",
+      "related_to": "emmc51"
+    },
+    {
+      "type": "label",
+      "content": "SD 3.0",
+      "location": "Top external storage",
+      "related_to": "sd30"
+    },
+    {
+      "type": "label",
+      "content": "USB FS/HS Host/Device",
+      "location": "Top external USB",
+      "related_to": "usb_fshs_hostdevice"
+    },
+    {
+      "type": "label",
+      "content": "USB FS/HS device",
+      "location": "Top external USB",
+      "related_to": "usb_fshs_device"
+    },
+    {
+      "type": "note",
+      "content": "Green background indicates main MT6797 SoC area",
+      "location": "Main central area",
+      "related_to": "mt6797"
+    },
+    {
+      "type": "note",
+      "content": "Blue blocks indicate MediaTek branded external chips",
+      "location": "External chips with MediaTek logo",
+      "related_to": ""
+    },
+    {
+      "type": "note",
+      "content": "Orange/yellow blocks indicate MediaTek branded components",
+      "location": "Various MediaTek branded blocks",
+      "related_to": ""
+    }
+  ],
+  "hierarchy": {
+    "top_level_module": "MT6797",
+    "submodules": [
+      "GPIO",
+      "I2C",
+      "EMI",
+      "MMC",
+      "SDIO",
+      "USB 2.0",
+      "USB 3.0",
+      "SIM",
+      "JTAG",
+      "ARM9 Cortex-A72 MPCore",
+      "ARM9 Cortex-A53 MPCore",
+      "ARM9 Cortex-A53 MPCore 3D Graphics",
+      "ARM9 CortexR4",
+      "L2 cache",
+      "MCI5i-A",
+      "AXI 64/128 bits interconnection",
+      "TD HSPA+ R9",
+      "UMTS HSPA+ R8/4",
+      "TDD/FDD R9 CAT6 LTE",
+      "8TxCSI-E",
+      "Security Engine",
+      "Quad Band EDGE/GPRS",
+      "CDMA",
+      "GPS/Glonass/Beidou",
+      "FM TRX",
+      "WiFi 11ac/nac",
+      "HiFi Audio Processor",
+      "Peripherals",
+      "25MPxel Image Signal Processor",
+      "2160P Video Codec",
+      "WQHD2560x14 (4) Display Engine MiraVision\u2122 Technology",
+      "MIPI CSI-2",
+      "MIPI DSI",
+      "RTC",
+      "Audio",
+      "Speakers",
+      "Microphones",
+      "Vibrator"
+    ],
+    "interfaces": [
+      "AXI",
+      "MIPI CSI-2",
+      "MIPI DSI",
+      "I2C",
+      "USB 2.0",
+      "USB 3.0",
+      "eMMC",
+      "SD",
+      "SDIO"
+    ]
+  },
+  "metadata": {
+    "merge_strategy": "consensus_with_union",
+    "sources_count": 3,
+    "total_modules": 97,
+    "total_connections": 112,
+    "ambiguities": [
+      "Exact pinout and pin counts not specified",
+      "The '8Tx5.5' label meaning is unclear",
+      "Some signal routing between blocks is implicit",
+      "WQHD2560x14 (4) - the '(4)' meaning is unclear",
+      "Some internal routing within MT6797 not fully detailed",
+      "Clock distribution not fully specified",
+      "Reset network not shown",
+      "Some connection paths between internal blocks may be simplified",
+      "Some peripheral connections to external components may be abstracted",
+      "Internal connections between modem blocks and RF interface not fully detailed",
+      "Exact bit widths for most internal buses not specified",
+      "Some internal connections within MT6797 are not explicitly shown",
+      "Clock distribution not fully detailed",
+      "Power distribution network not detailed",
+      "Exact bit widths for most buses not specified",
+      "Some signal names abbreviated or unclear (e.g., '8Tx3.5E')",
+      "Clock distribution network not shown",
+      "Power distribution network not shown",
+      "Exact bit widths not specified for most connections",
+      "Power management connections not fully detailed"
+    ]
+  },
+  "validation": {
+    "valid": false,
+    "issues": [
+      "Duplicate module IDs detected",
+      "Connection 0: to_module i2c not found",
+      "Connection 1: to_module gpio1 not found",
+      "Connection 2: to_module emi not found",
+      "Connection 4: from_module sd_3_0 not found",
+      "Connection 7: to_module sim not found",
+      "Connection 8: to_module sim not found",
+      "Connection 9: to_module jtag not found",
+      "Connection 13: to_module rf_rf not found",
+      "Connection 14: to_module rf_rf not found",
+      "Connection 15: to_module rf_rf not found",
+      "Connection 16: from_module rf_rf not found",
+      "Connection 17: from_module i2c_1 not found",
+      "Connection 22: from_module i2c_1 not found",
+      "Connection 23: to_module mipi_csi2 not found",
+      "Connection 25: to_module mipi_csi2_3 not found",
+      "Connection 26: from_module mipi_csi2 not found",
+      "Connection 28: from_module mipi_csi2_3 not found",
+      "Connection 29: to_module rtc not found",
+      "Connection 30: to_module audio not found",
+      "Connection 31: to_module speakers not found",
+      "Connection 32: to_module microphones not found",
+      "Connection 33: to_module vibrator not found",
+      "Connection 34: from_module rtc not found",
+      "Connection 35: from_module vibrator not found",
+      "Connection 36: to_module i2c_2 not found",
+      "Connection 38: from_module i2c_2 not found",
+      "Connection 40: to_module mipi_dsi not found",
+      "Connection 45: to_module i2c_block not found",
+      "Connection 46: to_module gpio_block not found",
+      "Connection 48: from_module emmc51 not found",
+      "Connection 48: to_module mmc_block not found",
+      "Connection 49: to_module sdio_block not found",
+      "Connection 50: to_module usb20_block not found",
+      "Connection 51: to_module usb30_block not found",
+      "Connection 52: to_module sim_block not found",
+      "Connection 53: to_module sim_block not found",
+      "Connection 54: to_module jtag_block not found",
+      "Connection 55: to_module mipi_csi2 not found",
+      "Connection 57: to_module mipi_csi2_3 not found",
+      "Connection 67: from_module i2c_block_out1 not found",
+      "Connection 68: from_module i2c_block_out2 not found",
+      "Connection 69: from_module mipi_dsi_block not found",
+      "Connection 70: from_module rf_rf_block not found",
+      "Connection 71: from_module i2c_block_bottom not found",
+      "Connection 73: from_module mipi_dsi_block not found",
+      "Connection 79: to_module i2c_block_out1 not found",
+      "Connection 80: to_module i2c_block_out2 not found",
+      "Connection 81: to_module mipi_dsi_block not found",
+      "Connection 82: from_module i2c_block_bottom not found",
+      "Connection 83: to_module gpio_interface not found",
+      "Connection 84: to_module i2c_interface not found",
+      "Connection 85: from_module gpio_interface not found",
+      "Connection 85: to_module gpio_external not found",
+      "Connection 89: to_module rf_if_interface not found",
+      "Connection 91: to_module l2_cache_1 not found",
+      "Connection 93: from_module arm_cortex_a53_mpcore_2 not found",
+      "Connection 93: to_module l2_cache_3 not found",
+      "Connection 94: to_module mipi_csi2_1 not found",
+      "Connection 96: to_module mipi_csi2_3 not found",
+      "Connection 97: from_module mipi_csi2_1 not found",
+      "Connection 98: to_module rtc not found",
+      "Connection 99: to_module audio not found",
+      "Connection 100: from_module audio not found",
+      "Connection 100: to_module speakers not found",
+      "Connection 101: from_module microphones not found",
+      "Connection 101: to_module audio not found",
+      "Connection 102: to_module vibrator not found",
+      "Connection 105: to_module mipi_dsi_2 not found",
+      "Connection 108: from_module rf_if_interface not found",
+      "Connection 110: from_module i2c_output not found"
+    ],
+    "warnings": [
+      "Isolated modules (no connections): {'mci5i_a', 'hifi_audio_processor', 'umts_hsdpa_hspa_r8', 'axi_interconnect', '8txs_le', 'arm9_cortexr4', 'arm_cortex_a72_mpcore', 'fm_trx', '8txcsi_e', 'gps_glonass_beidou', 'quad_band_edge_gprs', 'td_hsdpa_r9', 'image_processor', 'tdd_fdd_r8_cat5_lte', 'security_engine', 'wqhd2560x14_40', 'wifi_11acnabgn', 'arm_mali_t880mp4_3d', '8txcse', 'display_engine', 'wifi_11ac_nac', 'mci_a', 'td_hspa_r9', 'tdd_fdd_r9_cat6_lte', 'gpsdglonass_beidou', 'arm9_cortex_a53_mpcore_3d', 'cdma', 'umts_hspa_r9', 'arm_mali_t880_mp4', 'umts_hspa_r8'}"
+    ],
+    "stats": {
+      "modules": 97,
+      "connections": 112,
+      "ports": 35
+    }
+  }
+}

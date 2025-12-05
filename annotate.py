@@ -1,19 +1,49 @@
 import base64
 import json
+import re
 from openai import OpenAI
-from typing import List, Dict, Any,Optional
+from typing import List, Dict, Any, Optional
 from pathlib import Path
 import time
 import os
+from dotenv import load_dotenv
+
+
+def clean_json_string(json_str: str) -> str:
+    """Clean common JSON issues from LLM responses."""
+    # Remove trailing commas before } or ]
+    json_str = re.sub(r',\s*([}\]])', r'\1', json_str)
+    # Remove comments (// style)
+    json_str = re.sub(r'//.*$', '', json_str, flags=re.MULTILINE)
+    # Remove comments (/* */ style)
+    json_str = re.sub(r'/\*.*?\*/', '', json_str, flags=re.DOTALL)
+    # Fix unquoted property names (simple cases)
+    json_str = re.sub(r'([{,]\s*)(\w+)(\s*:)', r'\1"\2"\3', json_str)
+    return json_str
 
 class BlockDiagramAnnotator:
-    def __init__(self, api_key: str):
+    def __init__(self, api_key: str = None):
+        # Load from .env file if it exists
+        load_dotenv()
+        
+        # Use provided api_key, fall back to environment variable
+        final_api_key = api_key or os.getenv("OPENROUTER_API_KEY")
+        
+        if not final_api_key:
+            raise ValueError(
+                "API key not provided. Please either:\n"
+                "  1. Pass api_key parameter to BlockDiagramAnnotator\n"
+                "  2. Set OPENROUTER_API_KEY environment variable\n"
+                "  3. Create a .env file with OPENROUTER_API_KEY=your-key"
+            )
+        
         self.client = OpenAI(
             base_url="https://openrouter.ai/api/v1",
-            api_key=api_key or os.getenv("OPENROUTER_API_KEY")
+            api_key=final_api_key
         )
         self.primary_model = "anthropic/claude-sonnet-4.5"
         self.secondary_model = "openai/gpt-5.1"
+        self.tertiary_model = "mistral/mistral-7b-instruct-v0.1"
 
     def encode_image(self, image_path: str) -> str:
         with open(image_path, "rb") as image_file:
@@ -167,14 +197,29 @@ Final verification pass. Focus on:
                     }
                 ],
                 temperature=0.1,
-                max_tokens=5000,
+                max_tokens=16000,
             )
             content = response.choices[0].message.content
+            
+            # Check if response was truncated
+            finish_reason = response.choices[0].finish_reason
+            if finish_reason == "length":
+                print(f"  Warning: Response truncated due to max_tokens limit")
+            
             if "```json" in content:
-                json_split = content.split("```json")[1].split("```")[0].strip()
+                content = content.split("```json")[1].split("```")[0].strip()
             elif "```" in content:
-                json_split = content.split("```")[1].split("```")[0].strip()
-            return json.loads(json_split)
+                content = content.split("```")[1].split("```")[0].strip()
+            
+            # Clean common JSON issues from LLM responses
+            content = clean_json_string(content)
+            
+            try:
+                return json.loads(content)
+            except json.JSONDecodeError as je:
+                print(f"  JSON parse error at position {je.pos}: {je.msg}")
+                print(f"  Problematic content around error: ...{content[max(0, je.pos-50):je.pos+50]}...")
+                return None
     
         except Exception as e:
             print(f"Error with model {model} on pass {pass_number}: {e}")
@@ -348,7 +393,7 @@ Final verification pass. Focus on:
         self,
         image_path: str,
         multi_pass: bool = True,
-        multi_model: bool = True,
+        multi_model: bool = False,
         save_intermediate: bool = False
     ) -> Dict:
         """
@@ -398,8 +443,9 @@ Final verification pass. Focus on:
                         json.dump(annotation, f, indent=2)
                     print(f"Saved intermediate result to {output_file}")
 
-            print(f" Connections found: {len(annotation.get('connections', []))}")
-            print(f" Modules found: {len(annotation.get('modules', []))}")
+            if annotation:
+                print(f" Connections found: {len(annotation.get('connections', []))}")
+                print(f" Modules found: {len(annotation.get('modules', []))}")
 
             # Rate limiting / cooling period between calls
             if pass_num < passes or model_idx < len(models_to_use) - 1:
@@ -439,8 +485,8 @@ Final verification pass. Focus on:
         return final_annotation
 
 def main():
-    annotator = BlockDiagramAnnotator(api_key="your_openrouter_api_key_here")
-    image_path = "path_to_your_block_diagram_image.png"
+    annotator = BlockDiagramAnnotator()
+    image_path = "images/MT6797.png"
     result = annotator.annotate(
         image_path,
         multi_pass=True,
@@ -448,7 +494,7 @@ def main():
         save_intermediate=True
     )
     with open("final_annotation.json", "w") as f:
-        json.dump(annotation_result, f, indent=2)
+        json.dump(result, f, indent=2)
     print("Final annotation saved to final_annotation.json")
 
     # Optional: Pretty print a summary
