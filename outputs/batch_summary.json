@@ -1,0 +1,27 @@
+{
+  "timestamp": "2025-12-05T16:59:44.917352",
+  "duration_seconds": 2817.106137,
+  "settings": {
+    "multi_pass": true,
+    "multi_model": false,
+    "save_intermediate": true
+  },
+  "results": {
+    "processed": [
+      "MCP16502.png",
+      "MT6572.png",
+      "MT7620.png",
+      "MT7621.png",
+      "MT7931AN.png",
+      "MT7988A.png",
+      "MT8395.png",
+      "MX68GL1G0F.png",
+      "STM32f446mc.png",
+      "STM32L475xx.png"
+    ],
+    "skipped": [
+      "MT6797.png"
+    ],
+    "failed": []
+  }
+}

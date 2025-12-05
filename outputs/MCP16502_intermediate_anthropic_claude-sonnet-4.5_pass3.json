@@ -1,0 +1,1084 @@
+{
+  "modules": [
+    {
+      "id": "resistor_1",
+      "name": "40k\u03a9 Resistor",
+      "type": "resistor",
+      "position": {
+        "x": 90,
+        "y": 90
+      },
+      "parameters": {
+        "resistance": "40k\u03a9"
+      },
+      "description": "Pull-up/pull-down resistor between SVIN and nSTRT"
+    },
+    {
+      "id": "system_control",
+      "name": "SYSTEM CONTROL",
+      "type": "custom",
+      "position": {
+        "x": 290,
+        "y": 350
+      },
+      "parameters": {},
+      "description": "Main system control block managing all inputs and outputs"
+    },
+    {
+      "id": "serial_interface",
+      "name": "Serial Interface",
+      "type": "serial_interface",
+      "position": {
+        "x": 165,
+        "y": 640
+      },
+      "parameters": {},
+      "description": "Serial communication interface for SDA and SCL signals"
+    },
+    {
+      "id": "buck1",
+      "name": "Buck1",
+      "type": "power_converter",
+      "position": {
+        "x": 425,
+        "y": 95
+      },
+      "parameters": {},
+      "description": "Buck converter 1 with associated power outputs"
+    },
+    {
+      "id": "buck2",
+      "name": "Buck2",
+      "type": "power_converter",
+      "position": {
+        "x": 425,
+        "y": 225
+      },
+      "parameters": {},
+      "description": "Buck converter 2 with associated power outputs"
+    },
+    {
+      "id": "buck3",
+      "name": "Buck3",
+      "type": "power_converter",
+      "position": {
+        "x": 425,
+        "y": 365
+      },
+      "parameters": {},
+      "description": "Buck converter 3 with associated power outputs"
+    },
+    {
+      "id": "buck4",
+      "name": "Buck4",
+      "type": "power_converter",
+      "position": {
+        "x": 425,
+        "y": 505
+      },
+      "parameters": {},
+      "description": "Buck converter 4 with associated power outputs"
+    },
+    {
+      "id": "ldo1",
+      "name": "LDO1",
+      "type": "ldo_regulator",
+      "position": {
+        "x": 425,
+        "y": 625
+      },
+      "parameters": {},
+      "description": "Low dropout regulator 1"
+    },
+    {
+      "id": "ldo2",
+      "name": "LDO2",
+      "type": "ldo_regulator",
+      "position": {
+        "x": 425,
+        "y": 725
+      },
+      "parameters": {},
+      "description": "Low dropout regulator 2"
+    },
+    {
+      "id": "cap_nstrt",
+      "name": "nSTRT Capacitor",
+      "type": "capacitor",
+      "position": {
+        "x": 100,
+        "y": 380
+      },
+      "parameters": {},
+      "description": "Capacitor on nSTRT signal line"
+    },
+    {
+      "id": "cap_nint",
+      "name": "nINT Capacitor",
+      "type": "capacitor",
+      "position": {
+        "x": 100,
+        "y": 440
+      },
+      "parameters": {},
+      "description": "Capacitor on nINT signal line"
+    },
+    {
+      "id": "cap_nrst",
+      "name": "nRST Capacitor",
+      "type": "capacitor",
+      "position": {
+        "x": 100,
+        "y": 510
+      },
+      "parameters": {},
+      "description": "Capacitor on nRST signal line"
+    },
+    {
+      "id": "cap_sda",
+      "name": "SDA Capacitor",
+      "type": "capacitor",
+      "position": {
+        "x": 100,
+        "y": 610
+      },
+      "parameters": {},
+      "description": "Capacitor on SDA signal line"
+    }
+  ],
+  "connections": [
+    {
+      "id": "conn_1",
+      "from_module": "external",
+      "from_port": "SGND",
+      "to_module": "system_control",
+      "to_port": "SGND",
+      "signal_name": "SGND",
+      "width": "1",
+      "is_bus": false,
+      "direction": "input",
+      "annotations": [
+        "Ground signal"
+      ]
+    },
+    {
+      "id": "conn_2",
+      "from_module": "external",
+      "from_port": "SVIN",
+      "to_module": "resistor_1",
+      "to_port": "terminal1",
+      "signal_name": "SVIN",
+      "width": "1",
+      "is_bus": false,
+      "direction": "input",
+      "annotations": [
+        "Supply voltage input"
+      ]
+    },
+    {
+      "id": "conn_3",
+      "from_module": "resistor_1",
+      "from_port": "terminal2",
+      "to_module": "external",
+      "to_port": "nSTRT",
+      "signal_name": "nSTRT",
+      "width": "1",
+      "is_bus": false,
+      "direction": "input",
+      "annotations": [
+        "Start signal with 40k\u03a9 resistor"
+      ]
+    },
+    {
+      "id": "conn_4",
+      "from_module": "external",
+      "from_port": "nSTRT",
+      "to_module": "system_control",
+      "to_port": "nSTRT",
+      "signal_name": "nSTRT",
+      "width": "1",
+      "is_bus": false,
+      "direction": "input",
+      "annotations": [
+        "Start signal to system control"
+      ]
+    },
+    {
+      "id": "conn_5",
+      "from_module": "external",
+      "from_port": "PWRHLD",
+      "to_module": "system_control",
+      "to_port": "PWRHLD",
+      "signal_name": "PWRHLD",
+      "width": "1",
+      "is_bus": false,
+      "direction": "input",
+      "annotations": [
+        "Power hold signal"
+      ]
+    },
+    {
+      "id": "conn_6",
+      "from_module": "external",
+      "from_port": "LPM",
+      "to_module": "system_control",
+      "to_port": "LPM",
+      "signal_name": "LPM",
+      "width": "1",
+      "is_bus": false,
+      "direction": "input",
+      "annotations": [
+        "Low power mode signal"
+      ]
+    },
+    {
+      "id": "conn_7",
+      "from_module": "external",
+      "from_port": "HPM",
+      "to_module": "system_control",
+      "to_port": "HPM",
+      "signal_name": "HPM",
+      "width": "1",
+      "is_bus": false,
+      "direction": "input",
+      "annotations": [
+        "High power mode signal"
+      ]
+    },
+    {
+      "id": "conn_8",
+      "from_module": "external",
+      "from_port": "SELV2",
+      "to_module": "system_control",
+      "to_port": "SELV2",
+      "signal_name": "SELV2",
+      "width": "1",
+      "is_bus": false,
+      "direction": "input",
+      "annotations": [
+        "Select voltage 2 signal"
+      ]
+    },
+    {
+      "id": "conn_9",
+      "from_module": "external",
+      "from_port": "SELV1",
+      "to_module": "system_control",
+      "to_port": "SELV1",
+      "signal_name": "SELV1",
+      "width": "1",
+      "is_bus": false,
+      "direction": "input",
+      "annotations": [
+        "Select voltage 1 signal"
+      ]
+    },
+    {
+      "id": "conn_10",
+      "from_module": "external",
+      "from_port": "nSTRT",
+      "to_module": "cap_nstrt",
+      "to_port": "terminal1",
+      "signal_name": "nSTRT",
+      "width": "1",
+      "is_bus": false,
+      "direction": "bidirectional",
+      "annotations": [
+        "nSTRT with capacitor to ground"
+      ]
+    },
+    {
+      "id": "conn_11",
+      "from_module": "external",
+      "from_port": "nINT",
+      "to_module": "system_control",
+      "to_port": "nINT",
+      "signal_name": "nINT",
+      "width": "1",
+      "is_bus": false,
+      "direction": "output",
+      "annotations": [
+        "Interrupt signal output"
+      ]
+    },
+    {
+      "id": "conn_12",
+      "from_module": "external",
+      "from_port": "nINT",
+      "to_module": "cap_nint",
+      "to_port": "terminal1",
+      "signal_name": "nINT",
+      "width": "1",
+      "is_bus": false,
+      "direction": "bidirectional",
+      "annotations": [
+        "nINT with capacitor to ground"
+      ]
+    },
+    {
+      "id": "conn_13",
+      "from_module": "external",
+      "from_port": "nRST",
+      "to_module": "system_control",
+      "to_port": "nRST",
+      "signal_name": "nRST",
+      "width": "1",
+      "is_bus": false,
+      "direction": "output",
+      "annotations": [
+        "Reset signal output"
+      ]
+    },
+    {
+      "id": "conn_14",
+      "from_module": "external",
+      "from_port": "nRST",
+      "to_module": "cap_nrst",
+      "to_port": "terminal1",
+      "signal_name": "nRST",
+      "width": "1",
+      "is_bus": false,
+      "direction": "bidirectional",
+      "annotations": [
+        "nRST with capacitor to ground"
+      ]
+    },
+    {
+      "id": "conn_15",
+      "from_module": "external",
+      "from_port": "SDA",
+      "to_module": "serial_interface",
+      "to_port": "SDA",
+      "signal_name": "SDA",
+      "width": "1",
+      "is_bus": false,
+      "direction": "bidirectional",
+      "annotations": [
+        "Serial data line"
+      ]
+    },
+    {
+      "id": "conn_16",
+      "from_module": "external",
+      "from_port": "SDA",
+      "to_module": "cap_sda",
+      "to_port": "terminal1",
+      "signal_name": "SDA",
+      "width": "1",
+      "is_bus": false,
+      "direction": "bidirectional",
+      "annotations": [
+        "SDA with capacitor to ground"
+      ]
+    },
+    {
+      "id": "conn_17",
+      "from_module": "external",
+      "from_port": "SCL",
+      "to_module": "serial_interface",
+      "to_port": "SCL",
+      "signal_name": "SCL",
+      "width": "1",
+      "is_bus": false,
+      "direction": "input",
+      "annotations": [
+        "Serial clock line"
+      ]
+    },
+    {
+      "id": "conn_18",
+      "from_module": "serial_interface",
+      "from_port": "output",
+      "to_module": "system_control",
+      "to_port": "serial_input",
+      "signal_name": "serial_data",
+      "width": "1",
+      "is_bus": false,
+      "direction": "right",
+      "annotations": [
+        "Serial interface to system control"
+      ]
+    },
+    {
+      "id": "conn_19",
+      "from_module": "system_control",
+      "from_port": "buck1_out",
+      "to_module": "buck1",
+      "to_port": "control",
+      "signal_name": "buck1_ctrl",
+      "width": "1",
+      "is_bus": false,
+      "direction": "right",
+      "annotations": [
+        "Control signal to Buck1"
+      ]
+    },
+    {
+      "id": "conn_20",
+      "from_module": "buck1",
+      "from_port": "PVIN1",
+      "to_module": "external",
+      "to_port": "PVIN1",
+      "signal_name": "PVIN1",
+      "width": "1",
+      "is_bus": false,
+      "direction": "output",
+      "annotations": [
+        "Power input 1"
+      ]
+    },
+    {
+      "id": "conn_21",
+      "from_module": "buck1",
+      "from_port": "SW1",
+      "to_module": "external",
+      "to_port": "SW1",
+      "signal_name": "SW1",
+      "width": "1",
+      "is_bus": false,
+      "direction": "output",
+      "annotations": [
+        "Switch output 1"
+      ]
+    },
+    {
+      "id": "conn_22",
+      "from_module": "buck1",
+      "from_port": "PGND1",
+      "to_module": "external",
+      "to_port": "PGND1",
+      "signal_name": "PGND1",
+      "width": "1",
+      "is_bus": false,
+      "direction": "output",
+      "annotations": [
+        "Power ground 1"
+      ]
+    },
+    {
+      "id": "conn_23",
+      "from_module": "buck1",
+      "from_port": "OUT1",
+      "to_module": "external",
+      "to_port": "OUT1",
+      "signal_name": "OUT1",
+      "width": "1",
+      "is_bus": false,
+      "direction": "output",
+      "annotations": [
+        "Output 1"
+      ]
+    },
+    {
+      "id": "conn_24",
+      "from_module": "system_control",
+      "from_port": "buck2_out",
+      "to_module": "buck2",
+      "to_port": "control",
+      "signal_name": "buck2_ctrl",
+      "width": "1",
+      "is_bus": false,
+      "direction": "right",
+      "annotations": [
+        "Control signal to Buck2"
+      ]
+    },
+    {
+      "id": "conn_25",
+      "from_module": "buck2",
+      "from_port": "PVIN2",
+      "to_module": "external",
+      "to_port": "PVIN2",
+      "signal_name": "PVIN2",
+      "width": "1",
+      "is_bus": false,
+      "direction": "output",
+      "annotations": [
+        "Power input 2"
+      ]
+    },
+    {
+      "id": "conn_26",
+      "from_module": "buck2",
+      "from_port": "SW2",
+      "to_module": "external",
+      "to_port": "SW2",
+      "signal_name": "SW2",
+      "width": "1",
+      "is_bus": false,
+      "direction": "output",
+      "annotations": [
+        "Switch output 2"
+      ]
+    },
+    {
+      "id": "conn_27",
+      "from_module": "buck2",
+      "from_port": "PGND2",
+      "to_module": "external",
+      "to_port": "PGND2",
+      "signal_name": "PGND2",
+      "width": "1",
+      "is_bus": false,
+      "direction": "output",
+      "annotations": [
+        "Power ground 2"
+      ]
+    },
+    {
+      "id": "conn_28",
+      "from_module": "buck2",
+      "from_port": "OUT2",
+      "to_module": "external",
+      "to_port": "OUT2",
+      "signal_name": "OUT2",
+      "width": "1",
+      "is_bus": false,
+      "direction": "output",
+      "annotations": [
+        "Output 2"
+      ]
+    },
+    {
+      "id": "conn_29",
+      "from_module": "system_control",
+      "from_port": "buck3_out",
+      "to_module": "buck3",
+      "to_port": "control",
+      "signal_name": "buck3_ctrl",
+      "width": "1",
+      "is_bus": false,
+      "direction": "right",
+      "annotations": [
+        "Control signal to Buck3"
+      ]
+    },
+    {
+      "id": "conn_30",
+      "from_module": "buck3",
+      "from_port": "PVIN3",
+      "to_module": "external",
+      "to_port": "PVIN3",
+      "signal_name": "PVIN3",
+      "width": "1",
+      "is_bus": false,
+      "direction": "output",
+      "annotations": [
+        "Power input 3"
+      ]
+    },
+    {
+      "id": "conn_31",
+      "from_module": "buck3",
+      "from_port": "SW3",
+      "to_module": "external",
+      "to_port": "SW3",
+      "signal_name": "SW3",
+      "width": "1",
+      "is_bus": false,
+      "direction": "output",
+      "annotations": [
+        "Switch output 3"
+      ]
+    },
+    {
+      "id": "conn_32",
+      "from_module": "buck3",
+      "from_port": "PGND3",
+      "to_module": "external",
+      "to_port": "PGND3",
+      "signal_name": "PGND3",
+      "width": "1",
+      "is_bus": false,
+      "direction": "output",
+      "annotations": [
+        "Power ground 3"
+      ]
+    },
+    {
+      "id": "conn_33",
+      "from_module": "buck3",
+      "from_port": "OUT3",
+      "to_module": "external",
+      "to_port": "OUT3",
+      "signal_name": "OUT3",
+      "width": "1",
+      "is_bus": false,
+      "direction": "output",
+      "annotations": [
+        "Output 3"
+      ]
+    },
+    {
+      "id": "conn_34",
+      "from_module": "system_control",
+      "from_port": "buck4_out",
+      "to_module": "buck4",
+      "to_port": "control",
+      "signal_name": "buck4_ctrl",
+      "width": "1",
+      "is_bus": false,
+      "direction": "right",
+      "annotations": [
+        "Control signal to Buck4"
+      ]
+    },
+    {
+      "id": "conn_35",
+      "from_module": "buck4",
+      "from_port": "PVIN4",
+      "to_module": "external",
+      "to_port": "PVIN4",
+      "signal_name": "PVIN4",
+      "width": "1",
+      "is_bus": false,
+      "direction": "output",
+      "annotations": [
+        "Power input 4"
+      ]
+    },
+    {
+      "id": "conn_36",
+      "from_module": "buck4",
+      "from_port": "SW4",
+      "to_module": "external",
+      "to_port": "SW4",
+      "signal_name": "SW4",
+      "width": "1",
+      "is_bus": false,
+      "direction": "output",
+      "annotations": [
+        "Switch output 4"
+      ]
+    },
+    {
+      "id": "conn_37",
+      "from_module": "buck4",
+      "from_port": "PGND4",
+      "to_module": "external",
+      "to_port": "PGND4",
+      "signal_name": "PGND4",
+      "width": "1",
+      "is_bus": false,
+      "direction": "output",
+      "annotations": [
+        "Power ground 4"
+      ]
+    },
+    {
+      "id": "conn_38",
+      "from_module": "buck4",
+      "from_port": "OUT4",
+      "to_module": "external",
+      "to_port": "OUT4",
+      "signal_name": "OUT4",
+      "width": "1",
+      "is_bus": false,
+      "direction": "output",
+      "annotations": [
+        "Output 4"
+      ]
+    },
+    {
+      "id": "conn_39",
+      "from_module": "system_control",
+      "from_port": "ldo1_out",
+      "to_module": "ldo1",
+      "to_port": "control",
+      "signal_name": "ldo1_ctrl",
+      "width": "1",
+      "is_bus": false,
+      "direction": "right",
+      "annotations": [
+        "Control signal to LDO1"
+      ]
+    },
+    {
+      "id": "conn_40",
+      "from_module": "ldo1",
+      "from_port": "LOUT1",
+      "to_module": "external",
+      "to_port": "LOUT1",
+      "signal_name": "LOUT1",
+      "width": "1",
+      "is_bus": false,
+      "direction": "output",
+      "annotations": [
+        "LDO output 1"
+      ]
+    },
+    {
+      "id": "conn_41",
+      "from_module": "ldo1",
+      "from_port": "LVIN",
+      "to_module": "external",
+      "to_port": "LVIN",
+      "signal_name": "LVIN",
+      "width": "1",
+      "is_bus": false,
+      "direction": "output",
+      "annotations": [
+        "LDO voltage input"
+      ]
+    },
+    {
+      "id": "conn_42",
+      "from_module": "system_control",
+      "from_port": "ldo2_out",
+      "to_module": "ldo2",
+      "to_port": "control",
+      "signal_name": "ldo2_ctrl",
+      "width": "1",
+      "is_bus": false,
+      "direction": "right",
+      "annotations": [
+        "Control signal to LDO2"
+      ]
+    },
+    {
+      "id": "conn_43",
+      "from_module": "ldo2",
+      "from_port": "LOUT2",
+      "to_module": "external",
+      "to_port": "LOUT2",
+      "signal_name": "LOUT2",
+      "width": "1",
+      "is_bus": false,
+      "direction": "output",
+      "annotations": [
+        "LDO output 2"
+      ]
+    },
+    {
+      "id": "conn_44",
+      "from_module": "external",
+      "from_port": "SGND",
+      "to_module": "external",
+      "to_port": "LOUT2",
+      "signal_name": "ground_loop",
+      "width": "1",
+      "is_bus": false,
+      "direction": "bottom_to_right",
+      "annotations": [
+        "Ground connection loop from SGND to LOUT2"
+      ]
+    }
+  ],
+  "ports": [
+    {
+      "name": "SGND",
+      "direction": "input",
+      "width": "1",
+      "connected_to": "system_control",
+      "description": "System ground"
+    },
+    {
+      "name": "SVIN",
+      "direction": "input",
+      "width": "1",
+      "connected_to": "resistor_1",
+      "description": "System voltage input"
+    },
+    {
+      "name": "nSTRT",
+      "direction": "input",
+      "width": "1",
+      "connected_to": "system_control",
+      "description": "Start signal (active low)"
+    },
+    {
+      "name": "PWRHLD",
+      "direction": "input",
+      "width": "1",
+      "connected_to": "system_control",
+      "description": "Power hold signal"
+    },
+    {
+      "name": "LPM",
+      "direction": "input",
+      "width": "1",
+      "connected_to": "system_control",
+      "description": "Low power mode"
+    },
+    {
+      "name": "HPM",
+      "direction": "input",
+      "width": "1",
+      "connected_to": "system_control",
+      "description": "High power mode"
+    },
+    {
+      "name": "SELV2",
+      "direction": "input",
+      "width": "1",
+      "connected_to": "system_control",
+      "description": "Select voltage 2"
+    },
+    {
+      "name": "SELV1",
+      "direction": "input",
+      "width": "1",
+      "connected_to": "system_control",
+      "description": "Select voltage 1"
+    },
+    {
+      "name": "nINT",
+      "direction": "output",
+      "width": "1",
+      "connected_to": "system_control",
+      "description": "Interrupt output (active low)"
+    },
+    {
+      "name": "nRST",
+      "direction": "output",
+      "width": "1",
+      "connected_to": "system_control",
+      "description": "Reset output (active low)"
+    },
+    {
+      "name": "SDA",
+      "direction": "inout",
+      "width": "1",
+      "connected_to": "serial_interface",
+      "description": "Serial data (I2C)"
+    },
+    {
+      "name": "SCL",
+      "direction": "input",
+      "width": "1",
+      "connected_to": "serial_interface",
+      "description": "Serial clock (I2C)"
+    },
+    {
+      "name": "PVIN1",
+      "direction": "output",
+      "width": "1",
+      "connected_to": "buck1",
+      "description": "Power input for Buck1"
+    },
+    {
+      "name": "SW1",
+      "direction": "output",
+      "width": "1",
+      "connected_to": "buck1",
+      "description": "Switch node for Buck1"
+    },
+    {
+      "name": "PGND1",
+      "direction": "output",
+      "width": "1",
+      "connected_to": "buck1",
+      "description": "Power ground for Buck1"
+    },
+    {
+      "name": "OUT1",
+      "direction": "output",
+      "width": "1",
+      "connected_to": "buck1",
+      "description": "Output voltage for Buck1"
+    },
+    {
+      "name": "PVIN2",
+      "direction": "output",
+      "width": "1",
+      "connected_to": "buck2",
+      "description": "Power input for Buck2"
+    },
+    {
+      "name": "SW2",
+      "direction": "output",
+      "width": "1",
+      "connected_to": "buck2",
+      "description": "Switch node for Buck2"
+    },
+    {
+      "name": "PGND2",
+      "direction": "output",
+      "width": "1",
+      "connected_to": "buck2",
+      "description": "Power ground for Buck2"
+    },
+    {
+      "name": "OUT2",
+      "direction": "output",
+      "width": "1",
+      "connected_to": "buck2",
+      "description": "Output voltage for Buck2"
+    },
+    {
+      "name": "PVIN3",
+      "direction": "output",
+      "width": "1",
+      "connected_to": "buck3",
+      "description": "Power input for Buck3"
+    },
+    {
+      "name": "SW3",
+      "direction": "output",
+      "width": "1",
+      "connected_to": "buck3",
+      "description": "Switch node for Buck3"
+    },
+    {
+      "name": "PGND3",
+      "direction": "output",
+      "width": "1",
+      "connected_to": "buck3",
+      "description": "Power ground for Buck3"
+    },
+    {
+      "name": "OUT3",
+      "direction": "output",
+      "width": "1",
+      "connected_to": "buck3",
+      "description": "Output voltage for Buck3"
+    },
+    {
+      "name": "PVIN4",
+      "direction": "output",
+      "width": "1",
+      "connected_to": "buck4",
+      "description": "Power input for Buck4"
+    },
+    {
+      "name": "SW4",
+      "direction": "output",
+      "width": "1",
+      "connected_to": "buck4",
+      "description": "Switch node for Buck4"
+    },
+    {
+      "name": "PGND4",
+      "direction": "output",
+      "width": "1",
+      "connected_to": "buck4",
+      "description": "Power ground for Buck4"
+    },
+    {
+      "name": "OUT4",
+      "direction": "output",
+      "width": "1",
+      "connected_to": "buck4",
+      "description": "Output voltage for Buck4"
+    },
+    {
+      "name": "LOUT1",
+      "direction": "output",
+      "width": "1",
+      "connected_to": "ldo1",
+      "description": "LDO1 output voltage"
+    },
+    {
+      "name": "LVIN",
+      "direction": "output",
+      "width": "1",
+      "connected_to": "ldo1",
+      "description": "LDO voltage input"
+    },
+    {
+      "name": "LOUT2",
+      "direction": "output",
+      "width": "1",
+      "connected_to": "ldo2",
+      "description": "LDO2 output voltage"
+    }
+  ],
+  "annotations": [
+    {
+      "type": "label",
+      "content": "40 k\u03a9",
+      "location": "Between SVIN and nSTRT on the left side",
+      "related_to": "resistor_1"
+    },
+    {
+      "type": "label",
+      "content": "SYSTEM CONTROL",
+      "location": "Center of main control block",
+      "related_to": "system_control"
+    },
+    {
+      "type": "label",
+      "content": "Serial Interface",
+      "location": "Lower left block connected to SDA and SCL",
+      "related_to": "serial_interface"
+    },
+    {
+      "type": "label",
+      "content": "Buck1",
+      "location": "Right side, first power converter block",
+      "related_to": "buck1"
+    },
+    {
+      "type": "label",
+      "content": "Buck2",
+      "location": "Right side, second power converter block",
+      "related_to": "buck2"
+    },
+    {
+      "type": "label",
+      "content": "Buck3",
+      "location": "Right side, third power converter block",
+      "related_to": "buck3"
+    },
+    {
+      "type": "label",
+      "content": "Buck4",
+      "location": "Right side, fourth power converter block",
+      "related_to": "buck4"
+    },
+    {
+      "type": "label",
+      "content": "LDO1",
+      "location": "Right side, fifth regulator block",
+      "related_to": "ldo1"
+    },
+    {
+      "type": "label",
+      "content": "LDO2",
+      "location": "Right side, sixth regulator block",
+      "related_to": "ldo2"
+    },
+    {
+      "type": "note",
+      "content": "Capacitor symbols shown on nSTRT, nINT, nRST, and SDA lines",
+      "location": "Left side of diagram on various signal lines",
+      "related_to": "cap_nstrt, cap_nint, cap_nrst, cap_sda"
+    },
+    {
+      "type": "note",
+      "content": "Ground symbols shown with downward arrows",
+      "location": "Multiple locations on left side below capacitors",
+      "related_to": "ground connections"
+    }
+  ],
+  "hierarchy": {
+    "top_level_module": "Power Management IC",
+    "submodules": [
+      "SYSTEM CONTROL",
+      "Serial Interface",
+      "Buck1",
+      "Buck2",
+      "Buck3",
+      "Buck4",
+      "LDO1",
+      "LDO2"
+    ],
+    "interfaces": [
+      "I2C (SDA, SCL)"
+    ]
+  },
+  "metadata": {
+    "total_modules": 13,
+    "total_connections": 44,
+    "complexity": "moderate",
+    "protocol_hints": [
+      "I2C serial interface"
+    ],
+    "ambiguities": [
+      "Exact internal connections within SYSTEM CONTROL block are not shown",
+      "Specific bit widths are not explicitly labeled (assumed 1-bit for control signals)",
+      "Power converter internal topology not detailed",
+      "Exact capacitor values not specified"
+    ]
+  }
+}

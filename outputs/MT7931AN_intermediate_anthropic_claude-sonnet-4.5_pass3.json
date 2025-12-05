@@ -1,0 +1,883 @@
+{
+  "modules": [
+    {
+      "id": "spi_flash",
+      "name": "SPI flash",
+      "type": "memory",
+      "position": {
+        "x": 375,
+        "y": 32
+      },
+      "parameters": {
+        "interface": "SPI"
+      },
+      "description": "External SPI flash memory"
+    },
+    {
+      "id": "wifi_dual_band_rf",
+      "name": "WiFi dual-band RF",
+      "type": "rf_frontend",
+      "position": {
+        "x": 100,
+        "y": 107
+      },
+      "parameters": {},
+      "description": "WiFi dual-band radio frequency frontend"
+    },
+    {
+      "id": "wifi_baseband",
+      "name": "WiFi baseband",
+      "type": "baseband",
+      "position": {
+        "x": 100,
+        "y": 147
+      },
+      "parameters": {},
+      "description": "WiFi baseband processing"
+    },
+    {
+      "id": "wifi_mac",
+      "name": "WiFi MAC",
+      "type": "mac",
+      "position": {
+        "x": 100,
+        "y": 177
+      },
+      "parameters": {},
+      "description": "WiFi MAC layer"
+    },
+    {
+      "id": "wifi_sysram",
+      "name": "WiFi SYSRAM",
+      "type": "memory",
+      "position": {
+        "x": 100,
+        "y": 207
+      },
+      "parameters": {},
+      "description": "WiFi system RAM"
+    },
+    {
+      "id": "wifi_ilm_dlm_sram_rom",
+      "name": "ILM/DLM SRAM/ROM",
+      "type": "memory",
+      "position": {
+        "x": 100,
+        "y": 245
+      },
+      "parameters": {},
+      "description": "Instruction/Data Local Memory SRAM/ROM for WiFi"
+    },
+    {
+      "id": "wifi_icache",
+      "name": "I-cache",
+      "type": "cache",
+      "position": {
+        "x": 100,
+        "y": 287
+      },
+      "parameters": {},
+      "description": "WiFi instruction cache"
+    },
+    {
+      "id": "wifi_n10_cpu",
+      "name": "WiFi N10 CPU",
+      "type": "cpu",
+      "position": {
+        "x": 100,
+        "y": 307
+      },
+      "parameters": {},
+      "description": "WiFi N10 CPU core"
+    },
+    {
+      "id": "rf_rf",
+      "name": "RF RF",
+      "type": "rf_frontend",
+      "position": {
+        "x": 247,
+        "y": 107
+      },
+      "parameters": {},
+      "description": "RF radio frequency frontend"
+    },
+    {
+      "id": "bt_modem",
+      "name": "BT modem",
+      "type": "modem",
+      "position": {
+        "x": 247,
+        "y": 147
+      },
+      "parameters": {},
+      "description": "Bluetooth modem"
+    },
+    {
+      "id": "bt_pkv",
+      "name": "BT PKV",
+      "type": "custom",
+      "position": {
+        "x": 247,
+        "y": 177
+      },
+      "parameters": {},
+      "description": "Bluetooth PKV module"
+    },
+    {
+      "id": "bt_sysram",
+      "name": "BT SYSRAM",
+      "type": "memory",
+      "position": {
+        "x": 247,
+        "y": 207
+      },
+      "parameters": {},
+      "description": "Bluetooth system RAM"
+    },
+    {
+      "id": "bt_ilm_dlm_sram_rom",
+      "name": "ILM/DLM SRAM/ROM",
+      "type": "memory",
+      "position": {
+        "x": 247,
+        "y": 245
+      },
+      "parameters": {},
+      "description": "Instruction/Data Local Memory SRAM/ROM for BT"
+    },
+    {
+      "id": "bt_icache",
+      "name": "I-cache",
+      "type": "cache",
+      "position": {
+        "x": 247,
+        "y": 287
+      },
+      "parameters": {},
+      "description": "Bluetooth instruction cache"
+    },
+    {
+      "id": "bt_n10_cpu",
+      "name": "BT N10 CPU",
+      "type": "cpu",
+      "position": {
+        "x": 247,
+        "y": 307
+      },
+      "parameters": {},
+      "description": "Bluetooth N10 CPU core"
+    },
+    {
+      "id": "bt_use_8kb",
+      "name": "BT USE (8Kb)",
+      "type": "memory",
+      "position": {
+        "x": 175,
+        "y": 347
+      },
+      "parameters": {
+        "size": "8Kb"
+      },
+      "description": "Bluetooth USE memory 8Kb"
+    },
+    {
+      "id": "spi_flash_controller",
+      "name": "SPI flash Controller",
+      "type": "controller",
+      "position": {
+        "x": 373,
+        "y": 107
+      },
+      "parameters": {},
+      "description": "SPI flash controller"
+    },
+    {
+      "id": "aes_otf",
+      "name": "AES OTF",
+      "type": "crypto",
+      "position": {
+        "x": 373,
+        "y": 137
+      },
+      "parameters": {},
+      "description": "AES on-the-fly encryption/decryption"
+    },
+    {
+      "id": "system_mpu",
+      "name": "System MPU",
+      "type": "mpu",
+      "position": {
+        "x": 373,
+        "y": 167
+      },
+      "parameters": {},
+      "description": "System Memory Protection Unit"
+    },
+    {
+      "id": "dma",
+      "name": "DMA",
+      "type": "dma",
+      "position": {
+        "x": 373,
+        "y": 197
+      },
+      "parameters": {},
+      "description": "Direct Memory Access controller"
+    },
+    {
+      "id": "psram",
+      "name": "PSRAM",
+      "type": "memory",
+      "position": {
+        "x": 373,
+        "y": 227
+      },
+      "parameters": {},
+      "description": "Pseudo-static RAM"
+    },
+    {
+      "id": "sysram_1mb",
+      "name": "SYSRAM 1Mb",
+      "type": "memory",
+      "position": {
+        "x": 373,
+        "y": 267
+      },
+      "parameters": {
+        "size": "1Mb"
+      },
+      "description": "System RAM 1Mb"
+    },
+    {
+      "id": "tcm_4sconc_96kb",
+      "name": "TCM 4sconc (96KB)",
+      "type": "memory",
+      "position": {
+        "x": 373,
+        "y": 347
+      },
+      "parameters": {
+        "size": "96KB"
+      },
+      "description": "Tightly Coupled Memory 4sconc 96KB"
+    },
+    {
+      "id": "arm_cortex_cm33",
+      "name": "ARM Cortex CM33",
+      "type": "cpu",
+      "position": {
+        "x": 373,
+        "y": 387
+      },
+      "parameters": {},
+      "description": "ARM Cortex-M33 CPU core"
+    },
+    {
+      "id": "clock_generation",
+      "name": "Clock generation",
+      "type": "clock",
+      "position": {
+        "x": 487,
+        "y": 107
+      },
+      "parameters": {},
+      "description": "Clock generation module"
+    },
+    {
+      "id": "pmu",
+      "name": "PMU",
+      "type": "power",
+      "position": {
+        "x": 487,
+        "y": 157
+      },
+      "parameters": {},
+      "description": "Power Management Unit"
+    },
+    {
+      "id": "uart_swd",
+      "name": "UART/SWD",
+      "type": "interface",
+      "position": {
+        "x": 487,
+        "y": 187
+      },
+      "parameters": {},
+      "description": "UART/SWD interface"
+    },
+    {
+      "id": "sdio2_0",
+      "name": "SDIO2.0",
+      "type": "interface",
+      "position": {
+        "x": 487,
+        "y": 217
+      },
+      "parameters": {
+        "version": "2.0"
+      },
+      "description": "SDIO 2.0 interface"
+    },
+    {
+      "id": "top_efuse_4kb",
+      "name": "Top EFUSE (4Kb)",
+      "type": "memory",
+      "position": {
+        "x": 487,
+        "y": 257
+      },
+      "parameters": {
+        "size": "4Kb"
+      },
+      "description": "Top EFUSE memory 4Kb"
+    },
+    {
+      "id": "g4kb_rom",
+      "name": "G4KB ROM",
+      "type": "memory",
+      "position": {
+        "x": 487,
+        "y": 347
+      },
+      "parameters": {
+        "size": "4KB"
+      },
+      "description": "4KB ROM"
+    },
+    {
+      "id": "wdt",
+      "name": "WDT",
+      "type": "watchdog",
+      "position": {
+        "x": 487,
+        "y": 387
+      },
+      "parameters": {},
+      "description": "Watchdog Timer"
+    },
+    {
+      "id": "cm33_label",
+      "name": "CM33",
+      "type": "label",
+      "position": {
+        "x": 487,
+        "y": 407
+      },
+      "parameters": {},
+      "description": "CM33 label"
+    },
+    {
+      "id": "pwm",
+      "name": "PWM",
+      "type": "peripheral",
+      "position": {
+        "x": 100,
+        "y": 407
+      },
+      "parameters": {},
+      "description": "Pulse Width Modulation"
+    },
+    {
+      "id": "spi",
+      "name": "SPI",
+      "type": "interface",
+      "position": {
+        "x": 100,
+        "y": 437
+      },
+      "parameters": {},
+      "description": "SPI interface"
+    },
+    {
+      "id": "i2c",
+      "name": "I2C",
+      "type": "interface",
+      "position": {
+        "x": 100,
+        "y": 467
+      },
+      "parameters": {},
+      "description": "I2C interface"
+    },
+    {
+      "id": "uart",
+      "name": "UART",
+      "type": "interface",
+      "position": {
+        "x": 100,
+        "y": 497
+      },
+      "parameters": {},
+      "description": "UART interface"
+    },
+    {
+      "id": "key_scan",
+      "name": "Key Scan",
+      "type": "peripheral",
+      "position": {
+        "x": 100,
+        "y": 537
+      },
+      "parameters": {},
+      "description": "Key scan peripheral"
+    },
+    {
+      "id": "auxiliary_adc",
+      "name": "Auxiliary ADC",
+      "type": "adc",
+      "position": {
+        "x": 100,
+        "y": 573
+      },
+      "parameters": {},
+      "description": "Auxiliary ADC"
+    },
+    {
+      "id": "gcpu",
+      "name": "GCPU",
+      "type": "cpu",
+      "position": {
+        "x": 247,
+        "y": 407
+      },
+      "parameters": {},
+      "description": "Graphics CPU"
+    },
+    {
+      "id": "sei",
+      "name": "SEI",
+      "type": "interface",
+      "position": {
+        "x": 247,
+        "y": 437
+      },
+      "parameters": {},
+      "description": "SEI interface"
+    },
+    {
+      "id": "ecc",
+      "name": "ECC",
+      "type": "crypto",
+      "position": {
+        "x": 247,
+        "y": 467
+      },
+      "parameters": {},
+      "description": "Error Correction Code"
+    },
+    {
+      "id": "trng",
+      "name": "TRNG",
+      "type": "crypto",
+      "position": {
+        "x": 247,
+        "y": 507
+      },
+      "parameters": {},
+      "description": "True Random Number Generator"
+    },
+    {
+      "id": "security_efuse_4kb",
+      "name": "Security EFUSE (4Kb)",
+      "type": "memory",
+      "position": {
+        "x": 247,
+        "y": 547
+      },
+      "parameters": {
+        "size": "4Kb"
+      },
+      "description": "Security EFUSE memory 4Kb"
+    },
+    {
+      "id": "audio_te",
+      "name": "AUDIO TE",
+      "type": "audio",
+      "position": {
+        "x": 373,
+        "y": 547
+      },
+      "parameters": {},
+      "description": "Audio TE module"
+    },
+    {
+      "id": "audio_codec",
+      "name": "Audio CODEC",
+      "type": "codec",
+      "position": {
+        "x": 373,
+        "y": 597
+      },
+      "parameters": {},
+      "description": "Audio CODEC"
+    },
+    {
+      "id": "32k_clock",
+      "name": "32k clock",
+      "type": "clock",
+      "position": {
+        "x": 487,
+        "y": 597
+      },
+      "parameters": {
+        "frequency": "32kHz"
+      },
+      "description": "32kHz clock generator"
+    },
+    {
+      "id": "xtal_26mhz",
+      "name": "26MHz XTAL",
+      "type": "oscillator",
+      "position": {
+        "x": 595,
+        "y": 107
+      },
+      "parameters": {
+        "frequency": "26MHz"
+      },
+      "description": "26MHz crystal oscillator"
+    },
+    {
+      "id": "debug_port",
+      "name": "Debug",
+      "type": "interface",
+      "position": {
+        "x": 595,
+        "y": 167
+      },
+      "parameters": {},
+      "description": "Debug interface port"
+    },
+    {
+      "id": "xtal_32khz",
+      "name": "32KHz XTAL",
+      "type": "oscillator",
+      "position": {
+        "x": 487,
+        "y": 667
+      },
+      "parameters": {
+        "frequency": "32kHz"
+      },
+      "description": "32kHz crystal oscillator"
+    }
+  ],
+  "connections": [
+    {
+      "id": "conn_1",
+      "from_module": "spi_flash",
+      "from_port": "data",
+      "to_module": "spi_flash_controller",
+      "to_port": "flash_interface",
+      "signal_name": "",
+      "width": "",
+      "is_bus": true,
+      "direction": "bidirectional",
+      "annotations": []
+    },
+    {
+      "id": "conn_2",
+      "from_module": "wifi_dual_band_rf",
+      "from_port": "output",
+      "to_module": "rf_rf",
+      "to_port": "input",
+      "signal_name": "",
+      "width": "",
+      "is_bus": true,
+      "direction": "bidirectional",
+      "annotations": []
+    },
+    {
+      "id": "conn_3",
+      "from_module": "clock_generation",
+      "from_port": "clk_out",
+      "to_module": "xtal_26mhz",
+      "to_port": "clk",
+      "signal_name": "",
+      "width": "",
+      "is_bus": false,
+      "direction": "right",
+      "annotations": []
+    },
+    {
+      "id": "conn_4",
+      "from_module": "pmu",
+      "from_port": "output",
+      "to_module": "debug_port",
+      "to_port": "input",
+      "signal_name": "",
+      "width": "",
+      "is_bus": true,
+      "direction": "right",
+      "annotations": []
+    },
+    {
+      "id": "conn_5",
+      "from_module": "uart_swd",
+      "from_port": "output",
+      "to_module": "debug_port",
+      "to_port": "input",
+      "signal_name": "",
+      "width": "",
+      "is_bus": true,
+      "direction": "right",
+      "annotations": []
+    },
+    {
+      "id": "conn_6",
+      "from_module": "sdio2_0",
+      "from_port": "output",
+      "to_module": "debug_port",
+      "to_port": "input",
+      "signal_name": "",
+      "width": "",
+      "is_bus": true,
+      "direction": "right",
+      "annotations": []
+    },
+    {
+      "id": "conn_7",
+      "from_module": "pwm",
+      "from_port": "output",
+      "to_module": "external",
+      "to_port": "input",
+      "signal_name": "",
+      "width": "",
+      "is_bus": false,
+      "direction": "left",
+      "annotations": []
+    },
+    {
+      "id": "conn_8",
+      "from_module": "spi",
+      "from_port": "output",
+      "to_module": "external",
+      "to_port": "input",
+      "signal_name": "",
+      "width": "",
+      "is_bus": false,
+      "direction": "left",
+      "annotations": []
+    },
+    {
+      "id": "conn_9",
+      "from_module": "i2c",
+      "from_port": "output",
+      "to_module": "external",
+      "to_port": "input",
+      "signal_name": "",
+      "width": "",
+      "is_bus": false,
+      "direction": "left",
+      "annotations": []
+    },
+    {
+      "id": "conn_10",
+      "from_module": "uart",
+      "from_port": "output",
+      "to_module": "external",
+      "to_port": "input",
+      "signal_name": "",
+      "width": "",
+      "is_bus": false,
+      "direction": "left",
+      "annotations": []
+    },
+    {
+      "id": "conn_11",
+      "from_module": "key_scan",
+      "from_port": "output",
+      "to_module": "external",
+      "to_port": "input",
+      "signal_name": "",
+      "width": "",
+      "is_bus": false,
+      "direction": "left",
+      "annotations": []
+    },
+    {
+      "id": "conn_12",
+      "from_module": "auxiliary_adc",
+      "from_port": "output",
+      "to_module": "external",
+      "to_port": "input",
+      "signal_name": "",
+      "width": "",
+      "is_bus": false,
+      "direction": "left",
+      "annotations": []
+    },
+    {
+      "id": "conn_13",
+      "from_module": "audio_codec",
+      "from_port": "output",
+      "to_module": "external",
+      "to_port": "input",
+      "signal_name": "",
+      "width": "",
+      "is_bus": false,
+      "direction": "down",
+      "annotations": []
+    },
+    {
+      "id": "conn_14",
+      "from_module": "32k_clock",
+      "from_port": "output",
+      "to_module": "xtal_32khz",
+      "to_port": "input",
+      "signal_name": "",
+      "width": "",
+      "is_bus": false,
+      "direction": "down",
+      "annotations": []
+    },
+    {
+      "id": "conn_15",
+      "from_module": "audio_te",
+      "from_port": "output",
+      "to_module": "external",
+      "to_port": "input",
+      "signal_name": "",
+      "width": "",
+      "is_bus": false,
+      "direction": "down",
+      "annotations": []
+    }
+  ],
+  "ports": [
+    {
+      "name": "26MHz XTAL",
+      "direction": "input",
+      "width": "1",
+      "connected_to": "clock_generation",
+      "description": "26MHz crystal oscillator input"
+    },
+    {
+      "name": "Debug",
+      "direction": "output",
+      "width": "",
+      "connected_to": "uart_swd",
+      "description": "Debug interface output"
+    },
+    {
+      "name": "32KHz XTAL",
+      "direction": "input",
+      "width": "1",
+      "connected_to": "32k_clock",
+      "description": "32kHz crystal oscillator input"
+    },
+    {
+      "name": "PWM_out",
+      "direction": "output",
+      "width": "",
+      "connected_to": "pwm",
+      "description": "PWM output port"
+    },
+    {
+      "name": "SPI_out",
+      "direction": "output",
+      "width": "",
+      "connected_to": "spi",
+      "description": "SPI output port"
+    },
+    {
+      "name": "I2C_out",
+      "direction": "output",
+      "width": "",
+      "connected_to": "i2c",
+      "description": "I2C output port"
+    },
+    {
+      "name": "UART_out",
+      "direction": "output",
+      "width": "",
+      "connected_to": "uart",
+      "description": "UART output port"
+    },
+    {
+      "name": "Key_Scan_out",
+      "direction": "output",
+      "width": "",
+      "connected_to": "key_scan",
+      "description": "Key scan output port"
+    },
+    {
+      "name": "ADC_out",
+      "direction": "output",
+      "width": "",
+      "connected_to": "auxiliary_adc",
+      "description": "Auxiliary ADC output port"
+    },
+    {
+      "name": "Audio_out",
+      "direction": "output",
+      "width": "",
+      "connected_to": "audio_codec",
+      "description": "Audio codec output port"
+    }
+  ],
+  "annotations": [
+    {
+      "type": "label",
+      "content": "WiFi/BT",
+      "location": "Bottom center between WiFi and BT subsystems",
+      "related_to": "wifi_n10_cpu,bt_n10_cpu"
+    },
+    {
+      "type": "label",
+      "content": "Peripheral",
+      "location": "Bottom left under peripheral modules",
+      "related_to": "pwm,spi,i2c,uart,key_scan,auxiliary_adc"
+    },
+    {
+      "type": "label",
+      "content": "Crypto",
+      "location": "Bottom center under crypto modules",
+      "related_to": "gcpu,sei,ecc,trng,security_efuse_4kb"
+    },
+    {
+      "type": "label",
+      "content": "CM33",
+      "location": "Right side near ARM Cortex CM33",
+      "related_to": "arm_cortex_cm33,wdt,g4kb_rom"
+    }
+  ],
+  "hierarchy": {
+    "top_level_module": "SoC",
+    "submodules": [
+      "WiFi subsystem",
+      "Bluetooth subsystem",
+      "ARM Cortex-M33 subsystem",
+      "Peripheral subsystem",
+      "Crypto subsystem",
+      "Audio subsystem"
+    ],
+    "interfaces": [
+      "SPI",
+      "I2C",
+      "UART",
+      "SDIO2.0",
+      "SWD"
+    ]
+  },
+  "metadata": {
+    "total_modules": 48,
+    "total_connections": 15,
+    "complexity": "complex",
+    "protocol_hints": [
+      "SPI",
+      "I2C",
+      "UART",
+      "SDIO",
+      "SWD",
+      "AXI (implied by ARM Cortex-M33)"
+    ],
+    "ambiguities": [
+      "Exact bus widths not specified for most connections",
+      "Internal bus architecture not fully detailed",
+      "Some module interconnections within subsystems not explicitly shown",
+      "RF RF module name unclear - may be typo for 'BT RF'",
+      "Exact nature of connections between subsystems not fully detailed"
+    ]
+  }
+}

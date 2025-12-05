@@ -1,0 +1,1257 @@
+{
+  "modules": [
+    {
+      "id": "mt6572",
+      "name": "MT6572",
+      "type": "soc",
+      "position": {
+        "x": 420,
+        "y": 260
+      },
+      "parameters": {
+        "width": "not_specified",
+        "depth": "not_applicable"
+      },
+      "description": "Main System-on-Chip containing multiple subsystems"
+    },
+    {
+      "id": "external_memory_interface",
+      "name": "External Memory Interface",
+      "type": "memory_controller",
+      "position": {
+        "x": 290,
+        "y": 145
+      },
+      "parameters": {},
+      "description": "Interface for external memory connections"
+    },
+    {
+      "id": "rx_adc",
+      "name": "RX ADC",
+      "type": "adc",
+      "position": {
+        "x": 340,
+        "y": 145
+      },
+      "parameters": {},
+      "description": "Receive path Analog-to-Digital Converter in Modem Analog section"
+    },
+    {
+      "id": "tx_adc",
+      "name": "TX ADC",
+      "type": "adc",
+      "position": {
+        "x": 375,
+        "y": 145
+      },
+      "parameters": {},
+      "description": "Transmit path Analog-to-Digital Converter in Modem Analog section"
+    },
+    {
+      "id": "apc",
+      "name": "APC",
+      "type": "custom",
+      "position": {
+        "x": 415,
+        "y": 145
+      },
+      "parameters": {},
+      "description": "Automatic Power Control in Modem Analog section"
+    },
+    {
+      "id": "afc",
+      "name": "AFC",
+      "type": "custom",
+      "position": {
+        "x": 450,
+        "y": 145
+      },
+      "parameters": {},
+      "description": "Automatic Frequency Control in Modem Analog section"
+    },
+    {
+      "id": "pll",
+      "name": "PLL",
+      "type": "pll",
+      "position": {
+        "x": 500,
+        "y": 145
+      },
+      "parameters": {},
+      "description": "Phase-Locked Loop in WIFI/BT/GPS ABB section"
+    },
+    {
+      "id": "dac",
+      "name": "DAC",
+      "type": "dac",
+      "position": {
+        "x": 540,
+        "y": 145
+      },
+      "parameters": {},
+      "description": "Digital-to-Analog Converter in WIFI/BT/GPS ABB section"
+    },
+    {
+      "id": "adc",
+      "name": "ADC",
+      "type": "adc",
+      "position": {
+        "x": 580,
+        "y": 145
+      },
+      "parameters": {},
+      "description": "Analog-to-Digital Converter in WIFI/BT/GPS ABB section"
+    },
+    {
+      "id": "hspa",
+      "name": "HSPA",
+      "type": "modem",
+      "position": {
+        "x": 280,
+        "y": 205
+      },
+      "parameters": {},
+      "description": "High-Speed Packet Access modem"
+    },
+    {
+      "id": "gsm_gprs_edge",
+      "name": "GSM/GPRS/EDGE",
+      "type": "modem",
+      "position": {
+        "x": 350,
+        "y": 205
+      },
+      "parameters": {},
+      "description": "GSM/GPRS/EDGE modem"
+    },
+    {
+      "id": "td_scdma",
+      "name": "TD-SCDMA",
+      "type": "modem",
+      "position": {
+        "x": 430,
+        "y": 205
+      },
+      "parameters": {},
+      "description": "TD-SCDMA modem"
+    },
+    {
+      "id": "wifi",
+      "name": "WIFI",
+      "type": "wireless",
+      "position": {
+        "x": 500,
+        "y": 205
+      },
+      "parameters": {},
+      "description": "WiFi connectivity module"
+    },
+    {
+      "id": "bt",
+      "name": "BT",
+      "type": "wireless",
+      "position": {
+        "x": 545,
+        "y": 205
+      },
+      "parameters": {},
+      "description": "Bluetooth connectivity module"
+    },
+    {
+      "id": "gps",
+      "name": "GPS",
+      "type": "wireless",
+      "position": {
+        "x": 590,
+        "y": 205
+      },
+      "parameters": {},
+      "description": "GPS module"
+    },
+    {
+      "id": "pll_modem_mcu",
+      "name": "PLL",
+      "type": "pll",
+      "position": {
+        "x": 280,
+        "y": 265
+      },
+      "parameters": {},
+      "description": "Phase-Locked Loop in Multimedia ABB section"
+    },
+    {
+      "id": "dac_modem_mcu",
+      "name": "DAC",
+      "type": "dac",
+      "position": {
+        "x": 320,
+        "y": 265
+      },
+      "parameters": {},
+      "description": "Digital-to-Analog Converter in Multimedia ABB section"
+    },
+    {
+      "id": "adc_modem_mcu",
+      "name": "ADC",
+      "type": "adc",
+      "position": {
+        "x": 360,
+        "y": 265
+      },
+      "parameters": {},
+      "description": "Analog-to-Digital Converter in Multimedia ABB section"
+    },
+    {
+      "id": "power_management",
+      "name": "Power Management",
+      "type": "pmu",
+      "position": {
+        "x": 430,
+        "y": 265
+      },
+      "parameters": {},
+      "description": "Power Management Unit"
+    },
+    {
+      "id": "arm_cortex_a7_mpcore_0",
+      "name": "ARM\u00ae Cortex-A7 MPCore\u2122",
+      "type": "cpu",
+      "position": {
+        "x": 520,
+        "y": 265
+      },
+      "parameters": {},
+      "description": "First ARM Cortex-A7 MPCore processor"
+    },
+    {
+      "id": "arm_cortex_a7_mpcore_1",
+      "name": "ARM\u00ae Cortex-A7 MPCore\u2122",
+      "type": "cpu",
+      "position": {
+        "x": 580,
+        "y": 265
+      },
+      "parameters": {},
+      "description": "Second ARM Cortex-A7 MPCore processor"
+    },
+    {
+      "id": "gp_timer",
+      "name": "GP Timer",
+      "type": "timer",
+      "position": {
+        "x": 280,
+        "y": 310
+      },
+      "parameters": {},
+      "description": "General Purpose Timer"
+    },
+    {
+      "id": "arm_cortex_r4",
+      "name": "ARM\u00ae Cortex-R4",
+      "type": "cpu",
+      "position": {
+        "x": 360,
+        "y": 325
+      },
+      "parameters": {},
+      "description": "ARM Cortex-R4 processor in Modem MCU"
+    },
+    {
+      "id": "dma",
+      "name": "DMA",
+      "type": "dma",
+      "position": {
+        "x": 430,
+        "y": 310
+      },
+      "parameters": {},
+      "description": "Direct Memory Access controller"
+    },
+    {
+      "id": "neon",
+      "name": "NEON",
+      "type": "simd",
+      "position": {
+        "x": 550,
+        "y": 310
+      },
+      "parameters": {},
+      "description": "NEON SIMD engine"
+    },
+    {
+      "id": "internal_memory",
+      "name": "Internal Memory",
+      "type": "memory",
+      "position": {
+        "x": 280,
+        "y": 340
+      },
+      "parameters": {},
+      "description": "Internal memory in Modem MCU"
+    },
+    {
+      "id": "jtag",
+      "name": "JTAG",
+      "type": "debug",
+      "position": {
+        "x": 430,
+        "y": 340
+      },
+      "parameters": {},
+      "description": "JTAG debug interface"
+    },
+    {
+      "id": "l2_cache",
+      "name": "L2 Cache",
+      "type": "cache",
+      "position": {
+        "x": 550,
+        "y": 330
+      },
+      "parameters": {},
+      "description": "Level 2 Cache"
+    },
+    {
+      "id": "multimedia",
+      "name": "Multi-media",
+      "type": "custom",
+      "position": {
+        "x": 280,
+        "y": 400
+      },
+      "parameters": {},
+      "description": "Multimedia processing block"
+    },
+    {
+      "id": "video_codec",
+      "name": "Video Codec",
+      "type": "codec",
+      "position": {
+        "x": 330,
+        "y": 400
+      },
+      "parameters": {},
+      "description": "Video encoding/decoding"
+    },
+    {
+      "id": "lcd_control",
+      "name": "LCD Control",
+      "type": "display_controller",
+      "position": {
+        "x": 375,
+        "y": 400
+      },
+      "parameters": {},
+      "description": "LCD display controller"
+    },
+    {
+      "id": "camera",
+      "name": "Camera",
+      "type": "camera_interface",
+      "position": {
+        "x": 430,
+        "y": 400
+      },
+      "parameters": {},
+      "description": "Camera interface"
+    },
+    {
+      "id": "image_post_process",
+      "name": "Image post-process",
+      "type": "image_processor",
+      "position": {
+        "x": 490,
+        "y": 400
+      },
+      "parameters": {},
+      "description": "Image post-processing unit"
+    },
+    {
+      "id": "arm_mali_400_graphics",
+      "name": "ARM\u00ae MALI-400 Graphics accelerator",
+      "type": "gpu",
+      "position": {
+        "x": 575,
+        "y": 400
+      },
+      "parameters": {},
+      "description": "ARM MALI-400 Graphics Processing Unit"
+    },
+    {
+      "id": "mt6166",
+      "name": "MT6166",
+      "type": "rf_transceiver",
+      "position": {
+        "x": 175,
+        "y": 260
+      },
+      "parameters": {},
+      "description": "W-CDMA/TD-SCDMA/GSM RF transceiver"
+    },
+    {
+      "id": "mt6627",
+      "name": "MT6627",
+      "type": "rf_transceiver",
+      "position": {
+        "x": 680,
+        "y": 120
+      },
+      "parameters": {},
+      "description": "WIFI/BT/FM/GNSS RF transceiver"
+    },
+    {
+      "id": "mt6323",
+      "name": "MT6323",
+      "type": "pmic",
+      "position": {
+        "x": 680,
+        "y": 330
+      },
+      "parameters": {},
+      "description": "Power Management IC"
+    },
+    {
+      "id": "nand_flash",
+      "name": "NAND Flash",
+      "type": "memory",
+      "position": {
+        "x": 295,
+        "y": 30
+      },
+      "parameters": {},
+      "description": "NAND Flash memory"
+    },
+    {
+      "id": "usb2_otg",
+      "name": "USB2.0 OTG",
+      "type": "usb_controller",
+      "position": {
+        "x": 368,
+        "y": 30
+      },
+      "parameters": {},
+      "description": "USB 2.0 On-The-Go controller"
+    },
+    {
+      "id": "sw_jtag",
+      "name": "SW JTAG",
+      "type": "debug",
+      "position": {
+        "x": 455,
+        "y": 30
+      },
+      "parameters": {},
+      "description": "Software JTAG interface"
+    },
+    {
+      "id": "mmc_sd_sdio",
+      "name": "MMC/SD/SDIO",
+      "type": "memory_interface",
+      "position": {
+        "x": 565,
+        "y": 30
+      },
+      "parameters": {},
+      "description": "MMC/SD/SDIO interface"
+    },
+    {
+      "id": "lpddr1_lpddr2_lpddr3_pddr3",
+      "name": "LPDDR1/LPDDR2/LPDDR3/PDDR3",
+      "type": "memory",
+      "position": {
+        "x": 175,
+        "y": 120
+      },
+      "parameters": {},
+      "description": "Low-Power DDR memory options"
+    },
+    {
+      "id": "edge_rf",
+      "name": "EDGE RF",
+      "type": "rf_frontend",
+      "position": {
+        "x": 110,
+        "y": 190
+      },
+      "parameters": {},
+      "description": "EDGE RF frontend"
+    },
+    {
+      "id": "wcdma_rf",
+      "name": "WCDMA RF",
+      "type": "rf_frontend",
+      "position": {
+        "x": 60,
+        "y": 220
+      },
+      "parameters": {},
+      "description": "WCDMA RF frontend"
+    },
+    {
+      "id": "tdscdma_rf",
+      "name": "TDSCDMA RF",
+      "type": "rf_frontend",
+      "position": {
+        "x": 60,
+        "y": 280
+      },
+      "parameters": {},
+      "description": "TD-SCDMA RF frontend"
+    },
+    {
+      "id": "i2c",
+      "name": "I2C",
+      "type": "interface",
+      "position": {
+        "x": 195,
+        "y": 395
+      },
+      "parameters": {},
+      "description": "I2C interface"
+    },
+    {
+      "id": "gpio",
+      "name": "GPIO",
+      "type": "gpio",
+      "position": {
+        "x": 295,
+        "y": 485
+      },
+      "parameters": {},
+      "description": "General Purpose Input/Output"
+    },
+    {
+      "id": "smp_camera",
+      "name": "SMP Camera",
+      "type": "camera_interface",
+      "position": {
+        "x": 360,
+        "y": 485
+      },
+      "parameters": {},
+      "description": "SMP Camera interface"
+    },
+    {
+      "id": "lcd",
+      "name": "LCD",
+      "type": "display_interface",
+      "position": {
+        "x": 425,
+        "y": 485
+      },
+      "parameters": {},
+      "description": "LCD display interface"
+    },
+    {
+      "id": "uart",
+      "name": "UART",
+      "type": "uart",
+      "position": {
+        "x": 490,
+        "y": 485
+      },
+      "parameters": {},
+      "description": "Universal Asynchronous Receiver/Transmitter"
+    },
+    {
+      "id": "touch_panel",
+      "name": "Touch Panel",
+      "type": "touch_interface",
+      "position": {
+        "x": 565,
+        "y": 485
+      },
+      "parameters": {},
+      "description": "Touch panel interface"
+    },
+    {
+      "id": "qwerty_keypad",
+      "name": "Qwerty Keypad",
+      "type": "keypad_interface",
+      "position": {
+        "x": 770,
+        "y": 185
+      },
+      "parameters": {},
+      "description": "QWERTY keyboard interface"
+    },
+    {
+      "id": "sim_0",
+      "name": "SIM",
+      "type": "sim_interface",
+      "position": {
+        "x": 785,
+        "y": 230
+      },
+      "parameters": {},
+      "description": "SIM card interface 0"
+    },
+    {
+      "id": "sim_1",
+      "name": "SIM",
+      "type": "sim_interface",
+      "position": {
+        "x": 755,
+        "y": 253
+      },
+      "parameters": {},
+      "description": "SIM card interface 1"
+    },
+    {
+      "id": "speaker",
+      "name": "Speaker",
+      "type": "audio_output",
+      "position": {
+        "x": 770,
+        "y": 295
+      },
+      "parameters": {},
+      "description": "Speaker audio output"
+    },
+    {
+      "id": "headset",
+      "name": "Headset",
+      "type": "audio_interface",
+      "position": {
+        "x": 705,
+        "y": 395
+      },
+      "parameters": {},
+      "description": "Headset interface"
+    },
+    {
+      "id": "mic1",
+      "name": "MIC1",
+      "type": "audio_input",
+      "position": {
+        "x": 705,
+        "y": 420
+      },
+      "parameters": {},
+      "description": "Microphone 1 input"
+    },
+    {
+      "id": "mic2",
+      "name": "MIC2",
+      "type": "audio_input",
+      "position": {
+        "x": 705,
+        "y": 442
+      },
+      "parameters": {},
+      "description": "Microphone 2 input"
+    },
+    {
+      "id": "battery",
+      "name": "Battery",
+      "type": "power_source",
+      "position": {
+        "x": 770,
+        "y": 350
+      },
+      "parameters": {},
+      "description": "Battery power source"
+    }
+  ],
+  "connections": [
+    {
+      "id": "conn_1",
+      "from_module": "nand_flash",
+      "from_port": "data",
+      "to_module": "mt6572",
+      "to_port": "nand_interface",
+      "signal_name": "nand_bus",
+      "width": "not_specified",
+      "is_bus": true,
+      "direction": "bidirectional",
+      "annotations": []
+    },
+    {
+      "id": "conn_2",
+      "from_module": "usb2_otg",
+      "from_port": "data",
+      "to_module": "mt6572",
+      "to_port": "usb_interface",
+      "signal_name": "usb_bus",
+      "width": "not_specified",
+      "is_bus": true,
+      "direction": "bidirectional",
+      "annotations": []
+    },
+    {
+      "id": "conn_3",
+      "from_module": "sw_jtag",
+      "from_port": "data",
+      "to_module": "mt6572",
+      "to_port": "jtag_interface",
+      "signal_name": "jtag_bus",
+      "width": "not_specified",
+      "is_bus": true,
+      "direction": "bidirectional",
+      "annotations": []
+    },
+    {
+      "id": "conn_4",
+      "from_module": "mmc_sd_sdio",
+      "from_port": "data",
+      "to_module": "mt6572",
+      "to_port": "mmc_interface",
+      "signal_name": "mmc_bus",
+      "width": "not_specified",
+      "is_bus": true,
+      "direction": "bidirectional",
+      "annotations": []
+    },
+    {
+      "id": "conn_5",
+      "from_module": "lpddr1_lpddr2_lpddr3_pddr3",
+      "from_port": "data",
+      "to_module": "mt6572",
+      "to_port": "memory_interface",
+      "signal_name": "ddr_bus",
+      "width": "not_specified",
+      "is_bus": true,
+      "direction": "bidirectional",
+      "annotations": []
+    },
+    {
+      "id": "conn_6",
+      "from_module": "edge_rf",
+      "from_port": "rf_signal",
+      "to_module": "mt6166",
+      "to_port": "edge_rf_in",
+      "signal_name": "edge_rf_signal",
+      "width": "analog",
+      "is_bus": false,
+      "direction": "bidirectional",
+      "annotations": []
+    },
+    {
+      "id": "conn_7",
+      "from_module": "wcdma_rf",
+      "from_port": "rf_signal",
+      "to_module": "mt6166",
+      "to_port": "wcdma_rf_in",
+      "signal_name": "wcdma_rf_signal",
+      "width": "analog",
+      "is_bus": false,
+      "direction": "bidirectional",
+      "annotations": []
+    },
+    {
+      "id": "conn_8",
+      "from_module": "tdscdma_rf",
+      "from_port": "rf_signal",
+      "to_module": "mt6166",
+      "to_port": "tdscdma_rf_in",
+      "signal_name": "tdscdma_rf_signal",
+      "width": "analog",
+      "is_bus": false,
+      "direction": "bidirectional",
+      "annotations": []
+    },
+    {
+      "id": "conn_9",
+      "from_module": "mt6166",
+      "from_port": "digital_out",
+      "to_module": "mt6572",
+      "to_port": "rf_interface",
+      "signal_name": "rf_digital_bus",
+      "width": "not_specified",
+      "is_bus": true,
+      "direction": "bidirectional",
+      "annotations": []
+    },
+    {
+      "id": "conn_10",
+      "from_module": "mt6627",
+      "from_port": "digital_out",
+      "to_module": "mt6572",
+      "to_port": "wifi_bt_interface",
+      "signal_name": "wifi_bt_bus",
+      "width": "not_specified",
+      "is_bus": true,
+      "direction": "bidirectional",
+      "annotations": []
+    },
+    {
+      "id": "conn_11",
+      "from_module": "mt6323",
+      "from_port": "power_out",
+      "to_module": "mt6572",
+      "to_port": "power_in",
+      "signal_name": "power_bus",
+      "width": "not_specified",
+      "is_bus": true,
+      "direction": "to_mt6572",
+      "annotations": []
+    },
+    {
+      "id": "conn_12",
+      "from_module": "i2c",
+      "from_port": "data",
+      "to_module": "mt6572",
+      "to_port": "i2c_interface",
+      "signal_name": "i2c_bus",
+      "width": "not_specified",
+      "is_bus": true,
+      "direction": "bidirectional",
+      "annotations": []
+    },
+    {
+      "id": "conn_13",
+      "from_module": "mt6572",
+      "from_port": "gpio_port",
+      "to_module": "gpio",
+      "to_port": "gpio_pins",
+      "signal_name": "gpio_signals",
+      "width": "not_specified",
+      "is_bus": true,
+      "direction": "bidirectional",
+      "annotations": []
+    },
+    {
+      "id": "conn_14",
+      "from_module": "mt6572",
+      "from_port": "camera_port",
+      "to_module": "smp_camera",
+      "to_port": "camera_in",
+      "signal_name": "camera_bus",
+      "width": "not_specified",
+      "is_bus": true,
+      "direction": "from_camera",
+      "annotations": []
+    },
+    {
+      "id": "conn_15",
+      "from_module": "mt6572",
+      "from_port": "lcd_port",
+      "to_module": "lcd",
+      "to_port": "lcd_in",
+      "signal_name": "lcd_bus",
+      "width": "not_specified",
+      "is_bus": true,
+      "direction": "to_lcd",
+      "annotations": []
+    },
+    {
+      "id": "conn_16",
+      "from_module": "mt6572",
+      "from_port": "uart_port",
+      "to_module": "uart",
+      "to_port": "uart_pins",
+      "signal_name": "uart_signals",
+      "width": "not_specified",
+      "is_bus": false,
+      "direction": "bidirectional",
+      "annotations": []
+    },
+    {
+      "id": "conn_17",
+      "from_module": "mt6572",
+      "from_port": "touch_port",
+      "to_module": "touch_panel",
+      "to_port": "touch_in",
+      "signal_name": "touch_bus",
+      "width": "not_specified",
+      "is_bus": true,
+      "direction": "from_touch",
+      "annotations": []
+    },
+    {
+      "id": "conn_18",
+      "from_module": "mt6572",
+      "from_port": "keypad_port",
+      "to_module": "qwerty_keypad",
+      "to_port": "keypad_in",
+      "signal_name": "keypad_signals",
+      "width": "not_specified",
+      "is_bus": true,
+      "direction": "from_keypad",
+      "annotations": []
+    },
+    {
+      "id": "conn_19",
+      "from_module": "mt6572",
+      "from_port": "sim0_port",
+      "to_module": "sim_0",
+      "to_port": "sim_interface",
+      "signal_name": "sim0_signals",
+      "width": "not_specified",
+      "is_bus": false,
+      "direction": "bidirectional",
+      "annotations": []
+    },
+    {
+      "id": "conn_20",
+      "from_module": "mt6572",
+      "from_port": "sim1_port",
+      "to_module": "sim_1",
+      "to_port": "sim_interface",
+      "signal_name": "sim1_signals",
+      "width": "not_specified",
+      "is_bus": false,
+      "direction": "bidirectional",
+      "annotations": []
+    },
+    {
+      "id": "conn_21",
+      "from_module": "mt6572",
+      "from_port": "speaker_port",
+      "to_module": "speaker",
+      "to_port": "audio_in",
+      "signal_name": "speaker_audio",
+      "width": "analog",
+      "is_bus": false,
+      "direction": "to_speaker",
+      "annotations": []
+    },
+    {
+      "id": "conn_22",
+      "from_module": "mt6323",
+      "from_port": "headset_port",
+      "to_module": "headset",
+      "to_port": "audio_interface",
+      "signal_name": "headset_audio",
+      "width": "analog",
+      "is_bus": false,
+      "direction": "bidirectional",
+      "annotations": []
+    },
+    {
+      "id": "conn_23",
+      "from_module": "mt6323",
+      "from_port": "mic1_port",
+      "to_module": "mic1",
+      "to_port": "mic_in",
+      "signal_name": "mic1_audio",
+      "width": "analog",
+      "is_bus": false,
+      "direction": "from_mic",
+      "annotations": []
+    },
+    {
+      "id": "conn_24",
+      "from_module": "mt6323",
+      "from_port": "mic2_port",
+      "to_module": "mic2",
+      "to_port": "mic_in",
+      "signal_name": "mic2_audio",
+      "width": "analog",
+      "is_bus": false,
+      "direction": "from_mic",
+      "annotations": []
+    },
+    {
+      "id": "conn_25",
+      "from_module": "battery",
+      "from_port": "power_out",
+      "to_module": "mt6323",
+      "to_port": "battery_in",
+      "signal_name": "battery_power",
+      "width": "power",
+      "is_bus": false,
+      "direction": "to_pmic",
+      "annotations": []
+    }
+  ],
+  "ports": [
+    {
+      "name": "NAND Flash",
+      "direction": "inout",
+      "width": "not_specified",
+      "connected_to": "mt6572",
+      "description": "External NAND Flash memory interface"
+    },
+    {
+      "name": "USB2.0 OTG",
+      "direction": "inout",
+      "width": "not_specified",
+      "connected_to": "mt6572",
+      "description": "USB 2.0 On-The-Go interface"
+    },
+    {
+      "name": "SW JTAG",
+      "direction": "inout",
+      "width": "not_specified",
+      "connected_to": "mt6572",
+      "description": "Software JTAG debug interface"
+    },
+    {
+      "name": "MMC/SD/SDIO",
+      "direction": "inout",
+      "width": "not_specified",
+      "connected_to": "mt6572",
+      "description": "MMC/SD/SDIO card interface"
+    },
+    {
+      "name": "LPDDR",
+      "direction": "inout",
+      "width": "not_specified",
+      "connected_to": "mt6572",
+      "description": "Low-Power DDR memory interface"
+    },
+    {
+      "name": "EDGE RF",
+      "direction": "inout",
+      "width": "analog",
+      "connected_to": "mt6166",
+      "description": "EDGE RF antenna connection"
+    },
+    {
+      "name": "WCDMA RF",
+      "direction": "inout",
+      "width": "analog",
+      "connected_to": "mt6166",
+      "description": "WCDMA RF antenna connection"
+    },
+    {
+      "name": "TDSCDMA RF",
+      "direction": "inout",
+      "width": "analog",
+      "connected_to": "mt6166",
+      "description": "TD-SCDMA RF antenna connection"
+    },
+    {
+      "name": "I2C",
+      "direction": "inout",
+      "width": "2",
+      "connected_to": "mt6572",
+      "description": "I2C bus interface"
+    },
+    {
+      "name": "GPIO",
+      "direction": "inout",
+      "width": "not_specified",
+      "connected_to": "mt6572",
+      "description": "General Purpose I/O pins"
+    },
+    {
+      "name": "SMP Camera",
+      "direction": "input",
+      "width": "not_specified",
+      "connected_to": "mt6572",
+      "description": "Camera sensor interface"
+    },
+    {
+      "name": "LCD",
+      "direction": "output",
+      "width": "not_specified",
+      "connected_to": "mt6572",
+      "description": "LCD display interface"
+    },
+    {
+      "name": "UART",
+      "direction": "inout",
+      "width": "not_specified",
+      "connected_to": "mt6572",
+      "description": "UART serial interface"
+    },
+    {
+      "name": "Touch Panel",
+      "direction": "input",
+      "width": "not_specified",
+      "connected_to": "mt6572",
+      "description": "Touch screen interface"
+    },
+    {
+      "name": "Qwerty Keypad",
+      "direction": "input",
+      "width": "not_specified",
+      "connected_to": "mt6572",
+      "description": "QWERTY keyboard interface"
+    },
+    {
+      "name": "SIM0",
+      "direction": "inout",
+      "width": "not_specified",
+      "connected_to": "mt6572",
+      "description": "SIM card 0 interface"
+    },
+    {
+      "name": "SIM1",
+      "direction": "inout",
+      "width": "not_specified",
+      "connected_to": "mt6572",
+      "description": "SIM card 1 interface"
+    },
+    {
+      "name": "Speaker",
+      "direction": "output",
+      "width": "analog",
+      "connected_to": "mt6572",
+      "description": "Speaker audio output"
+    },
+    {
+      "name": "Headset",
+      "direction": "inout",
+      "width": "analog",
+      "connected_to": "mt6323",
+      "description": "Headset audio interface"
+    },
+    {
+      "name": "MIC1",
+      "direction": "input",
+      "width": "analog",
+      "connected_to": "mt6323",
+      "description": "Microphone 1 input"
+    },
+    {
+      "name": "MIC2",
+      "direction": "input",
+      "width": "analog",
+      "connected_to": "mt6323",
+      "description": "Microphone 2 input"
+    },
+    {
+      "name": "Battery",
+      "direction": "input",
+      "width": "power",
+      "connected_to": "mt6323",
+      "description": "Battery power input"
+    }
+  ],
+  "annotations": [
+    {
+      "type": "label",
+      "content": "MT6572",
+      "location": "Top center of main SoC block",
+      "related_to": "mt6572"
+    },
+    {
+      "type": "label",
+      "content": "Modem Analog",
+      "location": "Top-left section of MT6572",
+      "related_to": "mt6572"
+    },
+    {
+      "type": "label",
+      "content": "WIFI/BT/GPS ABB",
+      "location": "Top-right section of MT6572",
+      "related_to": "mt6572"
+    },
+    {
+      "type": "label",
+      "content": "Modem",
+      "location": "Upper-middle section of MT6572",
+      "related_to": "mt6572"
+    },
+    {
+      "type": "label",
+      "content": "Combo",
+      "location": "Upper-right section of MT6572",
+      "related_to": "mt6572"
+    },
+    {
+      "type": "label",
+      "content": "Multimedia ABB",
+      "location": "Middle-left section of MT6572",
+      "related_to": "mt6572"
+    },
+    {
+      "type": "label",
+      "content": "Modem MCU",
+      "location": "Middle-center section of MT6572",
+      "related_to": "mt6572"
+    },
+    {
+      "type": "label",
+      "content": "AP MCU",
+      "location": "Middle-right section of MT6572",
+      "related_to": "mt6572"
+    },
+    {
+      "type": "label",
+      "content": "W-CDMA/TD-SCDMA/GSM RF",
+      "location": "Inside MT6166 block",
+      "related_to": "mt6166"
+    },
+    {
+      "type": "label",
+      "content": "WIFI/BT/FM/GNSS RF",
+      "location": "Inside MT6627 block",
+      "related_to": "mt6627"
+    },
+    {
+      "type": "label",
+      "content": "PMU",
+      "location": "Inside MT6323 block",
+      "related_to": "mt6323"
+    },
+    {
+      "type": "text",
+      "content": "ARM\u00ae Cortex-A7 MPCore\u2122",
+      "location": "Two instances in AP MCU section",
+      "related_to": "arm_cortex_a7_mpcore_0"
+    },
+    {
+      "type": "text",
+      "content": "ARM\u00ae Cortex-R4",
+      "location": "Inside Modem MCU section",
+      "related_to": "arm_cortex_r4"
+    },
+    {
+      "type": "text",
+      "content": "ARM\u00ae MALI-400 Graphics accelerator",
+      "location": "Bottom-right section of MT6572",
+      "related_to": "arm_mali_400_graphics"
+    }
+  ],
+  "hierarchy": {
+    "top_level_module": "MT6572_System",
+    "submodules": [
+      "MT6572",
+      "MT6166",
+      "MT6627",
+      "MT6323",
+      "Modem Analog",
+      "WIFI/BT/GPS ABB",
+      "Modem",
+      "Combo",
+      "Multimedia ABB",
+      "Modem MCU",
+      "AP MCU"
+    ],
+    "interfaces": [
+      "USB 2.0 OTG",
+      "JTAG",
+      "MMC/SD/SDIO",
+      "LPDDR",
+      "I2C",
+      "UART",
+      "GPIO",
+      "SIM"
+    ]
+  },
+  "metadata": {
+    "total_modules": 60,
+    "total_connections": 25,
+    "complexity": "complex",
+    "protocol_hints": [
+      "USB 2.0",
+      "JTAG",
+      "MMC/SD/SDIO",
+      "LPDDR1/2/3",
+      "DDR3",
+      "I2C",
+      "UART",
+      "SIM",
+      "HSPA",
+      "GSM/GPRS/EDGE",
+      "TD-SCDMA",
+      "WiFi",
+      "Bluetooth",
+      "GPS",
+      "WCDMA"
+    ],
+    "ambiguities": [
+      "Exact bit widths not specified for most buses",
+      "Internal connections within MT6572 not fully detailed",
+      "Clock and reset distribution not shown",
+      "Power domain connections not explicitly shown",
+      "Exact pinout and signal names not provided",
+      "Internal architecture of subsystems (Modem Analog, AP MCU, etc.) abstracted",
+      "Connection topology between internal MT6572 blocks not detailed"
+    ]
+  }
+}

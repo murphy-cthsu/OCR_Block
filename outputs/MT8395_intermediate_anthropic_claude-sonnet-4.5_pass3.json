@@ -1,0 +1,882 @@
+{
+  "modules": [
+    {
+      "id": "mod_arm_dynamiq",
+      "name": "Arm DynamIQ",
+      "type": "processor_subsystem",
+      "position": {
+        "x": 100,
+        "y": 50
+      },
+      "parameters": {},
+      "description": "Main processor subsystem containing quad-core configurations"
+    },
+    {
+      "id": "mod_quad_core_cortex_a78",
+      "name": "Quad-Core Arm Cortex-A78",
+      "type": "cpu_core",
+      "position": {
+        "x": 50,
+        "y": 80
+      },
+      "parameters": {
+        "cores": "4",
+        "l1_cache": "64KB per core"
+      },
+      "description": "High-performance CPU cluster with 64KB L1 cache per core"
+    },
+    {
+      "id": "mod_quad_core_cortex_a55",
+      "name": "Quad-Core Arm Cortex-A55",
+      "type": "cpu_core",
+      "position": {
+        "x": 150,
+        "y": 80
+      },
+      "parameters": {
+        "cores": "4",
+        "l1_cache": "64KB per core"
+      },
+      "description": "Efficiency CPU cluster with 64KB L1 cache per core"
+    },
+    {
+      "id": "mod_256kb_l2_a78",
+      "name": "256KB L2",
+      "type": "cache",
+      "position": {
+        "x": 50,
+        "y": 120
+      },
+      "parameters": {
+        "size": "256KB",
+        "type": "L2"
+      },
+      "description": "L2 cache for Cortex-A78 cluster"
+    },
+    {
+      "id": "mod_128kb_l2_a55",
+      "name": "128KB L2",
+      "type": "cache",
+      "position": {
+        "x": 150,
+        "y": 120
+      },
+      "parameters": {
+        "size": "128KB",
+        "type": "L2"
+      },
+      "description": "L2 cache for Cortex-A55 cluster"
+    },
+    {
+      "id": "mod_generic_timers_a78",
+      "name": "Generic Timers",
+      "type": "timer",
+      "position": {
+        "x": 50,
+        "y": 145
+      },
+      "parameters": {},
+      "description": "Generic timers for A78 cluster"
+    },
+    {
+      "id": "mod_generic_timers_a55",
+      "name": "Generic Timers",
+      "type": "timer",
+      "position": {
+        "x": 150,
+        "y": 145
+      },
+      "parameters": {},
+      "description": "Generic timers for A55 cluster"
+    },
+    {
+      "id": "mod_2mb_shared_l3",
+      "name": "2MB Shared L3",
+      "type": "cache",
+      "position": {
+        "x": 100,
+        "y": 175
+      },
+      "parameters": {
+        "size": "2MB",
+        "type": "L3",
+        "shared": true
+      },
+      "description": "Shared L3 cache for all cores"
+    },
+    {
+      "id": "mod_gic_600",
+      "name": "GIC-600",
+      "type": "interrupt_controller",
+      "position": {
+        "x": 50,
+        "y": 210
+      },
+      "parameters": {},
+      "description": "Generic Interrupt Controller 600"
+    },
+    {
+      "id": "mod_dma",
+      "name": "DMA",
+      "type": "dma_controller",
+      "position": {
+        "x": 150,
+        "y": 210
+      },
+      "parameters": {},
+      "description": "Direct Memory Access controller"
+    },
+    {
+      "id": "mod_2x_emi",
+      "name": "2 \u00d7 EMI (64-bit LPDDR4X)",
+      "type": "memory_interface",
+      "position": {
+        "x": 292,
+        "y": 40
+      },
+      "parameters": {
+        "count": "2",
+        "width": "64-bit",
+        "type": "LPDDR4X"
+      },
+      "description": "Dual External Memory Interface for LPDDR4X"
+    },
+    {
+      "id": "mod_128kb_boot_rom",
+      "name": "128KB On-chip Boot ROM",
+      "type": "memory",
+      "position": {
+        "x": 292,
+        "y": 65
+      },
+      "parameters": {
+        "size": "128KB",
+        "type": "ROM"
+      },
+      "description": "On-chip boot ROM"
+    },
+    {
+      "id": "mod_192kb_sram",
+      "name": "192KB On-chip SRAM",
+      "type": "memory",
+      "position": {
+        "x": 292,
+        "y": 85
+      },
+      "parameters": {
+        "size": "192KB",
+        "type": "SRAM"
+      },
+      "description": "On-chip SRAM"
+    },
+    {
+      "id": "mod_hifi4_audio_dsp",
+      "name": "HiFi 4 Audio DSP",
+      "type": "dsp",
+      "position": {
+        "x": 442,
+        "y": 40
+      },
+      "parameters": {},
+      "description": "HiFi 4 Audio Digital Signal Processor"
+    },
+    {
+      "id": "mod_2d3d_gpu_mali_g57",
+      "name": "2D/3D GPU Mali-G57",
+      "type": "gpu",
+      "position": {
+        "x": 542,
+        "y": 40
+      },
+      "parameters": {
+        "model": "Mali-G57"
+      },
+      "description": "2D/3D Graphics Processing Unit"
+    },
+    {
+      "id": "mod_dual_core_apu",
+      "name": "Dual-Core APU Vision P6 + AIA",
+      "type": "apu",
+      "position": {
+        "x": 442,
+        "y": 80
+      },
+      "parameters": {
+        "cores": "2",
+        "model": "Vision P6"
+      },
+      "description": "AI Processing Unit with Vision P6 and AIA"
+    },
+    {
+      "id": "mod_dual_core_scp",
+      "name": "Dual-Core SCP M0oP RV33",
+      "type": "scp",
+      "position": {
+        "x": 542,
+        "y": 80
+      },
+      "parameters": {
+        "cores": "2",
+        "model": "M0oP RV33"
+      },
+      "description": "System Control Processor"
+    },
+    {
+      "id": "mod_display_16bit",
+      "name": "Display (16-bit)",
+      "type": "display_interface",
+      "position": {
+        "x": 242,
+        "y": 130
+      },
+      "parameters": {
+        "width": "16-bit"
+      },
+      "description": "16-bit display interface"
+    },
+    {
+      "id": "mod_2x_mipi_dsi",
+      "name": "2 \u00d7 MIPI DSI (4-lane D-PHY) (5-line C-PHY)",
+      "type": "display_interface",
+      "position": {
+        "x": 242,
+        "y": 160
+      },
+      "parameters": {
+        "count": "2",
+        "type": "MIPI DSI",
+        "d_phy_lanes": "4",
+        "c_phy_lines": "5"
+      },
+      "description": "Dual MIPI DSI interfaces"
+    },
+    {
+      "id": "mod_hdmi_tx",
+      "name": "HDMI TX",
+      "type": "hdmi_interface",
+      "position": {
+        "x": 217,
+        "y": 205
+      },
+      "parameters": {
+        "direction": "TX"
+      },
+      "description": "HDMI transmitter"
+    },
+    {
+      "id": "mod_hdmi_rx",
+      "name": "HDMI RX",
+      "type": "hdmi_interface",
+      "position": {
+        "x": 267,
+        "y": 205
+      },
+      "parameters": {
+        "direction": "RX"
+      },
+      "description": "HDMI receiver"
+    },
+    {
+      "id": "mod_dp",
+      "name": "DP",
+      "type": "display_interface",
+      "position": {
+        "x": 217,
+        "y": 225
+      },
+      "parameters": {},
+      "description": "DisplayPort interface"
+    },
+    {
+      "id": "mod_edp",
+      "name": "eDP",
+      "type": "display_interface",
+      "position": {
+        "x": 267,
+        "y": 225
+      },
+      "parameters": {},
+      "description": "Embedded DisplayPort interface"
+    },
+    {
+      "id": "mod_video_decoder",
+      "name": "Video Decoder (4K @ 90fps)",
+      "type": "video_codec",
+      "position": {
+        "x": 392,
+        "y": 135
+      },
+      "parameters": {
+        "resolution": "4K",
+        "framerate": "90fps",
+        "type": "decoder"
+      },
+      "description": "4K video decoder at 90fps"
+    },
+    {
+      "id": "mod_video_encoder",
+      "name": "Video Encoder (4K @ 60fps)",
+      "type": "video_codec",
+      "position": {
+        "x": 392,
+        "y": 200
+      },
+      "parameters": {
+        "resolution": "4K",
+        "framerate": "60fps",
+        "type": "encoder"
+      },
+      "description": "4K video encoder at 60fps"
+    },
+    {
+      "id": "mod_3x_mipi_csi2",
+      "name": "3 \u00d7 MIPI CSI-2 (4-lane D-PHY) (3-trio C-PHY)",
+      "type": "camera_interface",
+      "position": {
+        "x": 542,
+        "y": 135
+      },
+      "parameters": {
+        "count": "3",
+        "type": "MIPI CSI-2",
+        "d_phy_lanes": "4",
+        "c_phy_trios": "3"
+      },
+      "description": "Triple MIPI CSI-2 camera interfaces"
+    },
+    {
+      "id": "mod_fd",
+      "name": "FD",
+      "type": "face_detection",
+      "position": {
+        "x": 567,
+        "y": 155
+      },
+      "parameters": {},
+      "description": "Face Detection module"
+    },
+    {
+      "id": "mod_isp_single",
+      "name": "Single: 48MP @ 30fps",
+      "type": "isp",
+      "position": {
+        "x": 517,
+        "y": 200
+      },
+      "parameters": {
+        "mode": "single",
+        "resolution": "48MP",
+        "framerate": "30fps"
+      },
+      "description": "Image Signal Processor - Single camera mode"
+    },
+    {
+      "id": "mod_isp_dual",
+      "name": "Dual: 16MP + 16MP @ 30fps",
+      "type": "isp",
+      "position": {
+        "x": 517,
+        "y": 220
+      },
+      "parameters": {
+        "mode": "dual",
+        "resolution": "16MP+16MP",
+        "framerate": "30fps"
+      },
+      "description": "Image Signal Processor - Dual camera mode"
+    },
+    {
+      "id": "mod_3x_msdc",
+      "name": "3 \u00d7 MSDC eMMC/SD/SDIO",
+      "type": "storage_interface",
+      "position": {
+        "x": 50,
+        "y": 280
+      },
+      "parameters": {
+        "count": "3",
+        "type": "MSDC",
+        "protocols": [
+          "eMMC",
+          "SD",
+          "SDIO"
+        ]
+      },
+      "description": "Triple MSDC interface for eMMC/SD/SDIO"
+    },
+    {
+      "id": "mod_ufs",
+      "name": "UFS",
+      "type": "storage_interface",
+      "position": {
+        "x": 50,
+        "y": 320
+      },
+      "parameters": {},
+      "description": "Universal Flash Storage interface"
+    },
+    {
+      "id": "mod_serial_nor_flash",
+      "name": "Serial NOR Flash",
+      "type": "storage_interface",
+      "position": {
+        "x": 50,
+        "y": 375
+      },
+      "parameters": {},
+      "description": "Serial NOR Flash interface"
+    },
+    {
+      "id": "mod_spi_nand_flash",
+      "name": "SPI NAND Flash",
+      "type": "storage_interface",
+      "position": {
+        "x": 50,
+        "y": 425
+      },
+      "parameters": {},
+      "description": "SPI NAND Flash interface"
+    },
+    {
+      "id": "mod_5x_i2s_tdm",
+      "name": "5 \u00d7 I2S/TDM",
+      "type": "audio_interface",
+      "position": {
+        "x": 150,
+        "y": 275
+      },
+      "parameters": {
+        "count": "5",
+        "protocols": [
+          "I2S",
+          "TDM"
+        ]
+      },
+      "description": "Five I2S/TDM audio interfaces"
+    },
+    {
+      "id": "mod_spdif_inout",
+      "name": "S/PDIF In/Out",
+      "type": "audio_interface",
+      "position": {
+        "x": 150,
+        "y": 315
+      },
+      "parameters": {
+        "direction": "bidirectional"
+      },
+      "description": "S/PDIF input/output interface"
+    },
+    {
+      "id": "mod_4x_pdm",
+      "name": "4 \u00d7 PDM",
+      "type": "audio_interface",
+      "position": {
+        "x": 150,
+        "y": 355
+      },
+      "parameters": {
+        "count": "4"
+      },
+      "description": "Four Pulse Density Modulation interfaces"
+    },
+    {
+      "id": "mod_pcm",
+      "name": "PCM",
+      "type": "audio_interface",
+      "position": {
+        "x": 150,
+        "y": 390
+      },
+      "parameters": {},
+      "description": "Pulse Code Modulation interface"
+    },
+    {
+      "id": "mod_hdmi_dp_audio",
+      "name": "HDMI/DP Audio",
+      "type": "audio_interface",
+      "position": {
+        "x": 150,
+        "y": 430
+      },
+      "parameters": {},
+      "description": "HDMI/DisplayPort audio interface"
+    },
+    {
+      "id": "mod_12bit_auxadc",
+      "name": "12-bit AUXADC (8-channel)",
+      "type": "adc",
+      "position": {
+        "x": 292,
+        "y": 265
+      },
+      "parameters": {
+        "resolution": "12-bit",
+        "channels": "8"
+      },
+      "description": "12-bit Auxiliary ADC with 8 channels"
+    },
+    {
+      "id": "mod_pwrap",
+      "name": "PWRAP",
+      "type": "power_wrapper",
+      "position": {
+        "x": 292,
+        "y": 300
+      },
+      "parameters": {},
+      "description": "Power Wrapper interface"
+    },
+    {
+      "id": "mod_systmr",
+      "name": "SYSTMR",
+      "type": "timer",
+      "position": {
+        "x": 292,
+        "y": 335
+      },
+      "parameters": {},
+      "description": "System Timer"
+    },
+    {
+      "id": "mod_thermal_sensors",
+      "name": "Thermal Sensors",
+      "type": "sensor",
+      "position": {
+        "x": 292,
+        "y": 370
+      },
+      "parameters": {},
+      "description": "Thermal monitoring sensors"
+    },
+    {
+      "id": "mod_6x_gpt",
+      "name": "6 \u00d7 GPT",
+      "type": "timer",
+      "position": {
+        "x": 292,
+        "y": 405
+      },
+      "parameters": {
+        "count": "6"
+      },
+      "description": "Six General Purpose Timers"
+    },
+    {
+      "id": "mod_wdt",
+      "name": "WDT",
+      "type": "watchdog",
+      "position": {
+        "x": 292,
+        "y": 440
+      },
+      "parameters": {},
+      "description": "Watchdog Timer"
+    },
+    {
+      "id": "mod_6x_spi_master",
+      "name": "6 \u00d7 SPI Master",
+      "type": "spi_interface",
+      "position": {
+        "x": 442,
+        "y": 295
+      },
+      "parameters": {
+        "count": "6",
+        "mode": "master"
+      },
+      "description": "Six SPI Master interfaces"
+    },
+    {
+      "id": "mod_2x_spi_slave",
+      "name": "2 \u00d7 SPI Slave",
+      "type": "spi_interface",
+      "position": {
+        "x": 442,
+        "y": 315
+      },
+      "parameters": {
+        "count": "2",
+        "mode": "slave"
+      },
+      "description": "Two SPI Slave interfaces"
+    },
+    {
+      "id": "mod_6x_uart",
+      "name": "6 \u00d7 UART",
+      "type": "uart_interface",
+      "position": {
+        "x": 442,
+        "y": 340
+      },
+      "parameters": {
+        "count": "6"
+      },
+      "description": "Six UART interfaces"
+    },
+    {
+      "id": "mod_4x_pwm",
+      "name": "4 \u00d7 PWM",
+      "type": "pwm",
+      "position": {
+        "x": 442,
+        "y": 370
+      },
+      "parameters": {
+        "count": "4"
+      },
+      "description": "Four Pulse Width Modulation outputs"
+    },
+    {
+      "id": "mod_6x_i2c",
+      "name": "6 \u00d7 I2C",
+      "type": "i2c_interface",
+      "position": {
+        "x": 442,
+        "y": 400
+      },
+      "parameters": {
+        "count": "6"
+      },
+      "description": "Six I2C interfaces"
+    },
+    {
+      "id": "mod_2x_i3c",
+      "name": "2 \u00d7 I3C",
+      "type": "i3c_interface",
+      "position": {
+        "x": 442,
+        "y": 415
+      },
+      "parameters": {
+        "count": "2"
+      },
+      "description": "Two I3C interfaces"
+    },
+    {
+      "id": "mod_irrx",
+      "name": "IRRX",
+      "type": "ir_receiver",
+      "position": {
+        "x": 442,
+        "y": 440
+      },
+      "parameters": {},
+      "description": "Infrared Receiver"
+    },
+    {
+      "id": "mod_gpio",
+      "name": "GPIO",
+      "type": "gpio",
+      "position": {
+        "x": 542,
+        "y": 270
+      },
+      "parameters": {},
+      "description": "General Purpose Input/Output"
+    },
+    {
+      "id": "mod_enic",
+      "name": "ENIC",
+      "type": "ethernet",
+      "position": {
+        "x": 542,
+        "y": 300
+      },
+      "parameters": {},
+      "description": "Ethernet Network Interface Controller"
+    },
+    {
+      "id": "mod_ss_usb_drd",
+      "name": "SS USB DRD",
+      "type": "usb_interface",
+      "position": {
+        "x": 542,
+        "y": 325
+      },
+      "parameters": {
+        "speed": "SuperSpeed",
+        "mode": "DRD"
+      },
+      "description": "SuperSpeed USB Dual-Role Device"
+    },
+    {
+      "id": "mod_2x_hs_usb_drd",
+      "name": "2 \u00d7 HS USB DRD",
+      "type": "usb_interface",
+      "position": {
+        "x": 542,
+        "y": 345
+      },
+      "parameters": {
+        "count": "2",
+        "speed": "HighSpeed",
+        "mode": "DRD"
+      },
+      "description": "Two High-Speed USB Dual-Role Devices"
+    },
+    {
+      "id": "mod_keypad_3x3",
+      "name": "Keypad (3\u00d73)",
+      "type": "keypad_interface",
+      "position": {
+        "x": 542,
+        "y": 370
+      },
+      "parameters": {
+        "size": "3x3"
+      },
+      "description": "3x3 Keypad interface"
+    },
+    {
+      "id": "mod_pcie_ss_usb_host",
+      "name": "PCIe / SS USB Host",
+      "type": "pcie_usb_interface",
+      "position": {
+        "x": 542,
+        "y": 400
+      },
+      "parameters": {},
+      "description": "PCIe or SuperSpeed USB Host interface"
+    },
+    {
+      "id": "mod_pcie",
+      "name": "PCIe",
+      "type": "pcie_interface",
+      "position": {
+        "x": 542,
+        "y": 440
+      },
+      "parameters": {},
+      "description": "PCI Express interface"
+    }
+  ],
+  "connections": [],
+  "ports": [],
+  "annotations": [
+    {
+      "type": "section_header",
+      "content": "Application Processing",
+      "location": "Top-left section header",
+      "related_to": "mod_arm_dynamiq"
+    },
+    {
+      "type": "section_header",
+      "content": "Memory",
+      "location": "Top-center section header",
+      "related_to": "mod_2x_emi"
+    },
+    {
+      "type": "section_header",
+      "content": "Compute Engines",
+      "location": "Top-right section header",
+      "related_to": "mod_hifi4_audio_dsp"
+    },
+    {
+      "type": "section_header",
+      "content": "Display",
+      "location": "Middle-left section header",
+      "related_to": "mod_display_16bit"
+    },
+    {
+      "type": "section_header",
+      "content": "Video",
+      "location": "Middle-center section header",
+      "related_to": "mod_video_decoder"
+    },
+    {
+      "type": "section_header",
+      "content": "Imaging",
+      "location": "Middle-right section header",
+      "related_to": "mod_3x_mipi_csi2"
+    },
+    {
+      "type": "section_header",
+      "content": "Storage",
+      "location": "Bottom-left section header",
+      "related_to": "mod_3x_msdc"
+    },
+    {
+      "type": "section_header",
+      "content": "Audio",
+      "location": "Bottom-left-center section header",
+      "related_to": "mod_5x_i2s_tdm"
+    },
+    {
+      "type": "section_header",
+      "content": "Miscellaneous",
+      "location": "Bottom-center section header",
+      "related_to": "mod_12bit_auxadc"
+    },
+    {
+      "type": "section_header",
+      "content": "Connectivity",
+      "location": "Bottom-right section header",
+      "related_to": "mod_6x_spi_master"
+    }
+  ],
+  "hierarchy": {
+    "top_level_module": "SoC_System",
+    "submodules": [
+      "Arm DynamIQ",
+      "Memory Subsystem",
+      "Compute Engines",
+      "Display Subsystem",
+      "Video Subsystem",
+      "Imaging Subsystem",
+      "Storage Subsystem",
+      "Audio Subsystem",
+      "Miscellaneous Peripherals",
+      "Connectivity Subsystem"
+    ],
+    "interfaces": [
+      "MIPI DSI",
+      "MIPI CSI-2",
+      "HDMI",
+      "DisplayPort",
+      "USB",
+      "PCIe",
+      "I2C",
+      "I3C",
+      "SPI",
+      "UART",
+      "I2S",
+      "TDM",
+      "S/PDIF"
+    ]
+  },
+  "metadata": {
+    "total_modules": 60,
+    "total_connections": 0,
+    "complexity": "complex",
+    "protocol_hints": [
+      "LPDDR4X",
+      "MIPI DSI",
+      "MIPI CSI-2",
+      "HDMI",
+      "DisplayPort",
+      "USB SuperSpeed",
+      "USB High-Speed",
+      "PCIe",
+      "I2C",
+      "I3C",
+      "SPI",
+      "UART",
+      "I2S",
+      "TDM",
+      "S/PDIF",
+      "eMMC",
+      "SD",
+      "SDIO",
+      "UFS"
+    ],
+    "ambiguities": [
+      "No explicit connections shown between modules - this appears to be a high-level block diagram showing functional blocks rather than detailed RTL connections",
+      "Exact bus widths for most interconnects not specified",
+      "Clock and reset distribution not shown",
+      "Internal bus architecture (e.g., AXI, AHB) not explicitly labeled",
+      "Power domains not indicated",
+      "Exact pin counts and signal names not provided"
+    ]
+  }
+}

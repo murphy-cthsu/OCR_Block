@@ -1,0 +1,12 @@
+{
+  "validation": {
+    "valid": true,
+    "issues": [],
+    "warnings": [],
+    "stats": {
+      "modules": 0,
+      "connections": 0,
+      "ports": 0
+    }
+  }
+}

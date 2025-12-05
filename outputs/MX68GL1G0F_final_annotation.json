@@ -1,0 +1,1118 @@
+{
+  "modules": [
+    {
+      "id": "m1",
+      "name": "CONTROL INPUT LOGIC",
+      "type": "custom",
+      "position": {
+        "x": 170,
+        "y": 90
+      },
+      "parameters": {},
+      "description": "Control logic block receiving CE#, OE#, WE#, RESET#, BYTE#, WP/ACC# inputs",
+      "confidence": 1.0
+    },
+    {
+      "id": "m2",
+      "name": "ADDRESS LATCH AND BUFFER",
+      "type": "latch_buffer",
+      "position": {
+        "x": 170,
+        "y": 270
+      },
+      "parameters": {},
+      "description": "Address latching and buffering block with AC-AM input",
+      "confidence": 1.0
+    },
+    {
+      "id": "m3",
+      "name": "X-DECODER",
+      "type": "decoder",
+      "position": {
+        "x": 280,
+        "y": 240
+      },
+      "parameters": {},
+      "description": "X-axis decoder for flash array addressing",
+      "confidence": 1.0
+    },
+    {
+      "id": "m4",
+      "name": "Y-DECODER",
+      "type": "decoder",
+      "position": {
+        "x": 280,
+        "y": 310
+      },
+      "parameters": {},
+      "description": "Y-axis decoder for flash array addressing",
+      "confidence": 1.0
+    },
+    {
+      "id": "mod_5",
+      "name": "FLASH ARRAY",
+      "type": "memory",
+      "position": {
+        "x": 360,
+        "y": 245
+      },
+      "parameters": {
+        "type": "flash_memory"
+      },
+      "description": "Main flash memory array",
+      "confidence": 1.0
+    },
+    {
+      "id": "mod_6",
+      "name": "Y-PASS GATE",
+      "type": "pass_gate",
+      "position": {
+        "x": 360,
+        "y": 310
+      },
+      "parameters": {},
+      "description": "Y-axis pass gate for data routing",
+      "confidence": 1.0
+    },
+    {
+      "id": "mod_7",
+      "name": "SENSE AMPLIFIERS",
+      "type": "amplifier",
+      "position": {
+        "x": 280,
+        "y": 410
+      },
+      "parameters": {},
+      "description": "Sense amplifiers for reading flash array data",
+      "confidence": 1.0
+    },
+    {
+      "id": "m8",
+      "name": "PROGRAM/ERASE HIGH VOLTAGE",
+      "type": "high_voltage_generator",
+      "position": {
+        "x": 330,
+        "y": 90
+      },
+      "parameters": {},
+      "description": "High voltage generation for program and erase operations",
+      "confidence": 1.0
+    },
+    {
+      "id": "mod_13",
+      "name": "WRITE STATE MACHINE (WSM)",
+      "type": "state_machine",
+      "position": {
+        "x": 505,
+        "y": 85
+      },
+      "parameters": {},
+      "description": "Write state machine controlling program/erase operations",
+      "confidence": 1.0
+    },
+    {
+      "id": "m10",
+      "name": "STATE REGISTER",
+      "type": "register",
+      "position": {
+        "x": 505,
+        "y": 200
+      },
+      "parameters": {},
+      "description": "Register holding current state information",
+      "confidence": 1.0
+    },
+    {
+      "id": "m11",
+      "name": "COMMAND DATA DECODER",
+      "type": "decoder",
+      "position": {
+        "x": 505,
+        "y": 310
+      },
+      "parameters": {},
+      "description": "Decoder for command data interpretation",
+      "confidence": 1.0
+    },
+    {
+      "id": "m12",
+      "name": "COMMAND DATA LATCH",
+      "type": "latch",
+      "position": {
+        "x": 505,
+        "y": 430
+      },
+      "parameters": {},
+      "description": "Latch for command data storage",
+      "confidence": 1.0
+    },
+    {
+      "id": "m13",
+      "name": "PROGRAM DATA LATCH",
+      "type": "latch",
+      "position": {
+        "x": 360,
+        "y": 480
+      },
+      "parameters": {},
+      "description": "Latch for program data storage",
+      "confidence": 1.0
+    },
+    {
+      "id": "mod_9",
+      "name": "I/O BUFFER",
+      "type": "buffer",
+      "position": {
+        "x": 320,
+        "y": 550
+      },
+      "parameters": {},
+      "description": "Input/Output buffer for external data interface",
+      "confidence": 1.0
+    }
+  ],
+  "connections": [
+    {
+      "id": "c1",
+      "from_module": "external",
+      "from_port": "CE#_OE#_WE#_RESET#_BYTE#_WP/ACC#",
+      "to_module": "m1",
+      "to_port": "input",
+      "signal_name": "CE#, OE#, WE#, RESET#, BYTE#, WP/ACC#",
+      "width": "6",
+      "is_bus": true,
+      "direction": "right",
+      "annotations": [
+        "Control signals"
+      ],
+      "confidence": 2.3333333333333335
+    },
+    {
+      "id": "c7",
+      "from_module": "m1",
+      "from_port": "output",
+      "to_module": "m2",
+      "to_port": "control",
+      "signal_name": "",
+      "width": "1",
+      "is_bus": false,
+      "direction": "down",
+      "annotations": [
+        "Control signal to address latch"
+      ],
+      "confidence": 0.6666666666666666
+    },
+    {
+      "id": "c3",
+      "from_module": "external",
+      "from_port": "AC-AM",
+      "to_module": "m2",
+      "to_port": "address_input",
+      "signal_name": "AC-AM",
+      "width": "multi",
+      "is_bus": true,
+      "direction": "right",
+      "annotations": [
+        "Address inputs"
+      ],
+      "confidence": 0.6666666666666666
+    },
+    {
+      "id": "c9",
+      "from_module": "m2",
+      "from_port": "output",
+      "to_module": "m3",
+      "to_port": "input",
+      "signal_name": "",
+      "width": "multi",
+      "is_bus": true,
+      "direction": "right",
+      "annotations": [
+        "Address to Y-decoder"
+      ],
+      "confidence": 0.6666666666666666
+    },
+    {
+      "id": "c10",
+      "from_module": "m2",
+      "from_port": "output",
+      "to_module": "m4",
+      "to_port": "input",
+      "signal_name": "",
+      "width": "multi",
+      "is_bus": true,
+      "direction": "right",
+      "annotations": [
+        "Address to X-decoder"
+      ],
+      "confidence": 0.6666666666666666
+    },
+    {
+      "id": "c11",
+      "from_module": "m3",
+      "from_port": "output",
+      "to_module": "m5",
+      "to_port": "y_select",
+      "signal_name": "",
+      "width": "multi",
+      "is_bus": true,
+      "direction": "right",
+      "annotations": [
+        "Y-decoder output to flash array"
+      ],
+      "confidence": 0.6666666666666666
+    },
+    {
+      "id": "c12",
+      "from_module": "m4",
+      "from_port": "output",
+      "to_module": "m6",
+      "to_port": "control",
+      "signal_name": "",
+      "width": "multi",
+      "is_bus": true,
+      "direction": "down",
+      "annotations": [
+        "X-decoder output to Y-pass gate"
+      ],
+      "confidence": 0.6666666666666666
+    },
+    {
+      "id": "c8",
+      "from_module": "m5",
+      "from_port": "output",
+      "to_module": "m7",
+      "to_port": "input",
+      "signal_name": "",
+      "width": "multi",
+      "is_bus": true,
+      "direction": "down",
+      "annotations": [],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "c14",
+      "from_module": "m6",
+      "from_port": "output",
+      "to_module": "m7",
+      "to_port": "input",
+      "signal_name": "",
+      "width": "multi",
+      "is_bus": true,
+      "direction": "down",
+      "annotations": [
+        "Pass gate output to sense amplifiers"
+      ],
+      "confidence": 0.6666666666666666
+    },
+    {
+      "id": "c15",
+      "from_module": "m7",
+      "from_port": "output",
+      "to_module": "m14",
+      "to_port": "input",
+      "signal_name": "",
+      "width": "multi",
+      "is_bus": true,
+      "direction": "down",
+      "annotations": [
+        "Sense amplifier output to I/O buffer"
+      ],
+      "confidence": 0.6666666666666666
+    },
+    {
+      "id": "c16",
+      "from_module": "m14",
+      "from_port": "bidirectional",
+      "to_module": "external",
+      "to_port": "Q[0:15]/A[-1]",
+      "signal_name": "Q[0:15]/A[-1]",
+      "width": "16",
+      "is_bus": true,
+      "direction": "left-right",
+      "annotations": [
+        "Bidirectional data bus"
+      ],
+      "confidence": 0.6666666666666666
+    },
+    {
+      "id": "c17",
+      "from_module": "m14",
+      "from_port": "output",
+      "to_module": "m13",
+      "to_port": "input",
+      "signal_name": "",
+      "width": "multi",
+      "is_bus": true,
+      "direction": "up",
+      "annotations": [
+        "I/O buffer to program data latch"
+      ],
+      "confidence": 0.6666666666666666
+    },
+    {
+      "id": "c13",
+      "from_module": "m13",
+      "from_port": "output",
+      "to_module": "m6",
+      "to_port": "data_input",
+      "signal_name": "PGM DATA HV",
+      "width": "multi",
+      "is_bus": true,
+      "direction": "up",
+      "annotations": [
+        "Program data high voltage"
+      ],
+      "confidence": 0.6666666666666666
+    },
+    {
+      "id": "c19",
+      "from_module": "m14",
+      "from_port": "output",
+      "to_module": "m12",
+      "to_port": "input",
+      "signal_name": "",
+      "width": "multi",
+      "is_bus": true,
+      "direction": "right-up",
+      "annotations": [
+        "I/O buffer to command data latch"
+      ],
+      "confidence": 0.6666666666666666
+    },
+    {
+      "id": "c20",
+      "from_module": "m12",
+      "from_port": "output",
+      "to_module": "m11",
+      "to_port": "input",
+      "signal_name": "",
+      "width": "multi",
+      "is_bus": true,
+      "direction": "up",
+      "annotations": [
+        "Command data latch to decoder"
+      ],
+      "confidence": 0.6666666666666666
+    },
+    {
+      "id": "c21",
+      "from_module": "m11",
+      "from_port": "output",
+      "to_module": "m10",
+      "to_port": "input",
+      "signal_name": "",
+      "width": "multi",
+      "is_bus": true,
+      "direction": "up",
+      "annotations": [
+        "Command decoder to state register"
+      ],
+      "confidence": 0.6666666666666666
+    },
+    {
+      "id": "c22",
+      "from_module": "m10",
+      "from_port": "output",
+      "to_module": "m9",
+      "to_port": "input",
+      "signal_name": "",
+      "width": "multi",
+      "is_bus": true,
+      "direction": "up",
+      "annotations": [
+        "State register to write state machine"
+      ],
+      "confidence": 0.6666666666666666
+    },
+    {
+      "id": "c23",
+      "from_module": "m9",
+      "from_port": "output",
+      "to_module": "m8",
+      "to_port": "control",
+      "signal_name": "",
+      "width": "multi",
+      "is_bus": true,
+      "direction": "left",
+      "annotations": [
+        "WSM control to high voltage generator"
+      ],
+      "confidence": 0.6666666666666666
+    },
+    {
+      "id": "c24",
+      "from_module": "m8",
+      "from_port": "output",
+      "to_module": "m5",
+      "to_port": "hv_input",
+      "signal_name": "",
+      "width": "multi",
+      "is_bus": true,
+      "direction": "down",
+      "annotations": [
+        "High voltage to flash array"
+      ],
+      "confidence": 0.6666666666666666
+    },
+    {
+      "id": "c20",
+      "from_module": "m9",
+      "from_port": "output",
+      "to_module": "m5",
+      "to_port": "control",
+      "signal_name": "ARRAY SOURCE HV",
+      "width": "multi",
+      "is_bus": false,
+      "direction": "down-left",
+      "annotations": [
+        "Array source high voltage control"
+      ],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "c27",
+      "from_module": "external",
+      "from_port": "top",
+      "to_module": "m9",
+      "to_port": "input",
+      "signal_name": "",
+      "width": "1",
+      "is_bus": false,
+      "direction": "down",
+      "annotations": [
+        "External input to WSM"
+      ],
+      "confidence": 0.6666666666666666
+    },
+    {
+      "id": "c26",
+      "from_module": "m10",
+      "from_port": "output",
+      "to_module": "m14",
+      "to_port": "status",
+      "signal_name": "",
+      "width": "multi",
+      "is_bus": true,
+      "direction": "down-left",
+      "annotations": [
+        "State register status to I/O buffer"
+      ],
+      "confidence": 0.6666666666666666
+    },
+    {
+      "id": "c13",
+      "from_module": "m5",
+      "from_port": "output",
+      "to_module": "m6",
+      "to_port": "input",
+      "signal_name": "ARRAY SOURCE HV",
+      "width": "multi",
+      "is_bus": true,
+      "direction": "right-down",
+      "annotations": [
+        "Array source high voltage path"
+      ],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "c25",
+      "from_module": "m9",
+      "from_port": "output",
+      "to_module": "m10",
+      "to_port": "control",
+      "signal_name": "",
+      "width": "multi",
+      "is_bus": true,
+      "direction": "down",
+      "annotations": [
+        "WSM feedback to state register"
+      ],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_5",
+      "from_module": "external",
+      "from_port": "BYTE#",
+      "to_module": "mod_1",
+      "to_port": "input",
+      "signal_name": "BYTE#",
+      "width": "1",
+      "is_bus": false,
+      "direction": "right",
+      "annotations": [
+        "Byte mode select (active low)"
+      ],
+      "confidence": 2.0
+    },
+    {
+      "id": "conn_7",
+      "from_module": "mod_1",
+      "from_port": "output",
+      "to_module": "mod_2",
+      "to_port": "control",
+      "signal_name": "",
+      "width": "1",
+      "is_bus": false,
+      "direction": "down",
+      "annotations": [],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_8",
+      "from_module": "external",
+      "from_port": "A[:]",
+      "to_module": "mod_2",
+      "to_port": "input",
+      "signal_name": "A[:]",
+      "width": "multi",
+      "is_bus": true,
+      "direction": "right",
+      "annotations": [
+        "Address bus"
+      ],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_9",
+      "from_module": "mod_2",
+      "from_port": "output",
+      "to_module": "mod_3",
+      "to_port": "input",
+      "signal_name": "",
+      "width": "multi",
+      "is_bus": true,
+      "direction": "right",
+      "annotations": [
+        "Address to X-decoder"
+      ],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_10",
+      "from_module": "mod_2",
+      "from_port": "output",
+      "to_module": "mod_4",
+      "to_port": "input",
+      "signal_name": "",
+      "width": "multi",
+      "is_bus": true,
+      "direction": "right",
+      "annotations": [
+        "Address to Y-decoder"
+      ],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_11",
+      "from_module": "mod_3",
+      "from_port": "output",
+      "to_module": "mod_5",
+      "to_port": "x_select",
+      "signal_name": "",
+      "width": "multi",
+      "is_bus": true,
+      "direction": "right",
+      "annotations": [
+        "X-decoder output to flash array"
+      ],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_12",
+      "from_module": "mod_4",
+      "from_port": "output",
+      "to_module": "mod_6",
+      "to_port": "select",
+      "signal_name": "",
+      "width": "multi",
+      "is_bus": true,
+      "direction": "down",
+      "annotations": [
+        "Y-decoder output to Y-pass gate"
+      ],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_13",
+      "from_module": "mod_5",
+      "from_port": "output",
+      "to_module": "mod_6",
+      "to_port": "input",
+      "signal_name": "ARRAY SOURCE HV",
+      "width": "multi",
+      "is_bus": true,
+      "direction": "right",
+      "annotations": [
+        "Array source high voltage"
+      ],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_14",
+      "from_module": "mod_6",
+      "from_port": "output",
+      "to_module": "mod_7",
+      "to_port": "input",
+      "signal_name": "",
+      "width": "multi",
+      "is_bus": true,
+      "direction": "down",
+      "annotations": [],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_15",
+      "from_module": "mod_7",
+      "from_port": "output",
+      "to_module": "mod_9",
+      "to_port": "input",
+      "signal_name": "",
+      "width": "multi",
+      "is_bus": true,
+      "direction": "down",
+      "annotations": [],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_16",
+      "from_module": "mod_9",
+      "from_port": "bidirectional",
+      "to_module": "external",
+      "to_port": "DQ[0:15]/A[-1]",
+      "signal_name": "DQ[0:15]/A[-1]",
+      "width": "16",
+      "is_bus": true,
+      "direction": "bidirectional",
+      "annotations": [
+        "Data bus / Address -1"
+      ],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_17",
+      "from_module": "mod_9",
+      "from_port": "output",
+      "to_module": "mod_8",
+      "to_port": "input",
+      "signal_name": "",
+      "width": "multi",
+      "is_bus": true,
+      "direction": "up",
+      "annotations": [],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_18",
+      "from_module": "mod_8",
+      "from_port": "output",
+      "to_module": "mod_6",
+      "to_port": "program_data",
+      "signal_name": "PGM DATA HV",
+      "width": "multi",
+      "is_bus": true,
+      "direction": "up",
+      "annotations": [
+        "Program data high voltage"
+      ],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_19",
+      "from_module": "mod_9",
+      "from_port": "output",
+      "to_module": "mod_10",
+      "to_port": "input",
+      "signal_name": "",
+      "width": "multi",
+      "is_bus": true,
+      "direction": "right",
+      "annotations": [],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_20",
+      "from_module": "mod_10",
+      "from_port": "output",
+      "to_module": "mod_11",
+      "to_port": "input",
+      "signal_name": "",
+      "width": "multi",
+      "is_bus": true,
+      "direction": "up",
+      "annotations": [],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_21",
+      "from_module": "mod_11",
+      "from_port": "output",
+      "to_module": "mod_12",
+      "to_port": "input",
+      "signal_name": "",
+      "width": "multi",
+      "is_bus": true,
+      "direction": "up",
+      "annotations": [],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_22",
+      "from_module": "mod_12",
+      "from_port": "output",
+      "to_module": "mod_13",
+      "to_port": "input",
+      "signal_name": "",
+      "width": "multi",
+      "is_bus": true,
+      "direction": "up",
+      "annotations": [],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_23",
+      "from_module": "mod_13",
+      "from_port": "output",
+      "to_module": "mod_14",
+      "to_port": "control",
+      "signal_name": "",
+      "width": "multi",
+      "is_bus": true,
+      "direction": "left",
+      "annotations": [],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_24",
+      "from_module": "mod_14",
+      "from_port": "output",
+      "to_module": "mod_5",
+      "to_port": "hv_control",
+      "signal_name": "",
+      "width": "multi",
+      "is_bus": true,
+      "direction": "down",
+      "annotations": [],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_25",
+      "from_module": "mod_13",
+      "from_port": "output",
+      "to_module": "mod_9",
+      "to_port": "control",
+      "signal_name": "",
+      "width": "multi",
+      "is_bus": true,
+      "direction": "down-left",
+      "annotations": [
+        "WSM control to I/O buffer"
+      ],
+      "confidence": 0.3333333333333333
+    },
+    {
+      "id": "conn_26",
+      "from_module": "external",
+      "from_port": "top",
+      "to_module": "mod_13",
+      "to_port": "input",
+      "signal_name": "",
+      "width": "1",
+      "is_bus": false,
+      "direction": "down",
+      "annotations": [
+        "External input to WSM"
+      ],
+      "confidence": 0.3333333333333333
+    }
+  ],
+  "ports": [
+    {
+      "name": "CE#",
+      "direction": "input",
+      "width": "1",
+      "connected_to": "mod_1",
+      "description": "Chip Enable (active low)",
+      "confidence": 1.0
+    },
+    {
+      "name": "OE#",
+      "direction": "input",
+      "width": "1",
+      "connected_to": "mod_1",
+      "description": "Output Enable (active low)",
+      "confidence": 1.0
+    },
+    {
+      "name": "WE#",
+      "direction": "input",
+      "width": "1",
+      "connected_to": "mod_1",
+      "description": "Write Enable (active low)",
+      "confidence": 1.0
+    },
+    {
+      "name": "RESET#",
+      "direction": "input",
+      "width": "1",
+      "connected_to": "mod_1",
+      "description": "Reset signal (active low)",
+      "confidence": 1.0
+    },
+    {
+      "name": "BYTE#",
+      "direction": "input",
+      "width": "1",
+      "connected_to": "mod_1",
+      "description": "Byte mode select (active low)",
+      "confidence": 1.0
+    },
+    {
+      "name": "WP/ACC#",
+      "direction": "input",
+      "width": "1",
+      "connected_to": "m1",
+      "description": "Write Protect/Accelerate",
+      "confidence": 0.3333333333333333
+    },
+    {
+      "name": "AC-AM",
+      "direction": "input",
+      "width": "multi",
+      "connected_to": "m2",
+      "description": "Address inputs",
+      "confidence": 0.3333333333333333
+    },
+    {
+      "name": "Q0-Q15/A(-1)",
+      "direction": "inout",
+      "width": "16",
+      "connected_to": "m14",
+      "description": "Bidirectional data/address bus",
+      "confidence": 0.3333333333333333
+    },
+    {
+      "name": "WP#/ACC",
+      "direction": "input",
+      "width": "1",
+      "connected_to": "m1",
+      "description": "Write Protect/Accelerate dual function pin",
+      "confidence": 0.6666666666666666
+    },
+    {
+      "name": "A[:]",
+      "direction": "input",
+      "width": "multi",
+      "connected_to": "m2",
+      "description": "Address bus input",
+      "confidence": 0.6666666666666666
+    },
+    {
+      "name": "Q[0:15]/A[-1]",
+      "direction": "inout",
+      "width": "16",
+      "connected_to": "m14",
+      "description": "Bidirectional data bus, also serves as address bit A[-1]",
+      "confidence": 0.3333333333333333
+    },
+    {
+      "name": "DQ[0:15]/A[-1]",
+      "direction": "inout",
+      "width": "16",
+      "connected_to": "mod_9",
+      "description": "Data bus (16-bit) / Address -1",
+      "confidence": 0.3333333333333333
+    }
+  ],
+  "annotations": [
+    {
+      "type": "label",
+      "content": "ARRAY SOURCE HV",
+      "location": "Connection from WSM to Flash Array",
+      "related_to": "c20"
+    },
+    {
+      "type": "label",
+      "content": "PGM DATA HV",
+      "location": "Connection from Program Data Latch to Y-Pass Gate",
+      "related_to": "c13"
+    },
+    {
+      "type": "text",
+      "content": "X-DECODER",
+      "location": "Left decoder block",
+      "related_to": "m3"
+    },
+    {
+      "type": "text",
+      "content": "Y-DECODER",
+      "location": "Right decoder block",
+      "related_to": "m4"
+    },
+    {
+      "type": "note",
+      "content": "WSM - Write State Machine",
+      "location": "Top right module",
+      "related_to": "m9"
+    },
+    {
+      "type": "note",
+      "content": "High voltage paths for program/erase operations",
+      "location": "Central area between HV generator and array",
+      "related_to": "m8"
+    },
+    {
+      "type": "label",
+      "content": "CE#",
+      "location": "Top left, input to Control Input Logic",
+      "related_to": "conn_1"
+    },
+    {
+      "type": "label",
+      "content": "OE#",
+      "location": "Top left, input to Control Input Logic",
+      "related_to": "conn_2"
+    },
+    {
+      "type": "label",
+      "content": "WE#",
+      "location": "Top left, input to Control Input Logic",
+      "related_to": "conn_3"
+    },
+    {
+      "type": "label",
+      "content": "RESET#",
+      "location": "Top left, input to Control Input Logic",
+      "related_to": "conn_4"
+    },
+    {
+      "type": "label",
+      "content": "BYTE#",
+      "location": "Top left, input to Control Input Logic",
+      "related_to": "conn_5"
+    },
+    {
+      "type": "label",
+      "content": "WP#/ACC",
+      "location": "Top left, input to Control Input Logic",
+      "related_to": "conn_6"
+    },
+    {
+      "type": "label",
+      "content": "A[:]",
+      "location": "Left side, input to Address Latch and Buffer",
+      "related_to": "conn_8"
+    },
+    {
+      "type": "label",
+      "content": "DQ[0:15]/A[-1]",
+      "location": "Bottom left, bidirectional connection to I/O Buffer",
+      "related_to": "conn_16"
+    },
+    {
+      "type": "note",
+      "content": "WSM = Write State Machine",
+      "location": "Top right module",
+      "related_to": "mod_13"
+    }
+  ],
+  "hierarchy": {
+    "top_level_module": "Flash Memory Controller",
+    "submodules": [
+      "CONTROL INPUT LOGIC",
+      "ADDRESS LATCH AND BUFFER",
+      "X-DECODER",
+      "Y-DECODER",
+      "FLASH ARRAY",
+      "Y-PASS GATE",
+      "SENSE AMPLIFIERS",
+      "PROGRAM/ERASE HIGH VOLTAGE",
+      "WRITE STATE MACHINE (WSM)",
+      "STATE REGISTER",
+      "COMMAND DATA DECODER",
+      "COMMAND DATA LATCH",
+      "PROGRAM DATA LATCH",
+      "I/O BUFFER"
+    ],
+    "interfaces": []
+  },
+  "metadata": {
+    "merge_strategy": "consensus_with_union",
+    "sources_count": 3,
+    "total_modules": 14,
+    "total_connections": 45,
+    "ambiguities": [
+      "DQ[0:15]/A[-1] suggests multiplexed data/address functionality",
+      "Exact bit widths not specified for most buses",
+      "High voltage signal routing details not fully specified",
+      "Some control signal paths between modules not explicitly labeled",
+      "High voltage signal routing details partially implicit",
+      "Exact bit widths not specified for most internal buses",
+      "Address bus width indicated as A[:] without specific range",
+      "A[:] notation suggests variable address width",
+      "Some connection paths may have intermediate nodes not explicitly shown",
+      "Exact nature of high voltage signals not fully specified"
+    ]
+  },
+  "validation": {
+    "valid": false,
+    "issues": [
+      "Connection 0: from_module external not found",
+      "Connection 2: from_module external not found",
+      "Connection 5: to_module m5 not found",
+      "Connection 6: to_module m6 not found",
+      "Connection 7: from_module m5 not found",
+      "Connection 7: to_module m7 not found",
+      "Connection 8: from_module m6 not found",
+      "Connection 8: to_module m7 not found",
+      "Connection 9: from_module m7 not found",
+      "Connection 9: to_module m14 not found",
+      "Connection 10: from_module m14 not found",
+      "Connection 10: to_module external not found",
+      "Connection 11: from_module m14 not found",
+      "Connection 12: to_module m6 not found",
+      "Connection 13: from_module m14 not found",
+      "Connection 16: to_module m9 not found",
+      "Connection 17: from_module m9 not found",
+      "Connection 18: to_module m5 not found",
+      "Connection 19: from_module m9 not found",
+      "Connection 19: to_module m5 not found",
+      "Connection 20: from_module external not found",
+      "Connection 20: to_module m9 not found",
+      "Connection 21: to_module m14 not found",
+      "Connection 22: from_module m5 not found",
+      "Connection 22: to_module m6 not found",
+      "Connection 23: from_module m9 not found",
+      "Connection 24: from_module external not found",
+      "Connection 24: to_module mod_1 not found",
+      "Connection 25: from_module mod_1 not found",
+      "Connection 25: to_module mod_2 not found",
+      "Connection 26: from_module external not found",
+      "Connection 26: to_module mod_2 not found",
+      "Connection 27: from_module mod_2 not found",
+      "Connection 27: to_module mod_3 not found",
+      "Connection 28: from_module mod_2 not found",
+      "Connection 28: to_module mod_4 not found",
+      "Connection 29: from_module mod_3 not found",
+      "Connection 30: from_module mod_4 not found",
+      "Connection 34: to_module external not found",
+      "Connection 35: to_module mod_8 not found",
+      "Connection 36: from_module mod_8 not found",
+      "Connection 37: to_module mod_10 not found",
+      "Connection 38: from_module mod_10 not found",
+      "Connection 38: to_module mod_11 not found",
+      "Connection 39: from_module mod_11 not found",
+      "Connection 39: to_module mod_12 not found",
+      "Connection 40: from_module mod_12 not found",
+      "Connection 41: to_module mod_14 not found",
+      "Connection 42: from_module mod_14 not found",
+      "Connection 44: from_module external not found"
+    ],
+    "warnings": [],
+    "stats": {
+      "modules": 14,
+      "connections": 45,
+      "ports": 12
+    }
+  }
+}

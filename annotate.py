@@ -389,12 +389,15 @@ Final verification pass. Focus on:
                 "ports": len(annotation.get("ports", []))
             }
         }
+
     def annotate(
         self,
         image_path: str,
         multi_pass: bool = True,
         multi_model: bool = False,
-        save_intermediate: bool = False
+        save_intermediate: bool = False,
+        output_dir: str = None,
+        output_prefix: str = None
     ) -> Dict:
         """
         Main annotation function with multiple passes and models for accuracy
@@ -404,10 +407,20 @@ Final verification pass. Focus on:
             multi_pass: Whether to do multiple passes with same model
             multi_model: Whether to use multiple models for cross-validation
             save_intermediate: Save intermediate results for debugging
+            output_dir: Directory to save intermediate files (default: current dir)
+            output_prefix: Prefix for output files (default: derived from image name)
         """
 
         print(f"Starting high-accuracy annotation of: {image_path}")
         all_annotations = []
+
+        # Set up output paths
+        if output_prefix is None:
+            output_prefix = Path(image_path).stem
+        if output_dir is None:
+            output_dir = "."
+        output_dir = Path(output_dir)
+        output_dir.mkdir(parents=True, exist_ok=True)
 
         # Strategy for maximum accuracy:
         # 1. Multiple passes with primary model (catch progressive details)
@@ -438,8 +451,9 @@ Final verification pass. Focus on:
                     all_annotations.append(annotation)
 
                 if save_intermediate:
-                    output_file = f"intermediate_{model.replace('/', '_')}_pass{pass_num}.json"
-                    with open(output_file, "w") as f:
+                    model_safe = model.replace('/', '_')
+                    output_file = output_dir / f"{output_prefix}_intermediate_{model_safe}_pass{pass_num}.json"
+                    with open(output_file, "w", encoding="utf-8") as f:
                         json.dump(annotation, f, indent=2)
                     print(f"Saved intermediate result to {output_file}")
 

@@ -1,0 +1,905 @@
+{
+  "modules": [
+    {
+      "id": "m1",
+      "name": "MIPS 1004Kc",
+      "type": "processor",
+      "position": {
+        "x": 70,
+        "y": 90
+      },
+      "parameters": {
+        "cache_i": "32 KB per Core",
+        "cache_d": "32 KB per Core",
+        "frequency": "880 MHz"
+      },
+      "description": "MIPS 1004Kc processor with 32/32 KB I/D-Cache per Core, OCP_IF interface"
+    },
+    {
+      "id": "m2",
+      "name": "OCP Bridge",
+      "type": "bridge",
+      "position": {
+        "x": 235,
+        "y": 100
+      },
+      "parameters": {},
+      "description": "OCP to internal bus bridge"
+    },
+    {
+      "id": "m3",
+      "name": "DRAM Controller",
+      "type": "memory_controller",
+      "position": {
+        "x": 383,
+        "y": 60
+      },
+      "parameters": {
+        "memory_type": "16-Bit DDR2/DDR3"
+      },
+      "description": "DDR2/DDR3 DRAM Controller"
+    },
+    {
+      "id": "m4",
+      "name": "Arbiter",
+      "type": "arbiter",
+      "position": {
+        "x": 383,
+        "y": 115
+      },
+      "parameters": {},
+      "description": "Bus arbiter for RBUS/PBUS"
+    },
+    {
+      "id": "m5",
+      "name": "RBUS",
+      "type": "bus",
+      "position": {
+        "x": 340,
+        "y": 182
+      },
+      "parameters": {
+        "width": "unknown"
+      },
+      "description": "Main system bus (RBUS)"
+    },
+    {
+      "id": "m6",
+      "name": "PBUS",
+      "type": "bus",
+      "position": {
+        "x": 340,
+        "y": 222
+      },
+      "parameters": {
+        "width": "unknown"
+      },
+      "description": "Peripheral bus (PBUS)"
+    },
+    {
+      "id": "m7",
+      "name": "SDXC",
+      "type": "peripheral",
+      "position": {
+        "x": 42,
+        "y": 263
+      },
+      "parameters": {},
+      "description": "SD/SDXC controller"
+    },
+    {
+      "id": "m8",
+      "name": "USB 3.0/2.0 PHY",
+      "type": "phy",
+      "position": {
+        "x": 153,
+        "y": 263
+      },
+      "parameters": {
+        "protocol": "USB 3.0/2.0"
+      },
+      "description": "USB 3.0/2.0 PHY interface"
+    },
+    {
+      "id": "m9",
+      "name": "PCIe 1.1 PHY",
+      "type": "phy",
+      "position": {
+        "x": 280,
+        "y": 263
+      },
+      "parameters": {
+        "protocol": "PCIe 1.1",
+        "lanes": "3"
+      },
+      "description": "PCIe 1.1 PHY with 3 lanes"
+    },
+    {
+      "id": "m10",
+      "name": "Crypto Engine",
+      "type": "crypto",
+      "position": {
+        "x": 406,
+        "y": 263
+      },
+      "parameters": {},
+      "description": "Cryptographic engine"
+    },
+    {
+      "id": "m11",
+      "name": "Switch (5GE)",
+      "type": "switch",
+      "position": {
+        "x": 533,
+        "y": 263
+      },
+      "parameters": {
+        "ports": "5",
+        "type": "Gigabit Ethernet"
+      },
+      "description": "5-port Gigabit Ethernet switch"
+    },
+    {
+      "id": "m12",
+      "name": "5-Port EPHY",
+      "type": "phy",
+      "position": {
+        "x": 533,
+        "y": 309
+      },
+      "parameters": {
+        "ports": "5",
+        "type": "Ethernet PHY"
+      },
+      "description": "5-Port Ethernet PHY, RJ45 x5"
+    },
+    {
+      "id": "m13",
+      "name": "GDMA/HSDMA",
+      "type": "dma",
+      "position": {
+        "x": 635,
+        "y": 263
+      },
+      "parameters": {},
+      "description": "General DMA/High-Speed DMA controller"
+    },
+    {
+      "id": "m14",
+      "name": "INTC",
+      "type": "interrupt_controller",
+      "position": {
+        "x": 787,
+        "y": 22
+      },
+      "parameters": {},
+      "description": "Interrupt controller"
+    },
+    {
+      "id": "m15",
+      "name": "Timer",
+      "type": "timer",
+      "position": {
+        "x": 787,
+        "y": 55
+      },
+      "parameters": {},
+      "description": "Timer module"
+    },
+    {
+      "id": "m16",
+      "name": "SPI",
+      "type": "peripheral",
+      "position": {
+        "x": 787,
+        "y": 88
+      },
+      "parameters": {},
+      "description": "SPI controller"
+    },
+    {
+      "id": "m17",
+      "name": "NFI",
+      "type": "peripheral",
+      "position": {
+        "x": 787,
+        "y": 121
+      },
+      "parameters": {},
+      "description": "NAND Flash Interface"
+    },
+    {
+      "id": "m18",
+      "name": "UARTLx3",
+      "type": "peripheral",
+      "position": {
+        "x": 787,
+        "y": 154
+      },
+      "parameters": {
+        "instances": "3"
+      },
+      "description": "3x UART Lite controllers"
+    },
+    {
+      "id": "m19",
+      "name": "GPIO",
+      "type": "peripheral",
+      "position": {
+        "x": 787,
+        "y": 187
+      },
+      "parameters": {},
+      "description": "GPIO/LED controller"
+    },
+    {
+      "id": "m20",
+      "name": "I2C",
+      "type": "peripheral",
+      "position": {
+        "x": 787,
+        "y": 220
+      },
+      "parameters": {},
+      "description": "I2C controller"
+    },
+    {
+      "id": "m21",
+      "name": "I2S",
+      "type": "peripheral",
+      "position": {
+        "x": 787,
+        "y": 253
+      },
+      "parameters": {},
+      "description": "I2S audio interface"
+    },
+    {
+      "id": "m22",
+      "name": "PCM x4",
+      "type": "peripheral",
+      "position": {
+        "x": 787,
+        "y": 286
+      },
+      "parameters": {
+        "instances": "4"
+      },
+      "description": "4x PCM interfaces"
+    },
+    {
+      "id": "m23",
+      "name": "SPDIF",
+      "type": "peripheral",
+      "position": {
+        "x": 787,
+        "y": 319
+      },
+      "parameters": {},
+      "description": "SPDIF audio interface"
+    }
+  ],
+  "connections": [
+    {
+      "id": "c1",
+      "from_module": "external",
+      "from_port": "EJTAG",
+      "to_module": "m1",
+      "to_port": "EJTAG",
+      "signal_name": "EJTAG",
+      "width": "unknown",
+      "is_bus": false,
+      "direction": "input",
+      "annotations": [
+        "Debug interface"
+      ]
+    },
+    {
+      "id": "c2",
+      "from_module": "m1",
+      "from_port": "OCP_IF",
+      "to_module": "m2",
+      "to_port": "input",
+      "signal_name": "OCP_IF",
+      "width": "unknown",
+      "is_bus": true,
+      "direction": "right",
+      "annotations": [
+        "OCP interface"
+      ]
+    },
+    {
+      "id": "c3",
+      "from_module": "m2",
+      "from_port": "output",
+      "to_module": "m4",
+      "to_port": "input",
+      "signal_name": "unknown",
+      "width": "unknown",
+      "is_bus": true,
+      "direction": "right",
+      "annotations": [
+        "Yellow/orange bus"
+      ]
+    },
+    {
+      "id": "c4",
+      "from_module": "m3",
+      "from_port": "memory_interface",
+      "to_module": "external",
+      "to_port": "DDR2/DDR3",
+      "signal_name": "16-Bit DDR2/DDR3",
+      "width": "16",
+      "is_bus": true,
+      "direction": "up",
+      "annotations": [
+        "16-Bit DDR2/DDR3 memory interface"
+      ]
+    },
+    {
+      "id": "c5",
+      "from_module": "m4",
+      "from_port": "output",
+      "to_module": "m5",
+      "to_port": "input",
+      "signal_name": "RBUS",
+      "width": "unknown",
+      "is_bus": true,
+      "direction": "down",
+      "annotations": [
+        "Connection to RBUS"
+      ]
+    },
+    {
+      "id": "c6",
+      "from_module": "m5",
+      "from_port": "RBUS",
+      "to_module": "m7",
+      "to_port": "bus_interface",
+      "signal_name": "RBUS",
+      "width": "unknown",
+      "is_bus": true,
+      "direction": "down",
+      "annotations": []
+    },
+    {
+      "id": "c7",
+      "from_module": "m5",
+      "from_port": "RBUS",
+      "to_module": "m8",
+      "to_port": "bus_interface",
+      "signal_name": "RBUS",
+      "width": "unknown",
+      "is_bus": true,
+      "direction": "down",
+      "annotations": []
+    },
+    {
+      "id": "c8",
+      "from_module": "m5",
+      "from_port": "RBUS",
+      "to_module": "m9",
+      "to_port": "bus_interface",
+      "signal_name": "RBUS",
+      "width": "unknown",
+      "is_bus": true,
+      "direction": "down",
+      "annotations": []
+    },
+    {
+      "id": "c9",
+      "from_module": "m6",
+      "from_port": "PBUS",
+      "to_module": "m10",
+      "to_port": "bus_interface",
+      "signal_name": "PBUS",
+      "width": "unknown",
+      "is_bus": true,
+      "direction": "down",
+      "annotations": []
+    },
+    {
+      "id": "c10",
+      "from_module": "m6",
+      "from_port": "PBUS",
+      "to_module": "m11",
+      "to_port": "bus_interface",
+      "signal_name": "PBUS",
+      "width": "unknown",
+      "is_bus": true,
+      "direction": "down",
+      "annotations": []
+    },
+    {
+      "id": "c11",
+      "from_module": "m6",
+      "from_port": "PBUS",
+      "to_module": "m13",
+      "to_port": "bus_interface",
+      "signal_name": "PBUS",
+      "width": "unknown",
+      "is_bus": true,
+      "direction": "down",
+      "annotations": []
+    },
+    {
+      "id": "c12",
+      "from_module": "m11",
+      "from_port": "phy_interface",
+      "to_module": "m12",
+      "to_port": "input",
+      "signal_name": "unknown",
+      "width": "unknown",
+      "is_bus": true,
+      "direction": "down",
+      "annotations": [
+        "5-port connection"
+      ]
+    },
+    {
+      "id": "c13",
+      "from_module": "m7",
+      "from_port": "SD",
+      "to_module": "external",
+      "to_port": "SD",
+      "signal_name": "SD",
+      "width": "unknown",
+      "is_bus": false,
+      "direction": "down",
+      "annotations": [
+        "SD card interface"
+      ]
+    },
+    {
+      "id": "c14",
+      "from_module": "m8",
+      "from_port": "Host",
+      "to_module": "external",
+      "to_port": "Host",
+      "signal_name": "Host",
+      "width": "unknown",
+      "is_bus": false,
+      "direction": "down",
+      "annotations": [
+        "USB Host interface"
+      ]
+    },
+    {
+      "id": "c15",
+      "from_module": "m9",
+      "from_port": "PCIe",
+      "to_module": "external",
+      "to_port": "PCIe x 3",
+      "signal_name": "PCIe x 3",
+      "width": "unknown",
+      "is_bus": false,
+      "direction": "down",
+      "annotations": [
+        "3-lane PCIe"
+      ]
+    },
+    {
+      "id": "c16",
+      "from_module": "m12",
+      "from_port": "RJ45",
+      "to_module": "external",
+      "to_port": "RJ45 x5",
+      "signal_name": "RJ45 x5",
+      "width": "unknown",
+      "is_bus": false,
+      "direction": "down",
+      "annotations": [
+        "5 Ethernet ports"
+      ]
+    },
+    {
+      "id": "c17",
+      "from_module": "m11",
+      "from_port": "RGMII",
+      "to_module": "external",
+      "to_port": "RGMII TMII/MII x1",
+      "signal_name": "RGMII TMII/MII x1",
+      "width": "unknown",
+      "is_bus": false,
+      "direction": "down",
+      "annotations": [
+        "RGMII/TMII/MII interface"
+      ]
+    },
+    {
+      "id": "c18",
+      "from_module": "m5",
+      "from_port": "RBUS",
+      "to_module": "m6",
+      "to_port": "PBUS",
+      "signal_name": "RBUS to PBUS",
+      "width": "unknown",
+      "is_bus": true,
+      "direction": "vertical",
+      "annotations": [
+        "Bus bridge connection"
+      ]
+    },
+    {
+      "id": "c19",
+      "from_module": "m4",
+      "from_port": "arbiter_out",
+      "to_module": "m14",
+      "to_port": "pbus_connection",
+      "signal_name": "PBUS",
+      "width": "unknown",
+      "is_bus": true,
+      "direction": "right",
+      "annotations": [
+        "Green PBUS connection to peripherals"
+      ]
+    },
+    {
+      "id": "c20",
+      "from_module": "m14",
+      "from_port": "interrupts",
+      "to_module": "external",
+      "to_port": "CPU interrupts",
+      "signal_name": "To CPU interrupts",
+      "width": "unknown",
+      "is_bus": false,
+      "direction": "right",
+      "annotations": []
+    },
+    {
+      "id": "c21",
+      "from_module": "m16",
+      "from_port": "SPI",
+      "to_module": "external",
+      "to_port": "SPI",
+      "signal_name": "SPI",
+      "width": "unknown",
+      "is_bus": false,
+      "direction": "right",
+      "annotations": []
+    },
+    {
+      "id": "c22",
+      "from_module": "m17",
+      "from_port": "NAND",
+      "to_module": "external",
+      "to_port": "NAND",
+      "signal_name": "NAND",
+      "width": "unknown",
+      "is_bus": false,
+      "direction": "right",
+      "annotations": []
+    },
+    {
+      "id": "c23",
+      "from_module": "m18",
+      "from_port": "UART",
+      "to_module": "external",
+      "to_port": "UART",
+      "signal_name": "UART",
+      "width": "unknown",
+      "is_bus": false,
+      "direction": "right",
+      "annotations": []
+    },
+    {
+      "id": "c24",
+      "from_module": "m19",
+      "from_port": "GPIO",
+      "to_module": "external",
+      "to_port": "GPIO/LED",
+      "signal_name": "GPIO/LED",
+      "width": "unknown",
+      "is_bus": false,
+      "direction": "right",
+      "annotations": []
+    },
+    {
+      "id": "c25",
+      "from_module": "m20",
+      "from_port": "I2C",
+      "to_module": "external",
+      "to_port": "I2C",
+      "signal_name": "I2C",
+      "width": "unknown",
+      "is_bus": false,
+      "direction": "right",
+      "annotations": []
+    },
+    {
+      "id": "c26",
+      "from_module": "m21",
+      "from_port": "I2S",
+      "to_module": "external",
+      "to_port": "I2S",
+      "signal_name": "I2S",
+      "width": "unknown",
+      "is_bus": false,
+      "direction": "right",
+      "annotations": []
+    },
+    {
+      "id": "c27",
+      "from_module": "m22",
+      "from_port": "PCM",
+      "to_module": "external",
+      "to_port": "PCM",
+      "signal_name": "PCM",
+      "width": "unknown",
+      "is_bus": false,
+      "direction": "right",
+      "annotations": []
+    },
+    {
+      "id": "c28",
+      "from_module": "m23",
+      "from_port": "SPDIF",
+      "to_module": "external",
+      "to_port": "SPDIF",
+      "signal_name": "SPDIF",
+      "width": "unknown",
+      "is_bus": false,
+      "direction": "right",
+      "annotations": []
+    }
+  ],
+  "ports": [
+    {
+      "name": "EJTAG",
+      "direction": "input",
+      "width": "unknown",
+      "connected_to": "m1",
+      "description": "EJTAG debug interface"
+    },
+    {
+      "name": "16-Bit DDR2/DDR3",
+      "direction": "inout",
+      "width": "16",
+      "connected_to": "m3",
+      "description": "External DDR2/DDR3 memory interface"
+    },
+    {
+      "name": "SD",
+      "direction": "inout",
+      "width": "unknown",
+      "connected_to": "m7",
+      "description": "SD card interface"
+    },
+    {
+      "name": "Host",
+      "direction": "inout",
+      "width": "unknown",
+      "connected_to": "m8",
+      "description": "USB Host interface"
+    },
+    {
+      "name": "PCIe x 3",
+      "direction": "inout",
+      "width": "unknown",
+      "connected_to": "m9",
+      "description": "3-lane PCIe interface"
+    },
+    {
+      "name": "RJ45 x5",
+      "direction": "inout",
+      "width": "unknown",
+      "connected_to": "m12",
+      "description": "5 Ethernet RJ45 ports"
+    },
+    {
+      "name": "RGMII TMII/MII x1",
+      "direction": "inout",
+      "width": "unknown",
+      "connected_to": "m11",
+      "description": "RGMII/TMII/MII Ethernet interface"
+    },
+    {
+      "name": "To CPU interrupts",
+      "direction": "output",
+      "width": "unknown",
+      "connected_to": "m14",
+      "description": "Interrupt signals to CPU"
+    },
+    {
+      "name": "SPI",
+      "direction": "inout",
+      "width": "unknown",
+      "connected_to": "m16",
+      "description": "SPI interface"
+    },
+    {
+      "name": "NAND",
+      "direction": "inout",
+      "width": "unknown",
+      "connected_to": "m17",
+      "description": "NAND Flash interface"
+    },
+    {
+      "name": "UART",
+      "direction": "inout",
+      "width": "unknown",
+      "connected_to": "m18",
+      "description": "UART interface"
+    },
+    {
+      "name": "GPIO/LED",
+      "direction": "inout",
+      "width": "unknown",
+      "connected_to": "m19",
+      "description": "GPIO and LED interface"
+    },
+    {
+      "name": "I2C",
+      "direction": "inout",
+      "width": "unknown",
+      "connected_to": "m20",
+      "description": "I2C interface"
+    },
+    {
+      "name": "I2S",
+      "direction": "inout",
+      "width": "unknown",
+      "connected_to": "m21",
+      "description": "I2S audio interface"
+    },
+    {
+      "name": "PCM",
+      "direction": "inout",
+      "width": "unknown",
+      "connected_to": "m22",
+      "description": "PCM audio interface"
+    },
+    {
+      "name": "SPDIF",
+      "direction": "inout",
+      "width": "unknown",
+      "connected_to": "m23",
+      "description": "SPDIF audio interface"
+    }
+  ],
+  "annotations": [
+    {
+      "type": "label",
+      "content": "EJTAG",
+      "location": "Top left, above MIPS processor",
+      "related_to": "m1"
+    },
+    {
+      "type": "label",
+      "content": "16-Bit DDR2/DDR3",
+      "location": "Top center, above DRAM Controller",
+      "related_to": "m3"
+    },
+    {
+      "type": "label",
+      "content": "OCP_IF",
+      "location": "Between MIPS processor and OCP Bridge",
+      "related_to": "c2"
+    },
+    {
+      "type": "label",
+      "content": "RBUS",
+      "location": "Main horizontal bus in middle of diagram",
+      "related_to": "m5"
+    },
+    {
+      "type": "label",
+      "content": "PBUS",
+      "location": "Secondary horizontal bus below RBUS",
+      "related_to": "m6"
+    },
+    {
+      "type": "label",
+      "content": "To CPU interrupts",
+      "location": "Right side, from INTC module",
+      "related_to": "m14"
+    },
+    {
+      "type": "note",
+      "content": "32/32 KB I/D-Cache per Core (880 MHz)",
+      "location": "Inside MIPS processor block",
+      "related_to": "m1"
+    },
+    {
+      "type": "note",
+      "content": "5-Port EPHY RJ45 x5",
+      "location": "Below Switch module",
+      "related_to": "m12"
+    },
+    {
+      "type": "note",
+      "content": "RGMII TMII/MII x1",
+      "location": "Below Switch module, right side",
+      "related_to": "m11"
+    },
+    {
+      "type": "label",
+      "content": "SD",
+      "location": "Below SDXC module",
+      "related_to": "m7"
+    },
+    {
+      "type": "label",
+      "content": "Host",
+      "location": "Below USB PHY module",
+      "related_to": "m8"
+    },
+    {
+      "type": "label",
+      "content": "PCIe x 3",
+      "location": "Below PCIe PHY module",
+      "related_to": "m9"
+    }
+  ],
+  "hierarchy": {
+    "top_level_module": "SoC System",
+    "submodules": [
+      "MIPS 1004Kc",
+      "OCP Bridge",
+      "DRAM Controller",
+      "Arbiter",
+      "SDXC",
+      "USB 3.0/2.0 PHY",
+      "PCIe 1.1 PHY",
+      "Crypto Engine",
+      "Switch (5GE)",
+      "5-Port EPHY",
+      "GDMA/HSDMA",
+      "INTC",
+      "Timer",
+      "SPI",
+      "NFI",
+      "UARTLx3",
+      "GPIO",
+      "I2C",
+      "I2S",
+      "PCM x4",
+      "SPDIF"
+    ],
+    "interfaces": [
+      "OCP",
+      "DDR2/DDR3",
+      "USB 3.0/2.0",
+      "PCIe 1.1",
+      "RGMII",
+      "TMII",
+      "MII",
+      "SPI",
+      "I2C",
+      "I2S",
+      "UART",
+      "SPDIF"
+    ]
+  },
+  "metadata": {
+    "total_modules": 23,
+    "total_connections": 28,
+    "complexity": "complex",
+    "protocol_hints": [
+      "OCP",
+      "DDR2",
+      "DDR3",
+      "USB 3.0",
+      "USB 2.0",
+      "PCIe 1.1",
+      "RGMII",
+      "MII",
+      "TMII",
+      "SPI",
+      "I2C",
+      "I2S",
+      "UART",
+      "SPDIF",
+      "EJTAG"
+    ],
+    "ambiguities": [
+      "Exact bit widths for RBUS and PBUS not specified",
+      "Clock and reset distribution not explicitly shown",
+      "Exact connection topology between RBUS and PBUS unclear",
+      "Power domains not indicated",
+      "Some peripheral bus widths not specified",
+      "Arbiter connections to DRAM controller not fully detailed",
+      "Green PBUS connections to right-side peripherals shown as single line but likely represents full bus"
+    ]
+  }
+}

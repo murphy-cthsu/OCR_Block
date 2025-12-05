@@ -1,0 +1,1100 @@
+{
+  "modules": [
+    {
+      "id": "cpu",
+      "name": "CPU Quad-Core Cortex-A73",
+      "type": "processor",
+      "position": {
+        "x": 400,
+        "y": 150
+      },
+      "parameters": {
+        "cores": "4",
+        "architecture": "Cortex-A73"
+      },
+      "description": "Quad-core ARM Cortex-A73 CPU"
+    },
+    {
+      "id": "l2_cache",
+      "name": "L2 Cache 1 MB",
+      "type": "memory",
+      "position": {
+        "x": 450,
+        "y": 285
+      },
+      "parameters": {
+        "size": "1MB",
+        "type": "L2 Cache"
+      },
+      "description": "1 MB L2 Cache shared by CPU cores"
+    },
+    {
+      "id": "security",
+      "name": "Security",
+      "type": "custom",
+      "position": {
+        "x": 440,
+        "y": 357
+      },
+      "parameters": {},
+      "description": "Security module"
+    },
+    {
+      "id": "crypto",
+      "name": "CYPTO EIP197",
+      "type": "crypto_engine",
+      "position": {
+        "x": 330,
+        "y": 420
+      },
+      "parameters": {
+        "engine": "EIP197"
+      },
+      "description": "Cryptographic acceleration engine EIP197"
+    },
+    {
+      "id": "tunneling",
+      "name": "Tunneling Offload Engine",
+      "type": "offload_engine",
+      "position": {
+        "x": 520,
+        "y": 420
+      },
+      "parameters": {},
+      "description": "Tunneling offload engine for network processing"
+    },
+    {
+      "id": "netsys",
+      "name": "NETSYS",
+      "type": "network_subsystem",
+      "position": {
+        "x": 440,
+        "y": 520
+      },
+      "parameters": {
+        "features": "HNAT(PSE&PPE)/HQoS/PAO/MAP-E&T"
+      },
+      "description": "Network subsystem with HNAT, HQoS, PAO, MAP-E&T"
+    },
+    {
+      "id": "switch",
+      "name": "Switch",
+      "type": "network_switch",
+      "position": {
+        "x": 440,
+        "y": 607
+      },
+      "parameters": {},
+      "description": "Network switch with 4 GPHY ports"
+    },
+    {
+      "id": "gphy0",
+      "name": "GPHY",
+      "type": "phy",
+      "position": {
+        "x": 310,
+        "y": 652
+      },
+      "parameters": {},
+      "description": "Gigabit Ethernet PHY port 0"
+    },
+    {
+      "id": "gphy1",
+      "name": "GPHY",
+      "type": "phy",
+      "position": {
+        "x": 390,
+        "y": 652
+      },
+      "parameters": {},
+      "description": "Gigabit Ethernet PHY port 1"
+    },
+    {
+      "id": "gphy2",
+      "name": "GPHY",
+      "type": "phy",
+      "position": {
+        "x": 490,
+        "y": 652
+      },
+      "parameters": {},
+      "description": "Gigabit Ethernet PHY port 2"
+    },
+    {
+      "id": "gphy3",
+      "name": "GPHY",
+      "type": "phy",
+      "position": {
+        "x": 580,
+        "y": 652
+      },
+      "parameters": {},
+      "description": "Gigabit Ethernet PHY port 3"
+    },
+    {
+      "id": "spim",
+      "name": "SPIM",
+      "type": "interface",
+      "position": {
+        "x": 126,
+        "y": 98
+      },
+      "parameters": {},
+      "description": "SPI Master interface"
+    },
+    {
+      "id": "pcm",
+      "name": "PCM",
+      "type": "interface",
+      "position": {
+        "x": 126,
+        "y": 143
+      },
+      "parameters": {},
+      "description": "PCM interface"
+    },
+    {
+      "id": "i2c",
+      "name": "I2C",
+      "type": "interface",
+      "position": {
+        "x": 126,
+        "y": 188
+      },
+      "parameters": {},
+      "description": "I2C interface"
+    },
+    {
+      "id": "i2s",
+      "name": "I2S",
+      "type": "interface",
+      "position": {
+        "x": 126,
+        "y": 233
+      },
+      "parameters": {},
+      "description": "I2S interface"
+    },
+    {
+      "id": "nfi_nand",
+      "name": "NFI-NAND",
+      "type": "interface",
+      "position": {
+        "x": 126,
+        "y": 278
+      },
+      "parameters": {},
+      "description": "NAND Flash interface"
+    },
+    {
+      "id": "spim_nand",
+      "name": "SPIM-NAND",
+      "type": "interface",
+      "position": {
+        "x": 126,
+        "y": 323
+      },
+      "parameters": {},
+      "description": "SPI NAND interface"
+    },
+    {
+      "id": "spim_nor",
+      "name": "SPIM-NOR",
+      "type": "interface",
+      "position": {
+        "x": 126,
+        "y": 368
+      },
+      "parameters": {},
+      "description": "SPI NOR Flash interface"
+    },
+    {
+      "id": "sd_emmc",
+      "name": "SD/eMMC",
+      "type": "interface",
+      "position": {
+        "x": 126,
+        "y": 413
+      },
+      "parameters": {},
+      "description": "SD/eMMC interface"
+    },
+    {
+      "id": "gpiox2",
+      "name": "GPIOx2",
+      "type": "interface",
+      "position": {
+        "x": 126,
+        "y": 458
+      },
+      "parameters": {},
+      "description": "GPIO interface (x2)"
+    },
+    {
+      "id": "pwm",
+      "name": "PWM",
+      "type": "interface",
+      "position": {
+        "x": 126,
+        "y": 503
+      },
+      "parameters": {},
+      "description": "PWM interface"
+    },
+    {
+      "id": "mdio",
+      "name": "MDIO",
+      "type": "interface",
+      "position": {
+        "x": 126,
+        "y": 548
+      },
+      "parameters": {},
+      "description": "MDIO interface"
+    },
+    {
+      "id": "uartx3_pta",
+      "name": "UARTx3/PTA",
+      "type": "interface",
+      "position": {
+        "x": 126,
+        "y": 593
+      },
+      "parameters": {},
+      "description": "UART x3 / PTA interface"
+    },
+    {
+      "id": "dram_phy",
+      "name": "DRAM PHY",
+      "type": "phy",
+      "position": {
+        "x": 775,
+        "y": 98
+      },
+      "parameters": {},
+      "description": "DRAM PHY interface"
+    },
+    {
+      "id": "jtagx2",
+      "name": "JTAGx2",
+      "type": "interface",
+      "position": {
+        "x": 775,
+        "y": 143
+      },
+      "parameters": {},
+      "description": "JTAG interface (x2)"
+    },
+    {
+      "id": "pcie3_2l_0",
+      "name": "2xPCIe3.0 2L",
+      "type": "interface",
+      "position": {
+        "x": 775,
+        "y": 188
+      },
+      "parameters": {
+        "version": "3.0",
+        "lanes": "2",
+        "ports": "2"
+      },
+      "description": "2x PCIe 3.0 2-lane interfaces"
+    },
+    {
+      "id": "pcie3_1l_port1",
+      "name": "PCIe3.0 1L Port 1",
+      "type": "interface",
+      "position": {
+        "x": 775,
+        "y": 238
+      },
+      "parameters": {
+        "version": "3.0",
+        "lanes": "1",
+        "port": "1"
+      },
+      "description": "PCIe 3.0 1-lane Port 1"
+    },
+    {
+      "id": "pcie3_1l_port0",
+      "name": "PCIe3.0 1L Port 0",
+      "type": "interface",
+      "position": {
+        "x": 775,
+        "y": 283
+      },
+      "parameters": {
+        "version": "3.0",
+        "lanes": "1",
+        "port": "0",
+        "shared_with": "10G/USXGMII Port 0"
+      },
+      "description": "PCIe 3.0 1-lane Port 0 - Share PHY with 10G/USXGMII Port 0. Select either, not both."
+    },
+    {
+      "id": "usb3_2_port0",
+      "name": "USB3.2 Port 0",
+      "type": "interface",
+      "position": {
+        "x": 775,
+        "y": 343
+      },
+      "parameters": {
+        "version": "3.2",
+        "port": "0"
+      },
+      "description": "USB 3.2 Port 0"
+    },
+    {
+      "id": "usb3_2_port1",
+      "name": "USB3.2 Port 1",
+      "type": "interface",
+      "position": {
+        "x": 775,
+        "y": 398
+      },
+      "parameters": {
+        "version": "3.2",
+        "port": "1"
+      },
+      "description": "USB 3.2 Port 1"
+    },
+    {
+      "id": "10g_usxgmii_port0",
+      "name": "10G/USXGMII Port 0",
+      "type": "interface",
+      "position": {
+        "x": 775,
+        "y": 448
+      },
+      "parameters": {
+        "speed": "10G",
+        "protocol": "USXGMII",
+        "port": "0",
+        "shared_with": "PCIe3.0 1L Port 0"
+      },
+      "description": "10G/USXGMII Port 0 - Share PHY with PCIe 3.0 1L Port 0"
+    },
+    {
+      "id": "10g_usxgmii_port1",
+      "name": "10G/USXGMII Port 1",
+      "type": "interface",
+      "position": {
+        "x": 775,
+        "y": 493
+      },
+      "parameters": {
+        "speed": "10G",
+        "protocol": "USXGMII",
+        "port": "1",
+        "shared_with": "2.5GPHY"
+      },
+      "description": "10G/USXGMII Port 1 - Share MAC with 2.5GPHY"
+    },
+    {
+      "id": "2_5gphy",
+      "name": "2.5GPHY",
+      "type": "phy",
+      "position": {
+        "x": 775,
+        "y": 543
+      },
+      "parameters": {
+        "speed": "2.5G",
+        "shared_with": "10G/USXGMII Port 1"
+      },
+      "description": "2.5G Ethernet PHY - Share MAC with 10G/USXGMII Port 1. Select either, not both."
+    }
+  ],
+  "connections": [
+    {
+      "id": "conn_cpu_l2",
+      "from_module": "cpu",
+      "from_port": "cache_interface",
+      "to_module": "l2_cache",
+      "to_port": "cpu_interface",
+      "signal_name": "",
+      "width": "",
+      "is_bus": true,
+      "direction": "bidirectional",
+      "annotations": []
+    },
+    {
+      "id": "conn_l2_security",
+      "from_module": "l2_cache",
+      "from_port": "output",
+      "to_module": "security",
+      "to_port": "input",
+      "signal_name": "",
+      "width": "",
+      "is_bus": true,
+      "direction": "down",
+      "annotations": []
+    },
+    {
+      "id": "conn_security_crypto",
+      "from_module": "security",
+      "from_port": "crypto_interface",
+      "to_module": "crypto",
+      "to_port": "input",
+      "signal_name": "",
+      "width": "",
+      "is_bus": true,
+      "direction": "down",
+      "annotations": []
+    },
+    {
+      "id": "conn_security_tunneling",
+      "from_module": "security",
+      "from_port": "tunneling_interface",
+      "to_module": "tunneling",
+      "to_port": "input",
+      "signal_name": "",
+      "width": "",
+      "is_bus": true,
+      "direction": "down",
+      "annotations": []
+    },
+    {
+      "id": "conn_security_netsys",
+      "from_module": "security",
+      "from_port": "netsys_interface",
+      "to_module": "netsys",
+      "to_port": "input",
+      "signal_name": "",
+      "width": "",
+      "is_bus": true,
+      "direction": "down",
+      "annotations": []
+    },
+    {
+      "id": "conn_netsys_switch",
+      "from_module": "netsys",
+      "from_port": "switch_interface",
+      "to_module": "switch",
+      "to_port": "input",
+      "signal_name": "",
+      "width": "",
+      "is_bus": true,
+      "direction": "down",
+      "annotations": []
+    },
+    {
+      "id": "conn_switch_gphy0",
+      "from_module": "switch",
+      "from_port": "port0",
+      "to_module": "gphy0",
+      "to_port": "input",
+      "signal_name": "",
+      "width": "",
+      "is_bus": false,
+      "direction": "down",
+      "annotations": []
+    },
+    {
+      "id": "conn_switch_gphy1",
+      "from_module": "switch",
+      "from_port": "port1",
+      "to_module": "gphy1",
+      "to_port": "input",
+      "signal_name": "",
+      "width": "",
+      "is_bus": false,
+      "direction": "down",
+      "annotations": []
+    },
+    {
+      "id": "conn_switch_gphy2",
+      "from_module": "switch",
+      "from_port": "port2",
+      "to_module": "gphy2",
+      "to_port": "input",
+      "signal_name": "",
+      "width": "",
+      "is_bus": false,
+      "direction": "down",
+      "annotations": []
+    },
+    {
+      "id": "conn_switch_gphy3",
+      "from_module": "switch",
+      "from_port": "port3",
+      "to_module": "gphy3",
+      "to_port": "input",
+      "signal_name": "",
+      "width": "",
+      "is_bus": false,
+      "direction": "down",
+      "annotations": []
+    },
+    {
+      "id": "conn_cpu_spim",
+      "from_module": "cpu",
+      "from_port": "peripheral_bus",
+      "to_module": "spim",
+      "to_port": "interface",
+      "signal_name": "",
+      "width": "",
+      "is_bus": true,
+      "direction": "left",
+      "annotations": []
+    },
+    {
+      "id": "conn_cpu_pcm",
+      "from_module": "cpu",
+      "from_port": "peripheral_bus",
+      "to_module": "pcm",
+      "to_port": "interface",
+      "signal_name": "",
+      "width": "",
+      "is_bus": true,
+      "direction": "left",
+      "annotations": []
+    },
+    {
+      "id": "conn_cpu_i2c",
+      "from_module": "cpu",
+      "from_port": "peripheral_bus",
+      "to_module": "i2c",
+      "to_port": "interface",
+      "signal_name": "",
+      "width": "",
+      "is_bus": true,
+      "direction": "left",
+      "annotations": []
+    },
+    {
+      "id": "conn_cpu_i2s",
+      "from_module": "cpu",
+      "from_port": "peripheral_bus",
+      "to_module": "i2s",
+      "to_port": "interface",
+      "signal_name": "",
+      "width": "",
+      "is_bus": true,
+      "direction": "left",
+      "annotations": []
+    },
+    {
+      "id": "conn_cpu_nfi_nand",
+      "from_module": "cpu",
+      "from_port": "peripheral_bus",
+      "to_module": "nfi_nand",
+      "to_port": "interface",
+      "signal_name": "",
+      "width": "",
+      "is_bus": true,
+      "direction": "left",
+      "annotations": []
+    },
+    {
+      "id": "conn_cpu_spim_nand",
+      "from_module": "cpu",
+      "from_port": "peripheral_bus",
+      "to_module": "spim_nand",
+      "to_port": "interface",
+      "signal_name": "",
+      "width": "",
+      "is_bus": true,
+      "direction": "left",
+      "annotations": []
+    },
+    {
+      "id": "conn_cpu_spim_nor",
+      "from_module": "cpu",
+      "from_port": "peripheral_bus",
+      "to_module": "spim_nor",
+      "to_port": "interface",
+      "signal_name": "",
+      "width": "",
+      "is_bus": true,
+      "direction": "left",
+      "annotations": []
+    },
+    {
+      "id": "conn_cpu_sd_emmc",
+      "from_module": "cpu",
+      "from_port": "peripheral_bus",
+      "to_module": "sd_emmc",
+      "to_port": "interface",
+      "signal_name": "",
+      "width": "",
+      "is_bus": true,
+      "direction": "left",
+      "annotations": []
+    },
+    {
+      "id": "conn_cpu_gpiox2",
+      "from_module": "cpu",
+      "from_port": "peripheral_bus",
+      "to_module": "gpiox2",
+      "to_port": "interface",
+      "signal_name": "",
+      "width": "",
+      "is_bus": true,
+      "direction": "left",
+      "annotations": []
+    },
+    {
+      "id": "conn_cpu_pwm",
+      "from_module": "cpu",
+      "from_port": "peripheral_bus",
+      "to_module": "pwm",
+      "to_port": "interface",
+      "signal_name": "",
+      "width": "",
+      "is_bus": true,
+      "direction": "left",
+      "annotations": []
+    },
+    {
+      "id": "conn_cpu_mdio",
+      "from_module": "cpu",
+      "from_port": "peripheral_bus",
+      "to_module": "mdio",
+      "to_port": "interface",
+      "signal_name": "",
+      "width": "",
+      "is_bus": true,
+      "direction": "left",
+      "annotations": []
+    },
+    {
+      "id": "conn_cpu_uartx3_pta",
+      "from_module": "cpu",
+      "from_port": "peripheral_bus",
+      "to_module": "uartx3_pta",
+      "to_port": "interface",
+      "signal_name": "",
+      "width": "",
+      "is_bus": true,
+      "direction": "left",
+      "annotations": []
+    },
+    {
+      "id": "conn_cpu_dram_phy",
+      "from_module": "cpu",
+      "from_port": "memory_interface",
+      "to_module": "dram_phy",
+      "to_port": "interface",
+      "signal_name": "",
+      "width": "",
+      "is_bus": true,
+      "direction": "right",
+      "annotations": []
+    },
+    {
+      "id": "conn_cpu_jtagx2",
+      "from_module": "cpu",
+      "from_port": "debug_interface",
+      "to_module": "jtagx2",
+      "to_port": "interface",
+      "signal_name": "",
+      "width": "",
+      "is_bus": true,
+      "direction": "right",
+      "annotations": []
+    },
+    {
+      "id": "conn_cpu_pcie3_2l",
+      "from_module": "cpu",
+      "from_port": "pcie_interface",
+      "to_module": "pcie3_2l_0",
+      "to_port": "interface",
+      "signal_name": "",
+      "width": "",
+      "is_bus": true,
+      "direction": "right",
+      "annotations": []
+    },
+    {
+      "id": "conn_cpu_pcie3_1l_port1",
+      "from_module": "cpu",
+      "from_port": "pcie_interface",
+      "to_module": "pcie3_1l_port1",
+      "to_port": "interface",
+      "signal_name": "",
+      "width": "",
+      "is_bus": true,
+      "direction": "right",
+      "annotations": []
+    },
+    {
+      "id": "conn_cpu_pcie3_1l_port0",
+      "from_module": "cpu",
+      "from_port": "pcie_interface",
+      "to_module": "pcie3_1l_port0",
+      "to_port": "interface",
+      "signal_name": "",
+      "width": "",
+      "is_bus": true,
+      "direction": "right",
+      "annotations": [
+        "Share PHY. Select either, not both."
+      ]
+    },
+    {
+      "id": "conn_cpu_usb3_2_port0",
+      "from_module": "cpu",
+      "from_port": "usb_interface",
+      "to_module": "usb3_2_port0",
+      "to_port": "interface",
+      "signal_name": "",
+      "width": "",
+      "is_bus": true,
+      "direction": "right",
+      "annotations": []
+    },
+    {
+      "id": "conn_cpu_usb3_2_port1",
+      "from_module": "cpu",
+      "from_port": "usb_interface",
+      "to_module": "usb3_2_port1",
+      "to_port": "interface",
+      "signal_name": "",
+      "width": "",
+      "is_bus": true,
+      "direction": "right",
+      "annotations": []
+    },
+    {
+      "id": "conn_netsys_10g_usxgmii_port0",
+      "from_module": "netsys",
+      "from_port": "10g_interface",
+      "to_module": "10g_usxgmii_port0",
+      "to_port": "interface",
+      "signal_name": "",
+      "width": "",
+      "is_bus": true,
+      "direction": "right",
+      "annotations": [
+        "Share PHY. Select either, not both."
+      ]
+    },
+    {
+      "id": "conn_netsys_10g_usxgmii_port1",
+      "from_module": "netsys",
+      "from_port": "10g_interface",
+      "to_module": "10g_usxgmii_port1",
+      "to_port": "interface",
+      "signal_name": "",
+      "width": "",
+      "is_bus": true,
+      "direction": "right",
+      "annotations": [
+        "Share MAC. Select either, not both."
+      ]
+    },
+    {
+      "id": "conn_netsys_2_5gphy",
+      "from_module": "netsys",
+      "from_port": "2_5g_interface",
+      "to_module": "2_5gphy",
+      "to_port": "interface",
+      "signal_name": "",
+      "width": "",
+      "is_bus": true,
+      "direction": "right",
+      "annotations": [
+        "Share MAC. Select either, not both."
+      ]
+    }
+  ],
+  "ports": [
+    {
+      "name": "SPIM",
+      "direction": "output",
+      "width": "",
+      "connected_to": "spim",
+      "description": "SPI Master interface port"
+    },
+    {
+      "name": "PCM",
+      "direction": "output",
+      "width": "",
+      "connected_to": "pcm",
+      "description": "PCM interface port"
+    },
+    {
+      "name": "I2C",
+      "direction": "output",
+      "width": "",
+      "connected_to": "i2c",
+      "description": "I2C interface port"
+    },
+    {
+      "name": "I2S",
+      "direction": "output",
+      "width": "",
+      "connected_to": "i2s",
+      "description": "I2S interface port"
+    },
+    {
+      "name": "NFI-NAND",
+      "direction": "output",
+      "width": "",
+      "connected_to": "nfi_nand",
+      "description": "NAND Flash interface port"
+    },
+    {
+      "name": "SPIM-NAND",
+      "direction": "output",
+      "width": "",
+      "connected_to": "spim_nand",
+      "description": "SPI NAND interface port"
+    },
+    {
+      "name": "SPIM-NOR",
+      "direction": "output",
+      "width": "",
+      "connected_to": "spim_nor",
+      "description": "SPI NOR Flash interface port"
+    },
+    {
+      "name": "SD/eMMC",
+      "direction": "output",
+      "width": "",
+      "connected_to": "sd_emmc",
+      "description": "SD/eMMC interface port"
+    },
+    {
+      "name": "GPIOx2",
+      "direction": "inout",
+      "width": "",
+      "connected_to": "gpiox2",
+      "description": "GPIO interface port (x2)"
+    },
+    {
+      "name": "PWM",
+      "direction": "output",
+      "width": "",
+      "connected_to": "pwm",
+      "description": "PWM interface port"
+    },
+    {
+      "name": "MDIO",
+      "direction": "output",
+      "width": "",
+      "connected_to": "mdio",
+      "description": "MDIO interface port"
+    },
+    {
+      "name": "UARTx3/PTA",
+      "direction": "output",
+      "width": "",
+      "connected_to": "uartx3_pta",
+      "description": "UART x3 / PTA interface port"
+    },
+    {
+      "name": "DRAM PHY",
+      "direction": "output",
+      "width": "",
+      "connected_to": "dram_phy",
+      "description": "DRAM PHY interface port"
+    },
+    {
+      "name": "JTAGx2",
+      "direction": "inout",
+      "width": "",
+      "connected_to": "jtagx2",
+      "description": "JTAG interface port (x2)"
+    },
+    {
+      "name": "2xPCIe3.0 2L",
+      "direction": "output",
+      "width": "",
+      "connected_to": "pcie3_2l_0",
+      "description": "2x PCIe 3.0 2-lane interface ports"
+    },
+    {
+      "name": "PCIe3.0 1L Port 1",
+      "direction": "output",
+      "width": "",
+      "connected_to": "pcie3_1l_port1",
+      "description": "PCIe 3.0 1-lane Port 1"
+    },
+    {
+      "name": "PCIe3.0 1L Port 0",
+      "direction": "output",
+      "width": "",
+      "connected_to": "pcie3_1l_port0",
+      "description": "PCIe 3.0 1-lane Port 0 (shared PHY with 10G/USXGMII Port 0)"
+    },
+    {
+      "name": "USB3.2 Port 0",
+      "direction": "inout",
+      "width": "",
+      "connected_to": "usb3_2_port0",
+      "description": "USB 3.2 Port 0"
+    },
+    {
+      "name": "USB3.2 Port 1",
+      "direction": "inout",
+      "width": "",
+      "connected_to": "usb3_2_port1",
+      "description": "USB 3.2 Port 1"
+    },
+    {
+      "name": "10G/USXGMII Port 0",
+      "direction": "output",
+      "width": "",
+      "connected_to": "10g_usxgmii_port0",
+      "description": "10G/USXGMII Port 0 (shared PHY with PCIe 3.0 1L Port 0)"
+    },
+    {
+      "name": "10G/USXGMII Port 1",
+      "direction": "output",
+      "width": "",
+      "connected_to": "10g_usxgmii_port1",
+      "description": "10G/USXGMII Port 1 (shared MAC with 2.5GPHY)"
+    },
+    {
+      "name": "2.5GPHY",
+      "direction": "output",
+      "width": "",
+      "connected_to": "2_5gphy",
+      "description": "2.5G Ethernet PHY (shared MAC with 10G/USXGMII Port 1)"
+    },
+    {
+      "name": "GPHY_0",
+      "direction": "output",
+      "width": "",
+      "connected_to": "gphy0",
+      "description": "Gigabit Ethernet PHY port 0"
+    },
+    {
+      "name": "GPHY_1",
+      "direction": "output",
+      "width": "",
+      "connected_to": "gphy1",
+      "description": "Gigabit Ethernet PHY port 1"
+    },
+    {
+      "name": "GPHY_2",
+      "direction": "output",
+      "width": "",
+      "connected_to": "gphy2",
+      "description": "Gigabit Ethernet PHY port 2"
+    },
+    {
+      "name": "GPHY_3",
+      "direction": "output",
+      "width": "",
+      "connected_to": "gphy3",
+      "description": "Gigabit Ethernet PHY port 3"
+    }
+  ],
+  "annotations": [
+    {
+      "type": "label",
+      "content": "MT7988A",
+      "location": "Top-left corner of diagram",
+      "related_to": ""
+    },
+    {
+      "type": "note",
+      "content": "Share PHY. Select either, not both.",
+      "location": "Right side, between PCIe3.0 1L Port 0 and 10G/USXGMII Port 0",
+      "related_to": "pcie3_1l_port0, 10g_usxgmii_port0"
+    },
+    {
+      "type": "note",
+      "content": "Share MAC. Select either, not both.",
+      "location": "Right side, between 10G/USXGMII Port 1 and 2.5GPHY",
+      "related_to": "10g_usxgmii_port1, 2_5gphy"
+    },
+    {
+      "type": "label",
+      "content": "Quad-Core Cortex-A73",
+      "location": "Inside CPU block",
+      "related_to": "cpu"
+    },
+    {
+      "type": "label",
+      "content": "L2 Cache 1 MB",
+      "location": "Below CPU block",
+      "related_to": "l2_cache"
+    },
+    {
+      "type": "label",
+      "content": "HNAT(PSE&PPE)/HQoS/PAO/MAP-E&T",
+      "location": "Inside NETSYS block",
+      "related_to": "netsys"
+    },
+    {
+      "type": "label",
+      "content": "EIP197",
+      "location": "Inside CYPTO block",
+      "related_to": "crypto"
+    }
+  ],
+  "hierarchy": {
+    "top_level_module": "MT7988A",
+    "submodules": [
+      "CPU Quad-Core Cortex-A73",
+      "L2 Cache 1 MB",
+      "Security",
+      "CYPTO EIP197",
+      "Tunneling Offload Engine",
+      "NETSYS",
+      "Switch",
+      "GPHY x4"
+    ],
+    "interfaces": [
+      "SPIM",
+      "PCM",
+      "I2C",
+      "I2S",
+      "NFI-NAND",
+      "SPIM-NAND",
+      "SPIM-NOR",
+      "SD/eMMC",
+      "GPIOx2",
+      "PWM",
+      "MDIO",
+      "UARTx3/PTA",
+      "DRAM PHY",
+      "JTAGx2",
+      "PCIe 3.0",
+      "USB 3.2",
+      "10G/USXGMII",
+      "2.5GPHY"
+    ]
+  },
+  "metadata": {
+    "total_modules": 35,
+    "total_connections": 37,
+    "complexity": "complex",
+    "protocol_hints": [
+      "PCIe 3.0",
+      "USB 3.2",
+      "10G Ethernet",
+      "USXGMII",
+      "2.5G Ethernet",
+      "Gigabit Ethernet",
+      "SPI",
+      "I2C",
+      "I2S",
+      "PCM",
+      "UART",
+      "JTAG",
+      "MDIO",
+      "NAND Flash",
+      "NOR Flash",
+      "SD/eMMC",
+      "DDR (DRAM)",
+      "HNAT",
+      "HQoS",
+      "MAP-E&T"
+    ],
+    "ambiguities": [
+      "Exact bit widths for internal buses not specified",
+      "Specific DRAM type (DDR3/DDR4/DDR5) not specified",
+      "Exact GPIO count not specified (only 'x2' mentioned)",
+      "UART count is 3 but sharing with PTA not fully detailed",
+      "Internal CPU-to-peripheral bus architecture not detailed",
+      "Clock and reset distribution not shown",
+      "Power domains not indicated"
+    ]
+  }
+}

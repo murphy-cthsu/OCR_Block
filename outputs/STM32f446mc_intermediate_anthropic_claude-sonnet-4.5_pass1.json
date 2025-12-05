@@ -1,0 +1,1795 @@
+{
+  "modules": [
+    {
+      "id": "m1",
+      "name": "ARM CORTEX M4",
+      "type": "processor",
+      "position": {
+        "x": 80,
+        "y": 80
+      },
+      "parameters": {
+        "core": "Cortex M4",
+        "manufacturer": "ARM"
+      },
+      "description": "Main processor core with 180MHz capability"
+    },
+    {
+      "id": "m2",
+      "name": "USB OTG HS",
+      "type": "usb_controller",
+      "position": {
+        "x": 80,
+        "y": 140
+      },
+      "parameters": {
+        "type": "OTG High Speed"
+      },
+      "description": "USB OTG High Speed controller with DMA"
+    },
+    {
+      "id": "m3",
+      "name": "GP-DMA2",
+      "type": "dma",
+      "position": {
+        "x": 80,
+        "y": 150
+      },
+      "parameters": {},
+      "description": "General Purpose DMA controller 2"
+    },
+    {
+      "id": "m4",
+      "name": "CP-DMA1",
+      "type": "dma",
+      "position": {
+        "x": 80,
+        "y": 160
+      },
+      "parameters": {},
+      "description": "General Purpose DMA controller 1"
+    },
+    {
+      "id": "m5",
+      "name": "GPIO PORT A",
+      "type": "gpio",
+      "position": {
+        "x": 80,
+        "y": 230
+      },
+      "parameters": {},
+      "description": "General Purpose I/O Port A"
+    },
+    {
+      "id": "m6",
+      "name": "GPIO PORT B",
+      "type": "gpio",
+      "position": {
+        "x": 80,
+        "y": 245
+      },
+      "parameters": {},
+      "description": "General Purpose I/O Port B"
+    },
+    {
+      "id": "m7",
+      "name": "GPIO PORT C",
+      "type": "gpio",
+      "position": {
+        "x": 80,
+        "y": 260
+      },
+      "parameters": {},
+      "description": "General Purpose I/O Port C"
+    },
+    {
+      "id": "m8",
+      "name": "GPIO PORT D",
+      "type": "gpio",
+      "position": {
+        "x": 80,
+        "y": 275
+      },
+      "parameters": {},
+      "description": "General Purpose I/O Port D"
+    },
+    {
+      "id": "m9",
+      "name": "GPIO PORT E",
+      "type": "gpio",
+      "position": {
+        "x": 80,
+        "y": 290
+      },
+      "parameters": {},
+      "description": "General Purpose I/O Port E"
+    },
+    {
+      "id": "m10",
+      "name": "GPIO PORT G",
+      "type": "gpio",
+      "position": {
+        "x": 80,
+        "y": 305
+      },
+      "parameters": {},
+      "description": "General Purpose I/O Port G"
+    },
+    {
+      "id": "m11",
+      "name": "GPIO PORT H",
+      "type": "gpio",
+      "position": {
+        "x": 80,
+        "y": 320
+      },
+      "parameters": {},
+      "description": "General Purpose I/O Port H"
+    },
+    {
+      "id": "m12",
+      "name": "S/WD - IWDG",
+      "type": "watchdog",
+      "position": {
+        "x": 80,
+        "y": 450
+      },
+      "parameters": {
+        "type": "Independent Watchdog"
+      },
+      "description": "Independent Watchdog Timer"
+    },
+    {
+      "id": "m13",
+      "name": "TIMER1",
+      "type": "timer",
+      "position": {
+        "x": 80,
+        "y": 480
+      },
+      "parameters": {},
+      "description": "Timer 1"
+    },
+    {
+      "id": "m14",
+      "name": "TIMER8",
+      "type": "timer",
+      "position": {
+        "x": 80,
+        "y": 495
+      },
+      "parameters": {},
+      "description": "Timer 8"
+    },
+    {
+      "id": "m15",
+      "name": "TIMER9",
+      "type": "timer",
+      "position": {
+        "x": 80,
+        "y": 510
+      },
+      "parameters": {},
+      "description": "Timer 9"
+    },
+    {
+      "id": "m16",
+      "name": "TIMER10",
+      "type": "timer",
+      "position": {
+        "x": 80,
+        "y": 525
+      },
+      "parameters": {},
+      "description": "Timer 10"
+    },
+    {
+      "id": "m17",
+      "name": "TIMER11",
+      "type": "timer",
+      "position": {
+        "x": 80,
+        "y": 540
+      },
+      "parameters": {},
+      "description": "Timer 11"
+    },
+    {
+      "id": "m18",
+      "name": "SPI1/I2S1",
+      "type": "serial_interface",
+      "position": {
+        "x": 80,
+        "y": 555
+      },
+      "parameters": {
+        "protocols": [
+          "SPI",
+          "I2S"
+        ]
+      },
+      "description": "SPI1/I2S1 serial interface"
+    },
+    {
+      "id": "m19",
+      "name": "USART1",
+      "type": "uart",
+      "position": {
+        "x": 80,
+        "y": 570
+      },
+      "parameters": {},
+      "description": "USART 1"
+    },
+    {
+      "id": "m20",
+      "name": "USART6",
+      "type": "uart",
+      "position": {
+        "x": 80,
+        "y": 585
+      },
+      "parameters": {},
+      "description": "USART 6"
+    },
+    {
+      "id": "m21",
+      "name": "SAI1",
+      "type": "audio_interface",
+      "position": {
+        "x": 80,
+        "y": 620
+      },
+      "parameters": {},
+      "description": "Serial Audio Interface 1"
+    },
+    {
+      "id": "m22",
+      "name": "SAI2",
+      "type": "audio_interface",
+      "position": {
+        "x": 80,
+        "y": 635
+      },
+      "parameters": {},
+      "description": "Serial Audio Interface 2"
+    },
+    {
+      "id": "m23",
+      "name": "TEMP SENSOR",
+      "type": "sensor",
+      "position": {
+        "x": 80,
+        "y": 665
+      },
+      "parameters": {},
+      "description": "Temperature Sensor"
+    },
+    {
+      "id": "m24",
+      "name": "ADC",
+      "type": "adc",
+      "position": {
+        "x": 80,
+        "y": 680
+      },
+      "parameters": {},
+      "description": "Analog to Digital Converter"
+    },
+    {
+      "id": "m25",
+      "name": "SDADC",
+      "type": "adc",
+      "position": {
+        "x": 80,
+        "y": 695
+      },
+      "parameters": {},
+      "description": "Sigma-Delta ADC"
+    },
+    {
+      "id": "m26",
+      "name": "EXT MEM CTL (FMC)",
+      "type": "memory_controller",
+      "position": {
+        "x": 320,
+        "y": 40
+      },
+      "parameters": {},
+      "description": "External Memory Controller (Flexible Memory Controller)"
+    },
+    {
+      "id": "m27",
+      "name": "QuadSPI",
+      "type": "spi_controller",
+      "position": {
+        "x": 360,
+        "y": 60
+      },
+      "parameters": {
+        "type": "Quad SPI"
+      },
+      "description": "Quad SPI interface"
+    },
+    {
+      "id": "m28",
+      "name": "FLASH 512KB",
+      "type": "memory",
+      "position": {
+        "x": 320,
+        "y": 90
+      },
+      "parameters": {
+        "size": "512KB",
+        "type": "Flash"
+      },
+      "description": "512KB Flash Memory"
+    },
+    {
+      "id": "m29",
+      "name": "SRAM1 112KB",
+      "type": "memory",
+      "position": {
+        "x": 320,
+        "y": 120
+      },
+      "parameters": {
+        "size": "112KB",
+        "type": "SRAM"
+      },
+      "description": "SRAM1 112KB"
+    },
+    {
+      "id": "m30",
+      "name": "SRAM2 16KB",
+      "type": "memory",
+      "position": {
+        "x": 320,
+        "y": 135
+      },
+      "parameters": {
+        "size": "16KB",
+        "type": "SRAM"
+      },
+      "description": "SRAM2 16KB"
+    },
+    {
+      "id": "m31",
+      "name": "CAMERA ITF",
+      "type": "camera_interface",
+      "position": {
+        "x": 420,
+        "y": 115
+      },
+      "parameters": {},
+      "description": "Camera Interface"
+    },
+    {
+      "id": "m32",
+      "name": "USB OTG FS",
+      "type": "usb_controller",
+      "position": {
+        "x": 420,
+        "y": 130
+      },
+      "parameters": {
+        "type": "OTG Full Speed"
+      },
+      "description": "USB OTG Full Speed controller"
+    },
+    {
+      "id": "m33",
+      "name": "RTC",
+      "type": "rtc",
+      "position": {
+        "x": 340,
+        "y": 200
+      },
+      "parameters": {},
+      "description": "Real Time Clock"
+    },
+    {
+      "id": "m34",
+      "name": "BKUP SRAM",
+      "type": "memory",
+      "position": {
+        "x": 340,
+        "y": 215
+      },
+      "parameters": {
+        "type": "Backup SRAM"
+      },
+      "description": "Backup SRAM"
+    },
+    {
+      "id": "m35",
+      "name": "PWR",
+      "type": "power_management",
+      "position": {
+        "x": 340,
+        "y": 230
+      },
+      "parameters": {},
+      "description": "Power Management"
+    },
+    {
+      "id": "m36",
+      "name": "CRC",
+      "type": "crc",
+      "position": {
+        "x": 340,
+        "y": 280
+      },
+      "parameters": {},
+      "description": "CRC Calculation Unit"
+    },
+    {
+      "id": "m37",
+      "name": "RESET & CLOCK CTRL",
+      "type": "clock_control",
+      "position": {
+        "x": 340,
+        "y": 260
+      },
+      "parameters": {},
+      "description": "Reset and Clock Control"
+    },
+    {
+      "id": "m38",
+      "name": "ANALOG SWITCH",
+      "type": "analog_switch",
+      "position": {
+        "x": 420,
+        "y": 300
+      },
+      "parameters": {},
+      "description": "Analog Switch Matrix"
+    },
+    {
+      "id": "m39",
+      "name": "ADC12",
+      "type": "adc",
+      "position": {
+        "x": 420,
+        "y": 315
+      },
+      "parameters": {},
+      "description": "ADC 12-bit"
+    },
+    {
+      "id": "m40",
+      "name": "TIMER2",
+      "type": "timer",
+      "position": {
+        "x": 340,
+        "y": 360
+      },
+      "parameters": {},
+      "description": "Timer 2"
+    },
+    {
+      "id": "m41",
+      "name": "TIMER3",
+      "type": "timer",
+      "position": {
+        "x": 340,
+        "y": 375
+      },
+      "parameters": {},
+      "description": "Timer 3"
+    },
+    {
+      "id": "m42",
+      "name": "TIMER4",
+      "type": "timer",
+      "position": {
+        "x": 340,
+        "y": 390
+      },
+      "parameters": {},
+      "description": "Timer 4"
+    },
+    {
+      "id": "m43",
+      "name": "TIMER5",
+      "type": "timer",
+      "position": {
+        "x": 340,
+        "y": 405
+      },
+      "parameters": {},
+      "description": "Timer 5"
+    },
+    {
+      "id": "m44",
+      "name": "TIMER12",
+      "type": "timer",
+      "position": {
+        "x": 340,
+        "y": 420
+      },
+      "parameters": {},
+      "description": "Timer 12"
+    },
+    {
+      "id": "m45",
+      "name": "TIMER13",
+      "type": "timer",
+      "position": {
+        "x": 340,
+        "y": 435
+      },
+      "parameters": {},
+      "description": "Timer 13"
+    },
+    {
+      "id": "m46",
+      "name": "TIMER14",
+      "type": "timer",
+      "position": {
+        "x": 340,
+        "y": 450
+      },
+      "parameters": {},
+      "description": "Timer 14"
+    },
+    {
+      "id": "m47",
+      "name": "USART2",
+      "type": "uart",
+      "position": {
+        "x": 340,
+        "y": 480
+      },
+      "parameters": {},
+      "description": "USART 2"
+    },
+    {
+      "id": "m48",
+      "name": "USART3",
+      "type": "uart",
+      "position": {
+        "x": 340,
+        "y": 495
+      },
+      "parameters": {},
+      "description": "USART 3"
+    },
+    {
+      "id": "m49",
+      "name": "UART4",
+      "type": "uart",
+      "position": {
+        "x": 340,
+        "y": 510
+      },
+      "parameters": {},
+      "description": "UART 4"
+    },
+    {
+      "id": "m50",
+      "name": "UART5",
+      "type": "uart",
+      "position": {
+        "x": 340,
+        "y": 525
+      },
+      "parameters": {},
+      "description": "UART 5"
+    },
+    {
+      "id": "m51",
+      "name": "I2C1",
+      "type": "i2c",
+      "position": {
+        "x": 340,
+        "y": 540
+      },
+      "parameters": {},
+      "description": "I2C Interface 1"
+    },
+    {
+      "id": "m52",
+      "name": "I2C2",
+      "type": "i2c",
+      "position": {
+        "x": 340,
+        "y": 555
+      },
+      "parameters": {},
+      "description": "I2C Interface 2"
+    },
+    {
+      "id": "m53",
+      "name": "I2C3",
+      "type": "i2c",
+      "position": {
+        "x": 340,
+        "y": 570
+      },
+      "parameters": {},
+      "description": "I2C Interface 3"
+    },
+    {
+      "id": "m54",
+      "name": "HDMI CEC",
+      "type": "hdmi_cec",
+      "position": {
+        "x": 340,
+        "y": 600
+      },
+      "parameters": {},
+      "description": "HDMI CEC Interface"
+    },
+    {
+      "id": "m55",
+      "name": "SPI2/I2S2",
+      "type": "serial_interface",
+      "position": {
+        "x": 340,
+        "y": 635
+      },
+      "parameters": {
+        "protocols": [
+          "SPI",
+          "I2S"
+        ]
+      },
+      "description": "SPI2/I2S2 serial interface"
+    },
+    {
+      "id": "m56",
+      "name": "SPI3/I2S3",
+      "type": "serial_interface",
+      "position": {
+        "x": 340,
+        "y": 650
+      },
+      "parameters": {
+        "protocols": [
+          "SPI",
+          "I2S"
+        ]
+      },
+      "description": "SPI3/I2S3 serial interface"
+    },
+    {
+      "id": "m57",
+      "name": "I2S2/I2S3BUS",
+      "type": "audio_interface",
+      "position": {
+        "x": 340,
+        "y": 665
+      },
+      "parameters": {},
+      "description": "I2S2/I2S3 Bus"
+    },
+    {
+      "id": "m58",
+      "name": "I2S3/I2S3BUS",
+      "type": "audio_interface",
+      "position": {
+        "x": 340,
+        "y": 680
+      },
+      "parameters": {},
+      "description": "I2S3/I2S3 Bus"
+    },
+    {
+      "id": "m59",
+      "name": "FMPI2C1",
+      "type": "i2c",
+      "position": {
+        "x": 340,
+        "y": 695
+      },
+      "parameters": {},
+      "description": "Fast Mode Plus I2C 1"
+    },
+    {
+      "id": "m60",
+      "name": "S-CAN1",
+      "type": "can",
+      "position": {
+        "x": 340,
+        "y": 710
+      },
+      "parameters": {},
+      "description": "CAN Interface 1"
+    },
+    {
+      "id": "m61",
+      "name": "DAC1",
+      "type": "dac",
+      "position": {
+        "x": 280,
+        "y": 720
+      },
+      "parameters": {},
+      "description": "Digital to Analog Converter 1"
+    },
+    {
+      "id": "m62",
+      "name": "DAC2",
+      "type": "dac",
+      "position": {
+        "x": 340,
+        "y": 720
+      },
+      "parameters": {},
+      "description": "Digital to Analog Converter 2"
+    },
+    {
+      "id": "m63",
+      "name": "SYSCFG",
+      "type": "system_config",
+      "position": {
+        "x": 220,
+        "y": 450
+      },
+      "parameters": {},
+      "description": "System Configuration Controller"
+    },
+    {
+      "id": "m64",
+      "name": "EXTI",
+      "type": "interrupt_controller",
+      "position": {
+        "x": 220,
+        "y": 470
+      },
+      "parameters": {},
+      "description": "External Interrupt/Event Controller"
+    },
+    {
+      "id": "m65",
+      "name": "AHB1/APB2",
+      "type": "bus_bridge",
+      "position": {
+        "x": 220,
+        "y": 490
+      },
+      "parameters": {},
+      "description": "AHB1 to APB2 Bridge"
+    },
+    {
+      "id": "m66",
+      "name": "AHB1/APB1",
+      "type": "bus_bridge",
+      "position": {
+        "x": 220,
+        "y": 510
+      },
+      "parameters": {},
+      "description": "AHB1 to APB1 Bridge"
+    },
+    {
+      "id": "m67",
+      "name": "WD-WWDG",
+      "type": "watchdog",
+      "position": {
+        "x": 220,
+        "y": 530
+      },
+      "parameters": {
+        "type": "Window Watchdog"
+      },
+      "description": "Window Watchdog"
+    },
+    {
+      "id": "m68",
+      "name": "TIMER6",
+      "type": "timer",
+      "position": {
+        "x": 220,
+        "y": 610
+      },
+      "parameters": {},
+      "description": "Timer 6"
+    },
+    {
+      "id": "m69",
+      "name": "TIMER7",
+      "type": "timer",
+      "position": {
+        "x": 220,
+        "y": 625
+      },
+      "parameters": {},
+      "description": "Timer 7"
+    }
+  ],
+  "connections": [
+    {
+      "id": "c1",
+      "from_module": "m1",
+      "from_port": "JTAG/SWD",
+      "to_module": "external",
+      "to_port": "debug_interface",
+      "signal_name": "JTAG/SWD",
+      "width": "",
+      "is_bus": false,
+      "direction": "bidirectional",
+      "annotations": [
+        "Debug interface"
+      ]
+    },
+    {
+      "id": "c2",
+      "from_module": "m1",
+      "from_port": "ETM",
+      "to_module": "external",
+      "to_port": "trace",
+      "signal_name": "ETM",
+      "width": "",
+      "is_bus": false,
+      "direction": "output",
+      "annotations": [
+        "Embedded Trace Macrocell"
+      ]
+    },
+    {
+      "id": "c3",
+      "from_module": "m1",
+      "from_port": "bus",
+      "to_module": "m26",
+      "to_port": "bus",
+      "signal_name": "AHB",
+      "width": "",
+      "is_bus": true,
+      "direction": "bidirectional",
+      "annotations": [
+        "AHB Bus"
+      ]
+    },
+    {
+      "id": "c4",
+      "from_module": "m1",
+      "from_port": "bus",
+      "to_module": "m28",
+      "to_port": "bus",
+      "signal_name": "AHB",
+      "width": "",
+      "is_bus": true,
+      "direction": "bidirectional",
+      "annotations": []
+    },
+    {
+      "id": "c5",
+      "from_module": "m1",
+      "from_port": "bus",
+      "to_module": "m29",
+      "to_port": "bus",
+      "signal_name": "AHB",
+      "width": "",
+      "is_bus": true,
+      "direction": "bidirectional",
+      "annotations": []
+    },
+    {
+      "id": "c6",
+      "from_module": "m1",
+      "from_port": "bus",
+      "to_module": "m30",
+      "to_port": "bus",
+      "signal_name": "AHB",
+      "width": "",
+      "is_bus": true,
+      "direction": "bidirectional",
+      "annotations": []
+    },
+    {
+      "id": "c7",
+      "from_module": "m26",
+      "from_port": "output",
+      "to_module": "external",
+      "to_port": "memory",
+      "signal_name": "FRAM/PSRAM/NOR/SRAM/NAND/SDRAM",
+      "width": "",
+      "is_bus": true,
+      "direction": "output",
+      "annotations": [
+        "External memory interface"
+      ]
+    },
+    {
+      "id": "c8",
+      "from_module": "m27",
+      "from_port": "output",
+      "to_module": "external",
+      "to_port": "qspi",
+      "signal_name": "QuadSPI",
+      "width": "",
+      "is_bus": true,
+      "direction": "output",
+      "annotations": []
+    },
+    {
+      "id": "c9",
+      "from_module": "m31",
+      "from_port": "output",
+      "to_module": "external",
+      "to_port": "camera",
+      "signal_name": "8/10/12/14-bit DCMI",
+      "width": "8/10/12/14",
+      "is_bus": true,
+      "direction": "input",
+      "annotations": [
+        "Camera data interface"
+      ]
+    },
+    {
+      "id": "c10",
+      "from_module": "m32",
+      "from_port": "output",
+      "to_module": "external",
+      "to_port": "usb_fs",
+      "signal_name": "USB OTG FS",
+      "width": "",
+      "is_bus": false,
+      "direction": "bidirectional",
+      "annotations": []
+    },
+    {
+      "id": "c11",
+      "from_module": "m2",
+      "from_port": "output",
+      "to_module": "external",
+      "to_port": "usb_hs",
+      "signal_name": "USB OTG HS",
+      "width": "",
+      "is_bus": false,
+      "direction": "bidirectional",
+      "annotations": []
+    },
+    {
+      "id": "c12",
+      "from_module": "m5",
+      "from_port": "PA[0:15]",
+      "to_module": "external",
+      "to_port": "gpio_a",
+      "signal_name": "PA[0:15]",
+      "width": "16",
+      "is_bus": true,
+      "direction": "bidirectional",
+      "annotations": []
+    },
+    {
+      "id": "c13",
+      "from_module": "m6",
+      "from_port": "PB[0:15]",
+      "to_module": "external",
+      "to_port": "gpio_b",
+      "signal_name": "PB[0:15]",
+      "width": "16",
+      "is_bus": true,
+      "direction": "bidirectional",
+      "annotations": []
+    },
+    {
+      "id": "c14",
+      "from_module": "m7",
+      "from_port": "PC[0:15]",
+      "to_module": "external",
+      "to_port": "gpio_c",
+      "signal_name": "PC[0:15]",
+      "width": "16",
+      "is_bus": true,
+      "direction": "bidirectional",
+      "annotations": []
+    },
+    {
+      "id": "c15",
+      "from_module": "m8",
+      "from_port": "PD[0:15]",
+      "to_module": "external",
+      "to_port": "gpio_d",
+      "signal_name": "PD[0:15]",
+      "width": "16",
+      "is_bus": true,
+      "direction": "bidirectional",
+      "annotations": []
+    },
+    {
+      "id": "c16",
+      "from_module": "m9",
+      "from_port": "PE[0:15]",
+      "to_module": "external",
+      "to_port": "gpio_e",
+      "signal_name": "PE[0:15]",
+      "width": "16",
+      "is_bus": true,
+      "direction": "bidirectional",
+      "annotations": []
+    },
+    {
+      "id": "c17",
+      "from_module": "m10",
+      "from_port": "PG[0:15]",
+      "to_module": "external",
+      "to_port": "gpio_g",
+      "signal_name": "PG[0:15]",
+      "width": "16",
+      "is_bus": true,
+      "direction": "bidirectional",
+      "annotations": []
+    },
+    {
+      "id": "c18",
+      "from_module": "m11",
+      "from_port": "PH[0:1]",
+      "to_module": "external",
+      "to_port": "gpio_h",
+      "signal_name": "PH[0:1]",
+      "width": "2",
+      "is_bus": true,
+      "direction": "bidirectional",
+      "annotations": []
+    },
+    {
+      "id": "c19",
+      "from_module": "m33",
+      "from_port": "output",
+      "to_module": "external",
+      "to_port": "rtc",
+      "signal_name": "VBAT",
+      "width": "",
+      "is_bus": false,
+      "direction": "input",
+      "annotations": [
+        "Battery backup"
+      ]
+    },
+    {
+      "id": "c20",
+      "from_module": "m35",
+      "from_port": "output",
+      "to_module": "external",
+      "to_port": "power",
+      "signal_name": "VDD/VDDA",
+      "width": "",
+      "is_bus": false,
+      "direction": "input",
+      "annotations": [
+        "Power supply"
+      ]
+    },
+    {
+      "id": "c21",
+      "from_module": "m37",
+      "from_port": "output",
+      "to_module": "external",
+      "to_port": "clock",
+      "signal_name": "CLK, OSC, CEC, ETH",
+      "width": "",
+      "is_bus": false,
+      "direction": "input",
+      "annotations": [
+        "Clock inputs"
+      ]
+    },
+    {
+      "id": "c22",
+      "from_module": "m38",
+      "from_port": "output",
+      "to_module": "external",
+      "to_port": "analog",
+      "signal_name": "VREF+",
+      "width": "",
+      "is_bus": false,
+      "direction": "input",
+      "annotations": [
+        "Analog reference"
+      ]
+    },
+    {
+      "id": "c23",
+      "from_module": "m39",
+      "from_port": "output",
+      "to_module": "external",
+      "to_port": "adc",
+      "signal_name": "ADC12_IN",
+      "width": "",
+      "is_bus": false,
+      "direction": "input",
+      "annotations": [
+        "ADC inputs"
+      ]
+    },
+    {
+      "id": "c24",
+      "from_module": "m40",
+      "from_port": "output",
+      "to_module": "external",
+      "to_port": "timer2",
+      "signal_name": "TIMER2_CH",
+      "width": "",
+      "is_bus": false,
+      "direction": "output",
+      "annotations": [
+        "Timer 2 channels"
+      ]
+    },
+    {
+      "id": "c25",
+      "from_module": "m41",
+      "from_port": "output",
+      "to_module": "external",
+      "to_port": "timer3",
+      "signal_name": "TIMER3_CH",
+      "width": "",
+      "is_bus": false,
+      "direction": "output",
+      "annotations": [
+        "Timer 3 channels"
+      ]
+    },
+    {
+      "id": "c26",
+      "from_module": "m42",
+      "from_port": "output",
+      "to_module": "external",
+      "to_port": "timer4",
+      "signal_name": "TIMER4_CH",
+      "width": "",
+      "is_bus": false,
+      "direction": "output",
+      "annotations": [
+        "Timer 4 channels"
+      ]
+    },
+    {
+      "id": "c27",
+      "from_module": "m43",
+      "from_port": "output",
+      "to_module": "external",
+      "to_port": "timer5",
+      "signal_name": "TIMER5_CH",
+      "width": "",
+      "is_bus": false,
+      "direction": "output",
+      "annotations": [
+        "Timer 5 channels"
+      ]
+    },
+    {
+      "id": "c28",
+      "from_module": "m44",
+      "from_port": "output",
+      "to_module": "external",
+      "to_port": "timer12",
+      "signal_name": "TIMER12_CH",
+      "width": "",
+      "is_bus": false,
+      "direction": "output",
+      "annotations": [
+        "Timer 12 channels"
+      ]
+    },
+    {
+      "id": "c29",
+      "from_module": "m45",
+      "from_port": "output",
+      "to_module": "external",
+      "to_port": "timer13",
+      "signal_name": "TIMER13_CH",
+      "width": "",
+      "is_bus": false,
+      "direction": "output",
+      "annotations": [
+        "Timer 13 channels"
+      ]
+    },
+    {
+      "id": "c30",
+      "from_module": "m46",
+      "from_port": "output",
+      "to_module": "external",
+      "to_port": "timer14",
+      "signal_name": "TIMER14_CH",
+      "width": "",
+      "is_bus": false,
+      "direction": "output",
+      "annotations": [
+        "Timer 14 channels"
+      ]
+    },
+    {
+      "id": "c31",
+      "from_module": "m47",
+      "from_port": "output",
+      "to_module": "external",
+      "to_port": "usart2",
+      "signal_name": "USART2",
+      "width": "",
+      "is_bus": false,
+      "direction": "bidirectional",
+      "annotations": []
+    },
+    {
+      "id": "c32",
+      "from_module": "m48",
+      "from_port": "output",
+      "to_module": "external",
+      "to_port": "usart3",
+      "signal_name": "USART3",
+      "width": "",
+      "is_bus": false,
+      "direction": "bidirectional",
+      "annotations": []
+    },
+    {
+      "id": "c33",
+      "from_module": "m49",
+      "from_port": "output",
+      "to_module": "external",
+      "to_port": "uart4",
+      "signal_name": "UART4",
+      "width": "",
+      "is_bus": false,
+      "direction": "bidirectional",
+      "annotations": []
+    },
+    {
+      "id": "c34",
+      "from_module": "m50",
+      "from_port": "output",
+      "to_module": "external",
+      "to_port": "uart5",
+      "signal_name": "UART5",
+      "width": "",
+      "is_bus": false,
+      "direction": "bidirectional",
+      "annotations": []
+    },
+    {
+      "id": "c35",
+      "from_module": "m51",
+      "from_port": "output",
+      "to_module": "external",
+      "to_port": "i2c1",
+      "signal_name": "I2C1",
+      "width": "",
+      "is_bus": false,
+      "direction": "bidirectional",
+      "annotations": []
+    },
+    {
+      "id": "c36",
+      "from_module": "m52",
+      "from_port": "output",
+      "to_module": "external",
+      "to_port": "i2c2",
+      "signal_name": "I2C2",
+      "width": "",
+      "is_bus": false,
+      "direction": "bidirectional",
+      "annotations": []
+    },
+    {
+      "id": "c37",
+      "from_module": "m53",
+      "from_port": "output",
+      "to_module": "external",
+      "to_port": "i2c3",
+      "signal_name": "I2C3",
+      "width": "",
+      "is_bus": false,
+      "direction": "bidirectional",
+      "annotations": []
+    },
+    {
+      "id": "c38",
+      "from_module": "m54",
+      "from_port": "output",
+      "to_module": "external",
+      "to_port": "hdmi_cec",
+      "signal_name": "HDMI CEC",
+      "width": "",
+      "is_bus": false,
+      "direction": "bidirectional",
+      "annotations": []
+    },
+    {
+      "id": "c39",
+      "from_module": "m55",
+      "from_port": "output",
+      "to_module": "external",
+      "to_port": "spi2",
+      "signal_name": "SPI2/I2S2",
+      "width": "",
+      "is_bus": false,
+      "direction": "bidirectional",
+      "annotations": []
+    },
+    {
+      "id": "c40",
+      "from_module": "m56",
+      "from_port": "output",
+      "to_module": "external",
+      "to_port": "spi3",
+      "signal_name": "SPI3/I2S3",
+      "width": "",
+      "is_bus": false,
+      "direction": "bidirectional",
+      "annotations": []
+    },
+    {
+      "id": "c41",
+      "from_module": "m57",
+      "from_port": "output",
+      "to_module": "external",
+      "to_port": "i2s2bus",
+      "signal_name": "I2S2/I2S3BUS",
+      "width": "",
+      "is_bus": false,
+      "direction": "bidirectional",
+      "annotations": []
+    },
+    {
+      "id": "c42",
+      "from_module": "m58",
+      "from_port": "output",
+      "to_module": "external",
+      "to_port": "i2s3bus",
+      "signal_name": "I2S3/I2S3BUS",
+      "width": "",
+      "is_bus": false,
+      "direction": "bidirectional",
+      "annotations": []
+    },
+    {
+      "id": "c43",
+      "from_module": "m59",
+      "from_port": "output",
+      "to_module": "external",
+      "to_port": "fmpi2c1",
+      "signal_name": "FMPI2C1",
+      "width": "",
+      "is_bus": false,
+      "direction": "bidirectional",
+      "annotations": []
+    },
+    {
+      "id": "c44",
+      "from_module": "m60",
+      "from_port": "output",
+      "to_module": "external",
+      "to_port": "can1",
+      "signal_name": "S-CAN1",
+      "width": "",
+      "is_bus": false,
+      "direction": "bidirectional",
+      "annotations": []
+    },
+    {
+      "id": "c45",
+      "from_module": "m61",
+      "from_port": "output",
+      "to_module": "external",
+      "to_port": "dac1",
+      "signal_name": "DAC1",
+      "width": "",
+      "is_bus": false,
+      "direction": "output",
+      "annotations": []
+    },
+    {
+      "id": "c46",
+      "from_module": "m62",
+      "from_port": "output",
+      "to_module": "external",
+      "to_port": "dac2",
+      "signal_name": "DAC2",
+      "width": "",
+      "is_bus": false,
+      "direction": "output",
+      "annotations": []
+    },
+    {
+      "id": "c47",
+      "from_module": "m13",
+      "from_port": "output",
+      "to_module": "external",
+      "to_port": "timer1",
+      "signal_name": "TIMER1",
+      "width": "",
+      "is_bus": false,
+      "direction": "output",
+      "annotations": []
+    },
+    {
+      "id": "c48",
+      "from_module": "m14",
+      "from_port": "output",
+      "to_module": "external",
+      "to_port": "timer8",
+      "signal_name": "TIMER8",
+      "width": "",
+      "is_bus": false,
+      "direction": "output",
+      "annotations": []
+    },
+    {
+      "id": "c49",
+      "from_module": "m15",
+      "from_port": "output",
+      "to_module": "external",
+      "to_port": "timer9",
+      "signal_name": "TIMER9",
+      "width": "",
+      "is_bus": false,
+      "direction": "output",
+      "annotations": []
+    },
+    {
+      "id": "c50",
+      "from_module": "m16",
+      "from_port": "output",
+      "to_module": "external",
+      "to_port": "timer10",
+      "signal_name": "TIMER10",
+      "width": "",
+      "is_bus": false,
+      "direction": "output",
+      "annotations": []
+    },
+    {
+      "id": "c51",
+      "from_module": "m17",
+      "from_port": "output",
+      "to_module": "external",
+      "to_port": "timer11",
+      "signal_name": "TIMER11",
+      "width": "",
+      "is_bus": false,
+      "direction": "output",
+      "annotations": []
+    },
+    {
+      "id": "c52",
+      "from_module": "m18",
+      "from_port": "output",
+      "to_module": "external",
+      "to_port": "spi1",
+      "signal_name": "SPI1/I2S1",
+      "width": "",
+      "is_bus": false,
+      "direction": "bidirectional",
+      "annotations": []
+    },
+    {
+      "id": "c53",
+      "from_module": "m19",
+      "from_port": "output",
+      "to_module": "external",
+      "to_port": "usart1",
+      "signal_name": "USART1",
+      "width": "",
+      "is_bus": false,
+      "direction": "bidirectional",
+      "annotations": []
+    },
+    {
+      "id": "c54",
+      "from_module": "m20",
+      "from_port": "output",
+      "to_module": "external",
+      "to_port": "usart6",
+      "signal_name": "USART6",
+      "width": "",
+      "is_bus": false,
+      "direction": "bidirectional",
+      "annotations": []
+    },
+    {
+      "id": "c55",
+      "from_module": "m21",
+      "from_port": "output",
+      "to_module": "external",
+      "to_port": "sai1",
+      "signal_name": "SAI1",
+      "width": "",
+      "is_bus": false,
+      "direction": "bidirectional",
+      "annotations": []
+    },
+    {
+      "id": "c56",
+      "from_module": "m22",
+      "from_port": "output",
+      "to_module": "external",
+      "to_port": "sai2",
+      "signal_name": "SAI2",
+      "width": "",
+      "is_bus": false,
+      "direction": "bidirectional",
+      "annotations": []
+    },
+    {
+      "id": "c57",
+      "from_module": "m68",
+      "from_port": "output",
+      "to_module": "external",
+      "to_port": "timer6",
+      "signal_name": "TIMER6",
+      "width": "",
+      "is_bus": false,
+      "direction": "output",
+      "annotations": []
+    },
+    {
+      "id": "c58",
+      "from_module": "m69",
+      "from_port": "output",
+      "to_module": "external",
+      "to_port": "timer7",
+      "signal_name": "TIMER7",
+      "width": "",
+      "is_bus": false,
+      "direction": "output",
+      "annotations": []
+    }
+  ],
+  "ports": [
+    {
+      "name": "JTAG/SWD",
+      "direction": "inout",
+      "width": "",
+      "connected_to": "m1",
+      "description": "JTAG/Serial Wire Debug interface"
+    },
+    {
+      "name": "ETM",
+      "direction": "output",
+      "width": "",
+      "connected_to": "m1",
+      "description": "Embedded Trace Macrocell"
+    },
+    {
+      "name": "PA[0:15]",
+      "direction": "inout",
+      "width": "16",
+      "connected_to": "m5",
+      "description": "GPIO Port A pins"
+    },
+    {
+      "name": "PB[0:15]",
+      "direction": "inout",
+      "width": "16",
+      "connected_to": "m6",
+      "description": "GPIO Port B pins"
+    },
+    {
+      "name": "PC[0:15]",
+      "direction": "inout",
+      "width": "16",
+      "connected_to": "m7",
+      "description": "GPIO Port C pins"
+    },
+    {
+      "name": "PD[0:15]",
+      "direction": "inout",
+      "width": "16",
+      "connected_to": "m8",
+      "description": "GPIO Port D pins"
+    },
+    {
+      "name": "PE[0:15]",
+      "direction": "inout",
+      "width": "16",
+      "connected_to": "m9",
+      "description": "GPIO Port E pins"
+    },
+    {
+      "name": "PG[0:15]",
+      "direction": "inout",
+      "width": "16",
+      "connected_to": "m10",
+      "description": "GPIO Port G pins"
+    },
+    {
+      "name": "PH[0:1]",
+      "direction": "inout",
+      "width": "2",
+      "connected_to": "m11",
+      "description": "GPIO Port H pins"
+    },
+    {
+      "name": "VBAT",
+      "direction": "input",
+      "width": "1",
+      "connected_to": "m33",
+      "description": "Battery backup voltage"
+    },
+    {
+      "name": "VDD/VDDA",
+      "direction": "input",
+      "width": "",
+      "connected_to": "m35",
+      "description": "Power supply voltages"
+    },
+    {
+      "name": "VREF+",
+      "direction": "input",
+      "width": "1",
+      "connected_to": "m38",
+      "description": "Analog reference voltage"
+    },
+    {
+      "name": "CLK",
+      "direction": "input",
+      "width": "",
+      "connected_to": "m37",
+      "description": "Clock inputs"
+    },
+    {
+      "name": "OSC",
+      "direction": "input",
+      "width": "",
+      "connected_to": "m37",
+      "description": "Oscillator inputs"
+    }
+  ],
+  "annotations": [
+    {
+      "type": "label",
+      "content": "JTAG/SWD (1 x 5-pin JTAG/SWD)",
+      "location": "Top left, connected to ARM CORTEX M4",
+      "related_to": "m1"
+    },
+    {
+      "type": "label",
+      "content": "ETM",
+      "location": "Top left, connected to ARM CORTEX M4",
+      "related_to": "m1"
+    },
+    {
+      "type": "label",
+      "content": "FRAM/PSRAM/NOR/SRAM/NAND/SDRAM",
+      "location": "Top center, output from EXT MEM CTL",
+      "related_to": "m26"
+    },
+    {
+      "type": "label",
+      "content": "8/10/12/14-bit DCMI",
+      "location": "Right side, connected to CAMERA ITF",
+      "related_to": "m31"
+    },
+    {
+      "type": "label",
+      "content": "VCC = 1.8 to 3.6V",
+      "location": "Right side, near power connections",
+      "related_to": "m35"
+    },
+    {
+      "type": "label",
+      "content": "VDD12_IN (1.7V to 2.1V)",
+      "location": "Right side, power input",
+      "related_to": "m35"
+    },
+    {
+      "type": "label",
+      "content": "VDD = 1.8 to 3.6V",
+      "location": "Right side, power input",
+      "related_to": "m35"
+    },
+    {
+      "type": "label",
+      "content": "VDDA",
+      "location": "Right side, analog power",
+      "related_to": "m35"
+    },
+    {
+      "type": "label",
+      "content": "VBAT",
+      "location": "Right side, battery backup",
+      "related_to": "m33"
+    },
+    {
+      "type": "label",
+      "content": "CLK, OSC, CEC, ETH",
+      "location": "Right side, clock inputs",
+      "related_to": "m37"
+    },
+    {
+      "type": "label",
+      "content": "VREF+",
+      "location": "Right side, analog reference",
+      "related_to": "m38"
+    },
+    {
+      "type": "label",
+      "content": "MB33F0412",
+      "location": "Bottom right corner",
+      "related_to": "metadata"
+    },
+    {
+      "type": "note",
+      "content": "AHB Bus Matrix",
+      "location": "Center of diagram, connecting multiple modules",
+      "related_to": "connections"
+    },
+    {
+      "type": "note",
+      "content": "APB1 Bridge",
+      "location": "Center-left, connecting to APB1 peripherals",
+      "related_to": "m66"
+    },
+    {
+      "type": "note",
+      "content": "APB2 Bridge",
+      "location": "Center-left, connecting to APB2 peripherals",
+      "related_to": "m65"
+    }
+  ],
+  "hierarchy": {
+    "top_level_module": "STM32F412 Microcontroller",
+    "submodules": [
+      "ARM CORTEX M4",
+      "USB OTG HS",
+      "USB OTG FS",
+      "GP-DMA2",
+      "CP-DMA1",
+      "GPIO Ports (A,B,C,D,E,G,H)",
+      "Timers (1,2,3,4,5,6,7,8,9,10,11,12,13,14)",
+      "USART/UART (1,2,3,4,5,6)",
+      "SPI/I2S (1,2,3)",
+      "I2C (1,2,3)",
+      "SAI (1,2)",
+      "ADC",
+      "SDADC",
+      "DAC (1,2)",
+      "CAN",
+      "HDMI CEC",
+      "FMPI2C1",
+      "External Memory Controller (FMC)",
+      "QuadSPI",
+      "Camera Interface",
+      "RTC",
+      "Backup SRAM",
+      "Power Management",
+      "Reset & Clock Control",
+      "CRC",
+      "Watchdogs (IWDG, WWDG)",
+      "SYSCFG",
+      "EXTI"
+    ],
+    "interfaces": [
+      "AHB",
+      "APB1",
+      "APB2",
+      "JTAG/SWD",
+      "USB OTG",
+      "DCMI",
+      "FMC"
+    ]
+  },
+  "metadata": {
+    "total_modules": 69,
+    "total_connections": 58,
+    "complexity": "complex",
+    "protocol_hints": [
+      "AHB",
+      "APB1",
+      "APB2",
+      "USB OTG",
+      "SPI",
+      "I2C",
+      "I2S",
+      "UART",
+      "CAN",
+      "HDMI CEC",
+      "DCMI",
+      "FMC",
+      "QuadSPI"
+    ],
+    "ambiguities": [
+      "Exact bus widths for AHB/APB connections not specified",
+      "Some peripheral channel counts not explicitly shown",
+      "Exact pin mappings for multiplexed functions not detailed",
+      "Internal bus matrix connections partially obscured",
+      "Some signal routing between DMA and peripherals not explicitly shown"
+    ]
+  }
+}

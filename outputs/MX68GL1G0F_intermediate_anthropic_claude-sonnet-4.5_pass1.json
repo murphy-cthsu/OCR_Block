@@ -1,0 +1,554 @@
+{
+  "modules": [
+    {
+      "id": "m1",
+      "name": "CONTROL INPUT LOGIC",
+      "type": "custom",
+      "position": {
+        "x": 170,
+        "y": 90
+      },
+      "parameters": {},
+      "description": "Control logic block receiving CE#, OE#, WE#, RESET#, BYTE#, WP/ACC# inputs"
+    },
+    {
+      "id": "m2",
+      "name": "ADDRESS LATCH AND BUFFER",
+      "type": "latch_buffer",
+      "position": {
+        "x": 170,
+        "y": 270
+      },
+      "parameters": {},
+      "description": "Address latching and buffering block with AC-AM input"
+    },
+    {
+      "id": "m3",
+      "name": "X-DECODER",
+      "type": "decoder",
+      "position": {
+        "x": 280,
+        "y": 240
+      },
+      "parameters": {},
+      "description": "X-axis decoder for flash array addressing"
+    },
+    {
+      "id": "m4",
+      "name": "Y-DECODER",
+      "type": "decoder",
+      "position": {
+        "x": 280,
+        "y": 310
+      },
+      "parameters": {},
+      "description": "Y-axis decoder for flash array addressing"
+    },
+    {
+      "id": "m5",
+      "name": "FLASH ARRAY",
+      "type": "memory",
+      "position": {
+        "x": 360,
+        "y": 270
+      },
+      "parameters": {
+        "type": "flash"
+      },
+      "description": "Main flash memory array"
+    },
+    {
+      "id": "m6",
+      "name": "Y-PASS GATE",
+      "type": "pass_gate",
+      "position": {
+        "x": 360,
+        "y": 330
+      },
+      "parameters": {},
+      "description": "Y-axis pass gate for array access"
+    },
+    {
+      "id": "m7",
+      "name": "SENSE AMPLIFIERS",
+      "type": "sense_amp",
+      "position": {
+        "x": 280,
+        "y": 410
+      },
+      "parameters": {},
+      "description": "Sense amplifiers for reading flash array data"
+    },
+    {
+      "id": "m8",
+      "name": "PROGRAM/ERASE HIGH VOLTAGE",
+      "type": "high_voltage_generator",
+      "position": {
+        "x": 330,
+        "y": 90
+      },
+      "parameters": {},
+      "description": "High voltage generation for program and erase operations"
+    },
+    {
+      "id": "m9",
+      "name": "WRITE STATE MACHINE (WSM)",
+      "type": "state_machine",
+      "position": {
+        "x": 505,
+        "y": 80
+      },
+      "parameters": {},
+      "description": "Write state machine controlling program/erase operations"
+    },
+    {
+      "id": "m10",
+      "name": "STATE REGISTER",
+      "type": "register",
+      "position": {
+        "x": 505,
+        "y": 210
+      },
+      "parameters": {},
+      "description": "State register for WSM status"
+    },
+    {
+      "id": "m11",
+      "name": "COMMAND DATA DECODER",
+      "type": "decoder",
+      "position": {
+        "x": 505,
+        "y": 310
+      },
+      "parameters": {},
+      "description": "Decoder for command data interpretation"
+    },
+    {
+      "id": "m12",
+      "name": "COMMAND DATA LATCH",
+      "type": "latch",
+      "position": {
+        "x": 505,
+        "y": 430
+      },
+      "parameters": {},
+      "description": "Latch for command data storage"
+    },
+    {
+      "id": "m13",
+      "name": "PROGRAM DATA LATCH",
+      "type": "latch",
+      "position": {
+        "x": 360,
+        "y": 480
+      },
+      "parameters": {},
+      "description": "Latch for program data storage"
+    },
+    {
+      "id": "m14",
+      "name": "I/O BUFFER",
+      "type": "buffer",
+      "position": {
+        "x": 310,
+        "y": 555
+      },
+      "parameters": {},
+      "description": "Bidirectional I/O buffer for data interface"
+    }
+  ],
+  "connections": [
+    {
+      "id": "c1",
+      "from_module": "external",
+      "from_port": "CE#_OE#_WE#_RESET#_BYTE#_WP/ACC#",
+      "to_module": "m1",
+      "to_port": "input",
+      "signal_name": "CE#, OE#, WE#, RESET#, BYTE#, WP/ACC#",
+      "width": "6",
+      "is_bus": true,
+      "direction": "right",
+      "annotations": [
+        "Control signals"
+      ]
+    },
+    {
+      "id": "c2",
+      "from_module": "m1",
+      "from_port": "output",
+      "to_module": "m2",
+      "to_port": "control",
+      "signal_name": "",
+      "width": "1",
+      "is_bus": false,
+      "direction": "down",
+      "annotations": []
+    },
+    {
+      "id": "c3",
+      "from_module": "external",
+      "from_port": "AC-AM",
+      "to_module": "m2",
+      "to_port": "address_input",
+      "signal_name": "AC-AM",
+      "width": "multi",
+      "is_bus": true,
+      "direction": "right",
+      "annotations": [
+        "Address inputs"
+      ]
+    },
+    {
+      "id": "c4",
+      "from_module": "m2",
+      "from_port": "output",
+      "to_module": "m3",
+      "to_port": "input",
+      "signal_name": "",
+      "width": "multi",
+      "is_bus": true,
+      "direction": "right",
+      "annotations": []
+    },
+    {
+      "id": "c5",
+      "from_module": "m2",
+      "from_port": "output",
+      "to_module": "m4",
+      "to_port": "input",
+      "signal_name": "",
+      "width": "multi",
+      "is_bus": true,
+      "direction": "right",
+      "annotations": []
+    },
+    {
+      "id": "c6",
+      "from_module": "m3",
+      "from_port": "output",
+      "to_module": "m5",
+      "to_port": "x_select",
+      "signal_name": "",
+      "width": "multi",
+      "is_bus": true,
+      "direction": "right",
+      "annotations": []
+    },
+    {
+      "id": "c7",
+      "from_module": "m4",
+      "from_port": "output",
+      "to_module": "m6",
+      "to_port": "y_select",
+      "signal_name": "",
+      "width": "multi",
+      "is_bus": true,
+      "direction": "down",
+      "annotations": []
+    },
+    {
+      "id": "c8",
+      "from_module": "m5",
+      "from_port": "output",
+      "to_module": "m7",
+      "to_port": "input",
+      "signal_name": "",
+      "width": "multi",
+      "is_bus": true,
+      "direction": "down",
+      "annotations": []
+    },
+    {
+      "id": "c9",
+      "from_module": "m6",
+      "from_port": "output",
+      "to_module": "m7",
+      "to_port": "input",
+      "signal_name": "",
+      "width": "multi",
+      "is_bus": true,
+      "direction": "down",
+      "annotations": []
+    },
+    {
+      "id": "c10",
+      "from_module": "m7",
+      "from_port": "output",
+      "to_module": "m14",
+      "to_port": "input",
+      "signal_name": "",
+      "width": "multi",
+      "is_bus": true,
+      "direction": "down",
+      "annotations": []
+    },
+    {
+      "id": "c11",
+      "from_module": "m14",
+      "from_port": "bidirectional",
+      "to_module": "external",
+      "to_port": "Q0-Q15/A(-1)",
+      "signal_name": "Q0-Q15/A(-1)",
+      "width": "16",
+      "is_bus": true,
+      "direction": "bidirectional",
+      "annotations": [
+        "Data/Address bus"
+      ]
+    },
+    {
+      "id": "c12",
+      "from_module": "m14",
+      "from_port": "output",
+      "to_module": "m13",
+      "to_port": "input",
+      "signal_name": "",
+      "width": "multi",
+      "is_bus": true,
+      "direction": "up",
+      "annotations": []
+    },
+    {
+      "id": "c13",
+      "from_module": "m13",
+      "from_port": "output",
+      "to_module": "m6",
+      "to_port": "data_input",
+      "signal_name": "PGM DATA HV",
+      "width": "multi",
+      "is_bus": true,
+      "direction": "up",
+      "annotations": [
+        "Program data high voltage"
+      ]
+    },
+    {
+      "id": "c14",
+      "from_module": "m14",
+      "from_port": "output",
+      "to_module": "m12",
+      "to_port": "input",
+      "signal_name": "",
+      "width": "multi",
+      "is_bus": true,
+      "direction": "up-right",
+      "annotations": []
+    },
+    {
+      "id": "c15",
+      "from_module": "m12",
+      "from_port": "output",
+      "to_module": "m11",
+      "to_port": "input",
+      "signal_name": "",
+      "width": "multi",
+      "is_bus": true,
+      "direction": "up",
+      "annotations": []
+    },
+    {
+      "id": "c16",
+      "from_module": "m11",
+      "from_port": "output",
+      "to_module": "m10",
+      "to_port": "input",
+      "signal_name": "",
+      "width": "multi",
+      "is_bus": true,
+      "direction": "up",
+      "annotations": []
+    },
+    {
+      "id": "c17",
+      "from_module": "m10",
+      "from_port": "output",
+      "to_module": "m9",
+      "to_port": "input",
+      "signal_name": "",
+      "width": "multi",
+      "is_bus": true,
+      "direction": "up",
+      "annotations": []
+    },
+    {
+      "id": "c18",
+      "from_module": "m9",
+      "from_port": "output",
+      "to_module": "m8",
+      "to_port": "control",
+      "signal_name": "",
+      "width": "multi",
+      "is_bus": false,
+      "direction": "left",
+      "annotations": []
+    },
+    {
+      "id": "c19",
+      "from_module": "m8",
+      "from_port": "output",
+      "to_module": "m5",
+      "to_port": "high_voltage",
+      "signal_name": "",
+      "width": "1",
+      "is_bus": false,
+      "direction": "down",
+      "annotations": []
+    },
+    {
+      "id": "c20",
+      "from_module": "m9",
+      "from_port": "output",
+      "to_module": "m5",
+      "to_port": "control",
+      "signal_name": "ARRAY SOURCE HV",
+      "width": "multi",
+      "is_bus": false,
+      "direction": "down-left",
+      "annotations": [
+        "Array source high voltage control"
+      ]
+    },
+    {
+      "id": "c21",
+      "from_module": "external",
+      "from_port": "top",
+      "to_module": "m9",
+      "to_port": "input",
+      "signal_name": "",
+      "width": "1",
+      "is_bus": false,
+      "direction": "down",
+      "annotations": []
+    },
+    {
+      "id": "c22",
+      "from_module": "m10",
+      "from_port": "output",
+      "to_module": "m14",
+      "to_port": "status_input",
+      "signal_name": "",
+      "width": "multi",
+      "is_bus": true,
+      "direction": "down-left",
+      "annotations": []
+    }
+  ],
+  "ports": [
+    {
+      "name": "CE#",
+      "direction": "input",
+      "width": "1",
+      "connected_to": "m1",
+      "description": "Chip Enable (active low)"
+    },
+    {
+      "name": "OE#",
+      "direction": "input",
+      "width": "1",
+      "connected_to": "m1",
+      "description": "Output Enable (active low)"
+    },
+    {
+      "name": "WE#",
+      "direction": "input",
+      "width": "1",
+      "connected_to": "m1",
+      "description": "Write Enable (active low)"
+    },
+    {
+      "name": "RESET#",
+      "direction": "input",
+      "width": "1",
+      "connected_to": "m1",
+      "description": "Reset (active low)"
+    },
+    {
+      "name": "BYTE#",
+      "direction": "input",
+      "width": "1",
+      "connected_to": "m1",
+      "description": "Byte mode select (active low)"
+    },
+    {
+      "name": "WP/ACC#",
+      "direction": "input",
+      "width": "1",
+      "connected_to": "m1",
+      "description": "Write Protect/Accelerate"
+    },
+    {
+      "name": "AC-AM",
+      "direction": "input",
+      "width": "multi",
+      "connected_to": "m2",
+      "description": "Address inputs"
+    },
+    {
+      "name": "Q0-Q15/A(-1)",
+      "direction": "inout",
+      "width": "16",
+      "connected_to": "m14",
+      "description": "Bidirectional data/address bus"
+    }
+  ],
+  "annotations": [
+    {
+      "type": "label",
+      "content": "ARRAY SOURCE HV",
+      "location": "Connection from WSM to Flash Array",
+      "related_to": "c20"
+    },
+    {
+      "type": "label",
+      "content": "PGM DATA HV",
+      "location": "Connection from Program Data Latch to Y-Pass Gate",
+      "related_to": "c13"
+    },
+    {
+      "type": "text",
+      "content": "X-DECODER",
+      "location": "Left decoder block",
+      "related_to": "m3"
+    },
+    {
+      "type": "text",
+      "content": "Y-DECODER",
+      "location": "Right decoder block",
+      "related_to": "m4"
+    }
+  ],
+  "hierarchy": {
+    "top_level_module": "Flash Memory Controller",
+    "submodules": [
+      "CONTROL INPUT LOGIC",
+      "ADDRESS LATCH AND BUFFER",
+      "X-DECODER",
+      "Y-DECODER",
+      "FLASH ARRAY",
+      "Y-PASS GATE",
+      "SENSE AMPLIFIERS",
+      "PROGRAM/ERASE HIGH VOLTAGE",
+      "WRITE STATE MACHINE (WSM)",
+      "STATE REGISTER",
+      "COMMAND DATA DECODER",
+      "COMMAND DATA LATCH",
+      "PROGRAM DATA LATCH",
+      "I/O BUFFER"
+    ],
+    "interfaces": []
+  },
+  "metadata": {
+    "total_modules": 14,
+    "total_connections": 22,
+    "complexity": "complex",
+    "protocol_hints": [
+      "Flash memory interface",
+      "Command-based protocol"
+    ],
+    "ambiguities": [
+      "Exact bit widths not specified for most internal buses",
+      "Some connection paths may have intermediate nodes not explicitly shown",
+      "High voltage signal routing details not fully specified"
+    ]
+  }
+}
