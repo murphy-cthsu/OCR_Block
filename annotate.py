@@ -222,6 +222,11 @@ Final verification pass. Focus on:
                 return None
     
         except Exception as e:
+            error_msg = str(e)
+            # Check for fatal API errors that should stop the entire process
+            if "Key limit exceeded" in error_msg or "Insufficient credits" in error_msg:
+                raise e
+                
             print(f"Error with model {model} on pass {pass_number}: {e}")
             return None
         
@@ -258,11 +263,13 @@ Final verification pass. Focus on:
         for ann in valid_annotations:
             for module in ann.get("modules", []):
                 name = module.get("name", "")
-                if name not in module_map:
-                    module_map[name] = []
-                module_map[name].append(module)
+                # Use lowercase name for better grouping
+                key = name.lower().strip() if name else ""
+                if key not in module_map:
+                    module_map[key] = []
+                module_map[key].append(module)
 
-        for name, module_instances in module_map.items():
+        for key, module_instances in module_map.items():
             # Use most detailed version (most keys)
             best_module = max(module_instances, key=lambda m: len(json.dumps(m)))
             best_module["confidence"] = len(module_instances) / len(valid_annotations)
@@ -273,7 +280,11 @@ Final verification pass. Focus on:
 
         for ann in valid_annotations:
             for conn in ann.get("connections", []):
-                key = (conn.get("from_module", ""), conn.get("to_module", ""))
+                # Use lowercase IDs for grouping
+                from_mod = conn.get("from_module", "").lower().strip()
+                to_mod = conn.get("to_module", "").lower().strip()
+                key = (from_mod, to_mod)
+                
                 if key not in connection_map:
                     connection_map[key] = []
                 connection_map[key].append(conn)
@@ -332,6 +343,56 @@ Final verification pass. Focus on:
         merged["metadata"]["ambiguities"] = list(set(all_ambiguities))
 
         return merged
+
+    def post_process_annotation(self, annotation: Dict) -> Dict:
+        """
+        Clean up and normalize annotation data.
+        - Normalizes IDs to lowercase
+        - Deduplicates modules with same ID
+        - Ensures connection references match module IDs
+        """
+        if not annotation:
+            return annotation
+
+        def norm(s):
+            return str(s).lower().strip().replace(" ", "_") if s else ""
+
+        # 1. Normalize Module IDs and Deduplicate
+        unique_modules = {}
+        for module in annotation.get("modules", []):
+            mid = norm(module.get("id", ""))
+            if not mid: continue
+            
+            module["id"] = mid
+            
+            if mid not in unique_modules:
+                unique_modules[mid] = module
+            else:
+                # If duplicate ID found, merge/keep the one with more details
+                existing = unique_modules[mid]
+                if len(json.dumps(module)) > len(json.dumps(existing)):
+                    unique_modules[mid] = module
+        
+        annotation["modules"] = list(unique_modules.values())
+        
+        # 2. Normalize Connections
+        for conn in annotation.get("connections", []):
+            if "from_module" in conn:
+                conn["from_module"] = norm(conn["from_module"])
+            if "to_module" in conn:
+                conn["to_module"] = norm(conn["to_module"])
+            
+        # 3. Normalize Ports
+        for port in annotation.get("ports", []):
+            if "connected_to" in port:
+                port["connected_to"] = norm(port["connected_to"])
+
+        # 4. Normalize Annotations
+        for note in annotation.get("annotations", []):
+            if "related_to" in note:
+                note["related_to"] = norm(note["related_to"])
+                
+        return annotation
 
     def validate_annotation(self, annotation: Dict) -> Dict:
         """
@@ -471,6 +532,9 @@ Final verification pass. Focus on:
 
         # Merge all annotations
         final_annotation = self.merge_annotations(all_annotations)
+
+        # Post-process to regularize IDs and fix case mismatches
+        final_annotation = self.post_process_annotation(final_annotation)
 
         # Validate
         validation = self.validate_annotation(final_annotation)

@@ -86,6 +86,10 @@ def process_single_image(
         return result
         
     except Exception as e:
+        # Re-raise fatal API errors
+        if "Key limit exceeded" in str(e) or "Insufficient credits" in str(e):
+            raise e
+            
         print(f"\nERROR processing {image_path.name}: {e}")
         # Save error log
         error_log_path = output_dir / f"{filename_stem}_error.log"
@@ -170,20 +174,27 @@ def batch_annotate(
             results["skipped"].append(image_path.name)
             continue
         
-        result = process_single_image(
-            annotator=annotator,
-            image_path=image_path,
-            output_dir=output_dir,
-            multi_pass=multi_pass,
-            multi_model=multi_model,
-            save_intermediate=save_intermediate,
-            skip_existing=skip_existing
-        )
-        
-        if result is not None:
-            results["processed"].append(image_path.name)
-        elif not (skip_existing and final_output.exists()):
+        try:
+            result = process_single_image(
+                annotator=annotator,
+                image_path=image_path,
+                output_dir=output_dir,
+                multi_pass=multi_pass,
+                multi_model=multi_model,
+                save_intermediate=save_intermediate,
+                skip_existing=skip_existing
+            )
+            
+            if result is not None:
+                results["processed"].append(image_path.name)
+            elif not (skip_existing and final_output.exists()):
+                results["failed"].append(image_path.name)
+                
+        except Exception as e:
+            print(f"\n\nCRITICAL ERROR: {e}")
+            print("Stopping batch processing immediately.")
             results["failed"].append(image_path.name)
+            break
     
     end_time = datetime.now()
     duration = end_time - start_time
